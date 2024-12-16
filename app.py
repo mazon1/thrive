@@ -94,7 +94,7 @@ elif menu == "Profile":
 
 elif menu == "Support Groups":
     st.header("Join Support Groups")
-    st.image("SafeSpace.PNG", use_column_width=True)
+    st.image("SafeSpace.PNG", use_container_width=True)
     st.write("Connect in real-time with others.")
     st.write("Upcoming live sessions:")
     st.write("- [Mindfulness Monday: Coping Techniques](#) at 7 PM")
@@ -104,7 +104,7 @@ elif menu == "Support Groups":
 
 elif menu == "Case Management":
     st.header("Case Management Dashboard")
-    st.image("SafeSpace.PNG", use_column_width=True)
+    st.image("SafeSpace.PNG", use_container_width=True)
     st.write("Manage and monitor patient cases efficiently.")
 
     # Example Case List
