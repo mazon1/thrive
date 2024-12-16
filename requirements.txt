@@ -1,0 +1,2 @@
+streamlit==1.25.0  # Replace with the latest stable version
+pandas==2.1.0      # For data handling
