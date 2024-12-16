@@ -1,77 +1,83 @@
 import streamlit as st
-import pandas as pd
-import datetime
+from datetime import datetime
 
-# Synthetic Data for Demonstration
-story_data = []  # List to store stories
-document_data = []  # List to store documents
-provider_data = pd.DataFrame({
-    "Provider": ["Community Health Center", "Mental Health Services", "Housing Support"],
-    "Contact": ["chc@health.org", "mhs@mental.org", "hs@housing.org"],
-    "Services": ["Primary Care, SUD Treatment", "Counseling, Therapy", "Housing Assistance"]
-})
+# Set page title
+st.set_page_config(page_title="Supportive Community App", layout="wide")
 
-# App Configuration
-st.set_page_config(page_title="Centralized Care Platform", layout="wide")
-st.title("Centralized Care Platform")
-st.sidebar.header("Navigation")
+# Header
+st.title("Welcome to Your Safe Space")
+st.write("Express yourself, connect with others, and share your journey in a supportive community.")
 
-# Navigation Options
-page = st.sidebar.selectbox("Choose a section", ["Home", "Storytelling", "Interoperability Dashboard", "Document Storage"])
+# Navigation
+menu = st.sidebar.selectbox("Menu", ["Home", "Audio Sharing", "Community", "Profile", "Support Groups"])
 
-if page == "Home":
-    st.header("Welcome to the Centralized Care Platform")
-    st.write("This platform is designed to support individuals in recovery with personalized storytelling, interoperable provider dashboards, and secure document storage.")
+if menu == "Home":
+    st.header("Discover, Reflect, and Connect")
+    st.write("Explore shared stories, daily check-ins, and more.")
+    
+    # Suggested posts
+    st.subheader("Community Highlights")
+    st.write("1. [Jane's Journey to Recovery](#)")
+    st.write("2. [Tips for Overcoming Anxiety](#)")
+    st.write("3. [How Peer Support Changed My Life](#)")
 
-elif page == "Storytelling":
-    st.header("Share Your Recovery Journey")
+elif menu == "Audio Sharing":
+    st.header("Audio Sharing")
+    st.write("Record and share your journey or keep it private.")
 
-    # Input for Storytelling
-    with st.form("story_form"):
-        name = st.text_input("Your Name")
-        story = st.text_area("Share your story")
-        date = st.date_input("Date", value=datetime.date.today())
-        submitted = st.form_submit_button("Submit")
+    # Audio recording section
+    audio_option = st.radio("Choose your audio recording option:", ["Record Now", "Upload Audio"])
+    
+    if audio_option == "Record Now":
+        st.info("This feature will require microphone access.")
+        st.button("Start Recording")
+        st.button("Stop Recording")
+        st.write("[Recording Saved]")
+    elif audio_option == "Upload Audio":
+        uploaded_file = st.file_uploader("Upload your audio file", type=["mp3", "wav"])
+        if uploaded_file:
+            st.success("Audio uploaded successfully!")
 
-    if submitted:
-        story_data.append({"Name": name, "Story": story, "Date": date})
-        st.success("Your story has been submitted!")
+    # Share or Save Option
+    share_option = st.radio("What would you like to do with this recording?", ["Keep Private", "Share with Community"])
+    if share_option == "Share with Community":
+        st.text_area("Add a description or context to your audio log:")
+        st.button("Post Audio")
+        st.success("Your audio has been shared!")
 
-    # Display Existing Stories
-    if story_data:
-        st.subheader("Your Stories")
-        for s in story_data:
-            st.write(f"**{s['Name']}** on {s['Date']}: {s['Story']}")
+elif menu == "Community":
+    st.header("Community")
+    st.write("Follow others, join discussions, and build your network.")
+    
+    st.subheader("Your Network")
+    st.write("**Following**: 20 | **Followers**: 15")
 
-elif page == "Interoperability Dashboard":
-    st.header("Interoperability Dashboard")
-    st.write("View and communicate with service providers.")
+    st.subheader("Trending Stories")
+    st.write("1. [Overcoming Relapse: John's Story](#)")
+    st.write("2. [Anxiety Hacks from Sarah](#)")
+    
+    st.subheader("Find Friends")
+    search = st.text_input("Search for community members:")
+    if search:
+        st.write(f"Results for {search}:")
+        st.write("- [Alex Smith](#)")
+        st.write("- [Chris Doe](#)")
 
-    # Display Provider Information
-    st.table(provider_data)
+elif menu == "Profile":
+    st.header("Your Profile")
+    st.write("Customize your experience and control your privacy.")
 
-    # Simulated API Example
-    st.subheader("Send a Message to Providers")
-    with st.form("message_form"):
-        provider = st.selectbox("Choose a provider", provider_data["Provider"])
-        message = st.text_area("Your Message")
-        message_submitted = st.form_submit_button("Send")
+    # Profile Details
+    name = st.text_input("Name", "Your Name")
+    bio = st.text_area("Bio", "Share a bit about yourself.")
+    st.checkbox("Make my profile private")
+    st.button("Save Changes")
 
-    if message_submitted:
-        st.success(f"Message sent to {provider}!")
+elif menu == "Support Groups":
+    st.header("Join Support Groups")
+    st.write("Connect in real-time with others.")
+    st.write("Upcoming live sessions:")
+    st.write("- [Mindfulness Monday: Coping Techniques](#) at 7 PM")
+    st.write("- [Wellness Wednesday: Open Forum](#) at 6 PM")
 
-elif page == "Document Storage":
-    st.header("Document Storage")
-    st.write("Upload and securely store important documents.")
-
-    # Document Upload
-    uploaded_file = st.file_uploader("Upload Document")
-    if uploaded_file is not None:
-        document_data.append({"File Name": uploaded_file.name, "Upload Date": datetime.date.today()})
-        st.success("Document uploaded successfully!")
-
-    # Display Stored Documents
-    if document_data:
-        st.subheader("Stored Documents")
-        for doc in document_data:
-            st.write(f"**{doc['File Name']}** uploaded on {doc['Upload Date']}")
+    st.button("Join Live Session")
