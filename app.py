@@ -22,7 +22,7 @@ def generate_synthetic_story():
 
 # Header
 st.title("Welcome to Your Safe Space")
-st.image("SafeSpace.PNG", use_column_width=True)
+st.image("SafeSpace.PNG", use_container_width=True)
 st.write("Express yourself, connect with others, and share your journey in a supportive community.")
 
 # Navigation
@@ -39,7 +39,7 @@ if menu == "Home":
 
 elif menu == "Audio Sharing":
     st.header("Audio Sharing")
-    st.image("mic.jpg", use_column_width=True)
+    st.image("mic.jpg", use_container_width=True)
     st.write("Record and share your journey or keep it private.")
 
     # Audio recording section
@@ -64,7 +64,7 @@ elif menu == "Audio Sharing":
 
 elif menu == "Community":
     st.header("Community")
-    st.image("SafeSpace.PNG", use_column_width=True)
+    st.image("SafeSpace.PNG", use_container_width=True)
     st.write("Follow others, join discussions, and build your network.")
     
     st.subheader("Your Network")
@@ -83,7 +83,7 @@ elif menu == "Community":
 
 elif menu == "Profile":
     st.header("Your Profile")
-    st.image("SafeSpace.PNG", use_column_width=True)
+    st.image("SafeSpace.PNG", use_container_width=True)
     st.write("Customize your experience and control your privacy.")
 
     # Profile Details
