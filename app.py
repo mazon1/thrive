@@ -22,7 +22,7 @@ def generate_synthetic_story():
 
 # Header
 st.title("Welcome to Your Safe Space")
-st.image("https://via.placeholder.com/800x300.png?text=Your+Safe+Space", use_column_width=True)
+st.image("SafeSpace.PNG", use_column_width=True)
 st.write("Express yourself, connect with others, and share your journey in a supportive community.")
 
 # Navigation
@@ -39,7 +39,7 @@ if menu == "Home":
 
 elif menu == "Audio Sharing":
     st.header("Audio Sharing")
-    st.image("https://via.placeholder.com/400x200.png?text=Audio+Sharing", use_column_width=True)
+    st.image("mic.jpg", use_column_width=True)
     st.write("Record and share your journey or keep it private.")
 
     # Audio recording section
@@ -64,7 +64,7 @@ elif menu == "Audio Sharing":
 
 elif menu == "Community":
     st.header("Community")
-    st.image("https://via.placeholder.com/400x200.png?text=Community", use_column_width=True)
+    st.image("SafeSpace.PNG", use_column_width=True)
     st.write("Follow others, join discussions, and build your network.")
     
     st.subheader("Your Network")
@@ -83,7 +83,7 @@ elif menu == "Community":
 
 elif menu == "Profile":
     st.header("Your Profile")
-    st.image("https://via.placeholder.com/400x200.png?text=Profile", use_column_width=True)
+    st.image("SafeSpace.PNG", use_column_width=True)
     st.write("Customize your experience and control your privacy.")
 
     # Profile Details
@@ -94,7 +94,7 @@ elif menu == "Profile":
 
 elif menu == "Support Groups":
     st.header("Join Support Groups")
-    st.image("https://via.placeholder.com/400x200.png?text=Support+Groups", use_column_width=True)
+    st.image("SafeSpace.PNG", use_column_width=True)
     st.write("Connect in real-time with others.")
     st.write("Upcoming live sessions:")
     st.write("- [Mindfulness Monday: Coping Techniques](#) at 7 PM")
@@ -104,7 +104,7 @@ elif menu == "Support Groups":
 
 elif menu == "Case Management":
     st.header("Case Management Dashboard")
-    st.image("https://via.placeholder.com/400x200.png?text=Case+Management", use_column_width=True)
+    st.image("SafeSpace.PNG", use_column_width=True)
     st.write("Manage and monitor patient cases efficiently.")
 
     # Example Case List
