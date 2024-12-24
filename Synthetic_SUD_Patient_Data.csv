@@ -1,0 +1,1001 @@
+Patient_ID,Age,Gender,Substance_Type,Treatment_Type,Relapse_Risk,Support_System,Comorbidities,Admission_Date,Discharge_Date,Treatment_Outcome
+PID00001,56,Female,Alcohol,Residential Rehab,High,Strong,Anxiety,2024-05-07,2024-01-20,Ongoing
+PID00002,69,Male,Alcohol,Medication-Assisted Treatment (MAT),Low,Moderate,None,2024-10-13,2024-01-06,Relapsed
+PID00003,46,Male,Polysubstance,Residential Rehab,Low,Moderate,Depression,2024-11-06,2024-01-19,Recovered
+PID00004,32,Male,Methamphetamine,Medication-Assisted Treatment (MAT),Low,Weak,Depression,2024-09-09,2024-01-20,Recovered
+PID00005,60,Male,Opioids,Detox,Low,Weak,Anxiety,2024-09-22,2024-01-07,Recovered
+PID00006,25,Male,Cocaine,Detox,High,Strong,None,2024-07-06,2024-01-16,Ongoing
+PID00007,38,Male,Opioids,Medication-Assisted Treatment (MAT),Low,Weak,Anxiety,2024-08-17,2024-01-12,Recovered
+PID00008,56,Male,Opioids,Counseling,Low,Strong,Anxiety,2024-09-27,2024-01-17,Recovered
+PID00009,36,Male,Alcohol,Detox,Medium,Moderate,Anxiety,2024-09-15,2024-01-03,Recovered
+PID00010,40,Female,Cannabis,Counseling,Low,Moderate,Depression,2024-10-25,2024-01-18,Recovered
+PID00011,28,Female,Alcohol,Residential Rehab,Low,Moderate,Depression,2024-07-16,2024-01-13,Relapsed
+PID00012,28,Female,Cocaine,Counseling,Low,Strong,PTSD,2024-11-18,2024-01-25,Recovered
+PID00013,41,Female,Cannabis,Counseling,Medium,Weak,PTSD,2024-02-25,2024-01-22,Ongoing
+PID00014,53,Male,Cannabis,Counseling,High,Strong,Anxiety,2024-11-14,2024-01-08,Ongoing
+PID00015,57,Male,Alcohol,Detox,Medium,Strong,PTSD,2024-07-21,2024-01-26,Ongoing
+PID00016,41,Female,Alcohol,Counseling,Low,Moderate,PTSD,2024-09-27,2024-01-31,Recovered
+PID00017,20,Female,Alcohol,Counseling,High,Moderate,Depression,2024-04-18,2024-01-24,Ongoing
+PID00018,39,Female,Alcohol,Detox,Low,Weak,Anxiety,2024-04-25,2024-01-18,Relapsed
+PID00019,19,Male,Alcohol,Medication-Assisted Treatment (MAT),Low,Strong,Depression,2024-04-01,2024-01-04,Recovered
+PID00020,41,Male,Methamphetamine,Counseling,Low,Strong,Depression,2024-05-17,2024-01-03,Recovered
+PID00021,61,Male,Opioids,Medication-Assisted Treatment (MAT),Low,Weak,PTSD,2024-10-29,2024-01-26,Recovered
+PID00022,47,Male,Alcohol,Medication-Assisted Treatment (MAT),Medium,Moderate,None,2024-02-26,2024-01-26,Recovered
+PID00023,55,Female,Alcohol,Detox,Medium,Strong,None,2024-02-19,2024-01-11,Recovered
+PID00024,19,Female,Opioids,Counseling,High,Moderate,PTSD,2024-03-11,2024-01-24,Ongoing
+PID00025,38,Male,Opioids,Counseling,Medium,Moderate,Depression,2024-03-22,2024-01-14,Recovered
+PID00026,50,Non-binary,Opioids,Medication-Assisted Treatment (MAT),Medium,Moderate,Depression,2024-04-14,2024-01-19,Ongoing
+PID00027,29,Female,Methamphetamine,Detox,Low,Moderate,None,2024-03-28,2024-01-27,Ongoing
+PID00028,39,Male,Opioids,Counseling,Low,Weak,Anxiety,2024-01-02,2024-01-30,Recovered
+PID00029,61,Male,Polysubstance,Counseling,Medium,Weak,PTSD,2024-12-25,2024-01-31,Ongoing
+PID00030,42,Male,Cocaine,Detox,Low,Moderate,PTSD,2024-03-24,2024-01-17,Recovered
+PID00031,66,Male,Alcohol,Detox,High,Strong,PTSD,2024-02-12,2024-01-21,Relapsed
+PID00032,44,Male,Methamphetamine,Counseling,Low,Weak,None,2024-06-02,2024-01-29,Recovered
+PID00033,59,Male,Alcohol,Medication-Assisted Treatment (MAT),Low,Moderate,Depression,2024-11-22,2024-01-24,Ongoing
+PID00034,45,Male,Cocaine,Counseling,Low,Moderate,PTSD,2024-04-03,2024-01-12,Relapsed
+PID00035,33,Male,Alcohol,Counseling,Low,Strong,None,2024-10-24,2024-01-31,Recovered
+PID00036,32,Female,Cocaine,Counseling,Low,Weak,Depression,2024-05-12,2024-01-28,Recovered
+PID00037,64,Male,Cocaine,Medication-Assisted Treatment (MAT),Medium,Moderate,PTSD,2024-03-05,2024-01-29,Ongoing
+PID00038,68,Female,Cocaine,Detox,Low,Strong,Anxiety,2024-10-16,2024-01-14,Recovered
+PID00039,61,Male,Cannabis,Medication-Assisted Treatment (MAT),Medium,Moderate,None,2024-09-13,2024-01-16,Relapsed
+PID00040,69,Non-binary,Alcohol,Detox,Low,Weak,Depression,2024-07-31,2024-01-11,Relapsed
+PID00041,20,Male,Alcohol,Counseling,Low,Strong,Anxiety,2024-05-27,2024-01-29,Recovered
+PID00042,54,Male,Opioids,Detox,Low,Weak,Depression,2024-03-01,2024-01-15,Recovered
+PID00043,68,Non-binary,Alcohol,Detox,High,Moderate,PTSD,2024-05-28,2024-01-05,Recovered
+PID00044,24,Female,Cannabis,Counseling,Low,Moderate,Depression,2024-03-28,2024-01-23,Recovered
+PID00045,38,Female,Alcohol,Detox,Medium,Strong,Depression,2024-11-19,2024-01-31,Ongoing
+PID00046,26,Male,Polysubstance,Medication-Assisted Treatment (MAT),Low,Strong,Anxiety,2024-10-04,2024-01-16,Ongoing
+PID00047,56,Male,Opioids,Detox,Medium,Weak,None,2024-03-22,2024-01-23,Recovered
+PID00048,35,Female,Cocaine,Counseling,Low,Strong,Depression,2024-05-08,2024-01-12,Recovered
+PID00049,21,Female,Alcohol,Counseling,Medium,Moderate,Depression,2024-10-12,2024-01-18,Recovered
+PID00050,42,Female,Cocaine,Detox,Medium,Strong,PTSD,2024-12-18,2024-01-09,Recovered
+PID00051,31,Female,Methamphetamine,Detox,High,Strong,Anxiety,2024-10-06,2024-01-06,Relapsed
+PID00052,67,Male,Opioids,Counseling,Low,Strong,None,2024-09-26,2024-01-29,Recovered
+PID00053,26,Female,Opioids,Counseling,Low,Moderate,Depression,2024-10-18,2024-01-22,Relapsed
+PID00054,43,Male,Cannabis,Counseling,Low,Weak,PTSD,2024-07-21,2024-01-25,Ongoing
+PID00055,19,Male,Alcohol,Counseling,High,Strong,Depression,2024-01-24,2024-01-27,Ongoing
+PID00056,37,Male,Opioids,Counseling,Medium,Strong,Depression,2024-12-16,2024-01-13,Recovered
+PID00057,45,Female,Alcohol,Detox,Medium,Strong,PTSD,2024-11-06,2024-01-18,Ongoing
+PID00058,64,Male,Alcohol,Counseling,Low,Moderate,Anxiety,2024-07-26,2024-01-22,Ongoing
+PID00059,24,Male,Alcohol,Residential Rehab,Low,Moderate,PTSD,2024-10-06,2024-01-06,Ongoing
+PID00060,61,Female,Alcohol,Counseling,Low,Weak,Anxiety,2024-07-23,2024-01-24,Recovered
+PID00061,25,Male,Alcohol,Counseling,High,Moderate,Anxiety,2024-05-31,2024-01-24,Recovered
+PID00062,64,Female,Alcohol,Counseling,Medium,Moderate,Anxiety,2024-01-26,2024-01-25,Ongoing
+PID00063,52,Male,Polysubstance,Medication-Assisted Treatment (MAT),High,Strong,None,2024-07-12,2024-01-19,Recovered
+PID00064,31,Male,Opioids,Medication-Assisted Treatment (MAT),Low,Weak,Depression,2024-12-01,2024-01-15,Recovered
+PID00065,34,Female,Polysubstance,Counseling,Medium,Strong,Depression,2024-08-25,2024-01-13,Relapsed
+PID00066,53,Male,Opioids,Residential Rehab,Medium,Strong,Anxiety,2024-11-16,2024-01-05,Recovered
+PID00067,67,Male,Alcohol,Detox,Low,Moderate,Anxiety,2024-03-15,2024-01-11,Recovered
+PID00068,57,Male,Opioids,Detox,High,Moderate,Depression,2024-06-11,2024-01-08,Recovered
+PID00069,21,Male,Opioids,Medication-Assisted Treatment (MAT),High,Moderate,None,2024-10-25,2024-01-24,Ongoing
+PID00070,19,Non-binary,Alcohol,Medication-Assisted Treatment (MAT),High,Moderate,Depression,2024-01-29,2024-01-23,Recovered
+PID00071,23,Male,Opioids,Detox,Medium,Moderate,None,2024-06-13,2024-01-13,Ongoing
+PID00072,59,Female,Alcohol,Detox,Low,Strong,Depression,2024-12-02,2024-01-18,Recovered
+PID00073,21,Male,Opioids,Detox,Low,Weak,PTSD,2024-07-04,2024-01-21,Recovered
+PID00074,46,Female,Cannabis,Detox,High,Moderate,None,2024-02-23,2024-01-29,Ongoing
+PID00075,35,Female,Alcohol,Medication-Assisted Treatment (MAT),Low,Moderate,Depression,2024-10-21,2024-01-07,Recovered
+PID00076,43,Female,Alcohol,Counseling,Medium,Moderate,None,2024-02-11,2024-01-16,Relapsed
+PID00077,61,Male,Cannabis,Counseling,Medium,Strong,Anxiety,2024-10-11,2024-01-19,Recovered
+PID00078,51,Male,Opioids,Counseling,Medium,Moderate,None,2024-05-17,2024-01-05,Recovered
+PID00079,27,Male,Alcohol,Detox,High,Moderate,PTSD,2024-07-05,2024-01-06,Recovered
+PID00080,53,Female,Polysubstance,Detox,Low,Strong,Anxiety,2024-07-22,2024-01-18,Recovered
+PID00081,31,Female,Alcohol,Counseling,Low,Moderate,Depression,2024-02-11,2024-01-18,Relapsed
+PID00082,48,Non-binary,Cannabis,Residential Rehab,Low,Weak,Anxiety,2024-12-15,2024-01-23,Relapsed
+PID00083,65,Male,Polysubstance,Medication-Assisted Treatment (MAT),Low,Moderate,Depression,2024-10-14,2024-01-28,Recovered
+PID00084,32,Female,Alcohol,Detox,Low,Weak,Depression,2024-01-26,2024-01-27,Ongoing
+PID00085,25,Female,Alcohol,Medication-Assisted Treatment (MAT),Low,Strong,Depression,2024-02-25,2024-01-06,Ongoing
+PID00086,31,Male,Alcohol,Medication-Assisted Treatment (MAT),High,Strong,Anxiety,2024-09-09,2024-01-21,Recovered
+PID00087,40,Male,Alcohol,Medication-Assisted Treatment (MAT),High,Strong,PTSD,2024-05-01,2024-01-28,Recovered
+PID00088,57,Female,Alcohol,Counseling,Low,Moderate,Depression,2024-04-15,2024-01-19,Relapsed
+PID00089,38,Female,Cannabis,Counseling,Low,Strong,Depression,2024-05-09,2024-01-15,Relapsed
+PID00090,33,Female,Alcohol,Counseling,High,Strong,PTSD,2024-12-02,2024-01-28,Relapsed
+PID00091,62,Male,Opioids,Detox,Low,Weak,Depression,2024-06-06,2024-01-24,Ongoing
+PID00092,35,Female,Polysubstance,Detox,Low,Weak,Depression,2024-08-18,2024-01-25,Ongoing
+PID00093,64,Male,Cocaine,Detox,Low,Moderate,Depression,2024-11-03,2024-01-28,Recovered
+PID00094,41,Male,Opioids,Counseling,Medium,Strong,None,2024-03-31,2024-01-26,Recovered
+PID00095,43,Male,Alcohol,Medication-Assisted Treatment (MAT),Low,Strong,None,2024-01-22,2024-01-30,Recovered
+PID00096,42,Female,Opioids,Counseling,High,Strong,Anxiety,2024-10-16,2024-01-03,Ongoing
+PID00097,62,Female,Opioids,Detox,Low,Moderate,PTSD,2024-04-19,2024-01-14,Ongoing
+PID00098,58,Female,Opioids,Residential Rehab,Medium,Weak,Anxiety,2024-02-18,2024-01-06,Relapsed
+PID00099,46,Male,Alcohol,Residential Rehab,Low,Moderate,PTSD,2024-05-08,2024-01-13,Relapsed
+PID00100,32,Female,Cocaine,Medication-Assisted Treatment (MAT),Low,Strong,PTSD,2024-03-13,2024-01-07,Relapsed
+PID00101,62,Male,Opioids,Residential Rehab,Medium,Moderate,PTSD,2024-12-05,2024-01-04,Relapsed
+PID00102,18,Female,Alcohol,Counseling,Medium,Strong,Depression,2024-02-22,2024-01-19,Recovered
+PID00103,42,Male,Alcohol,Residential Rehab,Medium,Strong,Depression,2024-12-21,2024-01-10,Ongoing
+PID00104,24,Male,Opioids,Detox,Medium,Moderate,Anxiety,2024-06-16,2024-01-08,Ongoing
+PID00105,26,Male,Cocaine,Counseling,High,Moderate,None,2024-02-14,2024-01-23,Recovered
+PID00106,41,Male,Cannabis,Detox,High,Strong,Anxiety,2024-04-14,2024-01-31,Relapsed
+PID00107,18,Female,Cannabis,Detox,Medium,Strong,None,2024-05-29,2024-01-11,Relapsed
+PID00108,61,Female,Alcohol,Detox,Low,Weak,None,2024-05-25,2024-01-15,Recovered
+PID00109,25,Male,Opioids,Counseling,Low,Strong,Depression,2024-07-22,2024-01-13,Recovered
+PID00110,41,Female,Opioids,Medication-Assisted Treatment (MAT),Low,Strong,PTSD,2024-12-27,2024-01-31,Ongoing
+PID00111,28,Male,Alcohol,Counseling,Medium,Strong,PTSD,2024-10-25,2024-01-18,Ongoing
+PID00112,68,Female,Alcohol,Detox,Low,Strong,None,2024-06-15,2024-01-18,Relapsed
+PID00113,34,Female,Cannabis,Medication-Assisted Treatment (MAT),Low,Strong,None,2024-07-19,2024-01-29,Recovered
+PID00114,25,Female,Alcohol,Counseling,High,Weak,PTSD,2024-05-13,2024-01-04,Recovered
+PID00115,52,Male,Opioids,Counseling,High,Strong,Depression,2024-07-29,2024-01-12,Recovered
+PID00116,52,Female,Alcohol,Counseling,High,Moderate,PTSD,2024-02-17,2024-01-14,Recovered
+PID00117,50,Female,Alcohol,Detox,Low,Moderate,Depression,2024-05-05,2024-01-10,Recovered
+PID00118,22,Male,Alcohol,Counseling,Medium,Moderate,PTSD,2024-08-26,2024-01-13,Relapsed
+PID00119,59,Male,Polysubstance,Residential Rehab,Low,Weak,None,2024-01-07,2024-01-12,Recovered
+PID00120,56,Female,Cocaine,Detox,Low,Weak,Anxiety,2024-09-28,2024-01-15,Recovered
+PID00121,58,Female,Polysubstance,Counseling,Low,Strong,PTSD,2024-02-06,2024-01-27,Recovered
+PID00122,45,Female,Opioids,Medication-Assisted Treatment (MAT),Low,Moderate,Anxiety,2024-07-29,2024-01-19,Recovered
+PID00123,24,Female,Alcohol,Medication-Assisted Treatment (MAT),Low,Moderate,Anxiety,2024-06-13,2024-01-09,Relapsed
+PID00124,26,Female,Opioids,Detox,High,Weak,Anxiety,2024-05-04,2024-01-26,Ongoing
+PID00125,25,Male,Opioids,Detox,Low,Moderate,PTSD,2024-12-02,2024-01-05,Ongoing
+PID00126,29,Male,Cocaine,Detox,Medium,Weak,None,2024-07-10,2024-01-22,Recovered
+PID00127,51,Male,Alcohol,Counseling,Medium,Moderate,None,2024-08-05,2024-01-15,Recovered
+PID00128,50,Female,Opioids,Counseling,Low,Strong,Depression,2024-08-01,2024-01-21,Recovered
+PID00129,65,Male,Alcohol,Detox,Low,Moderate,None,2024-03-02,2024-01-09,Recovered
+PID00130,40,Female,Alcohol,Residential Rehab,Low,Weak,PTSD,2024-11-23,2024-01-11,Relapsed
+PID00131,41,Female,Cannabis,Counseling,Medium,Weak,Depression,2024-06-09,2024-01-21,Recovered
+PID00132,54,Female,Opioids,Detox,Low,Strong,Depression,2024-03-06,2024-01-15,Ongoing
+PID00133,52,Male,Alcohol,Counseling,Low,Moderate,Depression,2024-10-12,2024-01-24,Recovered
+PID00134,61,Female,Alcohol,Counseling,Low,Strong,None,2024-08-26,2024-01-10,Ongoing
+PID00135,57,Male,Opioids,Detox,Medium,Strong,PTSD,2024-01-20,2024-01-24,Relapsed
+PID00136,39,Female,Cannabis,Detox,High,Moderate,PTSD,2024-07-06,2024-01-20,Ongoing
+PID00137,44,Male,Cocaine,Medication-Assisted Treatment (MAT),Low,Strong,Depression,2024-03-22,2024-01-31,Ongoing
+PID00138,52,Male,Polysubstance,Counseling,Medium,Weak,PTSD,2024-12-28,2024-01-25,Relapsed
+PID00139,18,Female,Cannabis,Counseling,Medium,Strong,Depression,2024-07-20,2024-01-04,Ongoing
+PID00140,52,Male,Alcohol,Counseling,High,Weak,Anxiety,2024-05-11,2024-01-20,Recovered
+PID00141,54,Male,Cannabis,Detox,High,Strong,PTSD,2024-02-06,2024-01-20,Recovered
+PID00142,64,Female,Opioids,Detox,Medium,Strong,Depression,2024-05-11,2024-01-13,Ongoing
+PID00143,31,Female,Alcohol,Counseling,Medium,Strong,None,2024-03-17,2024-01-03,Ongoing
+PID00144,20,Female,Cocaine,Detox,High,Strong,Depression,2024-03-29,2024-01-16,Recovered
+PID00145,18,Female,Alcohol,Detox,Low,Strong,PTSD,2024-09-09,2024-01-18,Recovered
+PID00146,22,Female,Methamphetamine,Medication-Assisted Treatment (MAT),Low,Strong,Anxiety,2024-12-09,2024-01-13,Relapsed
+PID00147,43,Male,Opioids,Residential Rehab,Low,Moderate,Anxiety,2024-07-12,2024-01-03,Recovered
+PID00148,31,Male,Opioids,Medication-Assisted Treatment (MAT),High,Strong,Depression,2024-06-24,2024-01-09,Recovered
+PID00149,56,Male,Cannabis,Medication-Assisted Treatment (MAT),High,Moderate,Depression,2024-02-02,2024-01-31,Recovered
+PID00150,44,Female,Cocaine,Detox,Low,Strong,None,2024-02-27,2024-01-18,Relapsed
+PID00151,26,Female,Opioids,Residential Rehab,Medium,Weak,Depression,2024-07-19,2024-01-16,Recovered
+PID00152,32,Male,Opioids,Detox,Low,Weak,None,2024-01-28,2024-01-17,Ongoing
+PID00153,32,Male,Alcohol,Residential Rehab,Low,Moderate,None,2024-02-04,2024-01-16,Recovered
+PID00154,43,Female,Opioids,Residential Rehab,High,Strong,Depression,2024-05-04,2024-01-30,Ongoing
+PID00155,59,Male,Alcohol,Medication-Assisted Treatment (MAT),Low,Strong,Depression,2024-11-16,2024-01-23,Relapsed
+PID00156,30,Female,Cannabis,Residential Rehab,Low,Weak,PTSD,2024-02-11,2024-01-13,Recovered
+PID00157,68,Female,Opioids,Counseling,Medium,Strong,None,2024-03-25,2024-01-18,Ongoing
+PID00158,49,Female,Cannabis,Detox,Medium,Strong,None,2024-07-06,2024-01-21,Recovered
+PID00159,56,Male,Alcohol,Counseling,Low,Strong,Anxiety,2024-04-20,2024-01-19,Recovered
+PID00160,66,Female,Alcohol,Counseling,Medium,Strong,PTSD,2024-09-27,2024-01-29,Relapsed
+PID00161,69,Female,Cannabis,Detox,Medium,Strong,Depression,2024-11-20,2024-01-28,Recovered
+PID00162,49,Female,Alcohol,Counseling,Low,Moderate,None,2024-04-14,2024-01-08,Ongoing
+PID00163,21,Female,Alcohol,Residential Rehab,Low,Strong,None,2024-11-15,2024-01-13,Recovered
+PID00164,47,Female,Alcohol,Detox,Medium,Moderate,Depression,2024-02-10,2024-01-19,Recovered
+PID00165,54,Female,Polysubstance,Medication-Assisted Treatment (MAT),Low,Strong,Depression,2024-08-02,2024-01-11,Recovered
+PID00166,40,Male,Cannabis,Residential Rehab,High,Strong,Depression,2024-03-11,2024-01-20,Ongoing
+PID00167,56,Female,Alcohol,Residential Rehab,High,Weak,Depression,2024-02-25,2024-01-19,Recovered
+PID00168,62,Female,Alcohol,Residential Rehab,High,Strong,None,2024-08-23,2024-01-14,Ongoing
+PID00169,32,Male,Alcohol,Counseling,Low,Weak,Anxiety,2024-10-07,2024-01-25,Recovered
+PID00170,60,Female,Cannabis,Residential Rehab,High,Moderate,Depression,2024-04-14,2024-01-24,Recovered
+PID00171,46,Female,Cannabis,Medication-Assisted Treatment (MAT),Low,Strong,Anxiety,2024-06-10,2024-01-24,Ongoing
+PID00172,53,Female,Alcohol,Detox,Low,Weak,None,2024-07-09,2024-01-07,Relapsed
+PID00173,30,Male,Alcohol,Counseling,Low,Strong,PTSD,2024-01-09,2024-01-13,Recovered
+PID00174,49,Male,Alcohol,Medication-Assisted Treatment (MAT),Low,Weak,Anxiety,2024-02-29,2024-01-06,Ongoing
+PID00175,24,Non-binary,Cannabis,Detox,Medium,Strong,Depression,2024-10-31,2024-01-29,Recovered
+PID00176,68,Female,Cannabis,Counseling,Low,Weak,None,2024-08-12,2024-01-06,Ongoing
+PID00177,39,Male,Alcohol,Counseling,Low,Strong,None,2024-11-02,2024-01-05,Relapsed
+PID00178,45,Female,Alcohol,Detox,Medium,Moderate,Depression,2024-07-06,2024-01-28,Relapsed
+PID00179,19,Female,Alcohol,Counseling,Low,Moderate,Depression,2024-03-10,2024-01-26,Ongoing
+PID00180,59,Female,Polysubstance,Medication-Assisted Treatment (MAT),Medium,Weak,Depression,2024-10-19,2024-01-25,Recovered
+PID00181,62,Female,Alcohol,Counseling,Low,Weak,Depression,2024-10-13,2024-01-27,Relapsed
+PID00182,23,Male,Cannabis,Detox,High,Weak,Anxiety,2024-06-17,2024-01-19,Ongoing
+PID00183,45,Male,Opioids,Detox,High,Weak,None,2024-03-02,2024-01-09,Recovered
+PID00184,45,Male,Alcohol,Counseling,Low,Strong,Anxiety,2024-12-14,2024-01-28,Recovered
+PID00185,61,Female,Alcohol,Residential Rehab,Low,Strong,None,2024-01-14,2024-01-06,Relapsed
+PID00186,61,Male,Alcohol,Detox,Low,Strong,Anxiety,2024-06-12,2024-01-25,Relapsed
+PID00187,37,Male,Opioids,Counseling,High,Strong,PTSD,2024-09-01,2024-01-15,Recovered
+PID00188,47,Male,Cannabis,Detox,Low,Strong,PTSD,2024-11-30,2024-01-14,Ongoing
+PID00189,28,Female,Opioids,Counseling,Low,Moderate,Depression,2024-01-08,2024-01-03,Relapsed
+PID00190,45,Female,Opioids,Medication-Assisted Treatment (MAT),Low,Strong,Anxiety,2024-06-02,2024-01-23,Recovered
+PID00191,42,Male,Alcohol,Medication-Assisted Treatment (MAT),Low,Moderate,PTSD,2024-02-05,2024-01-21,Recovered
+PID00192,56,Male,Polysubstance,Detox,Low,Strong,Depression,2024-02-17,2024-01-23,Ongoing
+PID00193,50,Female,Cannabis,Counseling,High,Strong,Anxiety,2024-03-25,2024-01-22,Recovered
+PID00194,18,Male,Alcohol,Detox,Low,Moderate,Anxiety,2024-01-28,2024-01-20,Recovered
+PID00195,44,Male,Polysubstance,Counseling,Low,Moderate,None,2024-07-14,2024-01-13,Ongoing
+PID00196,69,Male,Opioids,Counseling,High,Moderate,Anxiety,2024-07-26,2024-01-22,Relapsed
+PID00197,30,Male,Opioids,Detox,High,Moderate,None,2024-07-22,2024-01-05,Ongoing
+PID00198,58,Male,Cannabis,Detox,Low,Strong,Anxiety,2024-11-02,2024-01-31,Ongoing
+PID00199,20,Male,Cocaine,Counseling,Low,Moderate,PTSD,2024-04-13,2024-01-19,Recovered
+PID00200,56,Male,Cannabis,Residential Rehab,Low,Strong,Anxiety,2024-08-17,2024-01-14,Recovered
+PID00201,23,Female,Alcohol,Residential Rehab,High,Strong,None,2024-04-10,2024-01-12,Ongoing
+PID00202,25,Male,Alcohol,Detox,Low,Moderate,Anxiety,2024-01-29,2024-01-10,Recovered
+PID00203,44,Female,Methamphetamine,Medication-Assisted Treatment (MAT),High,Strong,PTSD,2024-05-06,2024-01-17,Relapsed
+PID00204,26,Female,Alcohol,Counseling,Medium,Strong,PTSD,2024-12-03,2024-01-07,Recovered
+PID00205,54,Male,Alcohol,Counseling,Medium,Weak,Anxiety,2024-01-10,2024-01-06,Recovered
+PID00206,50,Female,Opioids,Medication-Assisted Treatment (MAT),Low,Weak,Depression,2024-04-15,2024-01-28,Recovered
+PID00207,68,Male,Opioids,Residential Rehab,Low,Strong,Depression,2024-06-15,2024-01-30,Relapsed
+PID00208,59,Non-binary,Opioids,Residential Rehab,Low,Strong,Depression,2024-09-13,2024-01-23,Recovered
+PID00209,61,Male,Methamphetamine,Counseling,Low,Strong,None,2024-10-21,2024-01-22,Recovered
+PID00210,41,Male,Alcohol,Counseling,Medium,Strong,Depression,2024-10-03,2024-01-21,Recovered
+PID00211,32,Male,Alcohol,Medication-Assisted Treatment (MAT),High,Weak,Depression,2024-03-05,2024-01-23,Relapsed
+PID00212,49,Non-binary,Alcohol,Detox,Medium,Strong,PTSD,2024-09-27,2024-01-06,Recovered
+PID00213,49,Female,Cocaine,Counseling,Medium,Moderate,Anxiety,2024-07-06,2024-01-17,Recovered
+PID00214,41,Female,Opioids,Counseling,Low,Strong,Anxiety,2024-11-12,2024-01-19,Recovered
+PID00215,58,Male,Alcohol,Counseling,Low,Weak,Depression,2024-05-17,2024-01-14,Ongoing
+PID00216,69,Female,Cocaine,Detox,Low,Strong,None,2024-12-08,2024-01-05,Recovered
+PID00217,66,Male,Cocaine,Detox,Medium,Moderate,None,2024-04-14,2024-01-12,Recovered
+PID00218,66,Female,Cocaine,Residential Rehab,High,Strong,None,2024-02-03,2024-01-17,Recovered
+PID00219,69,Male,Methamphetamine,Detox,Medium,Moderate,Anxiety,2024-04-19,2024-01-12,Ongoing
+PID00220,29,Male,Alcohol,Counseling,Low,Strong,PTSD,2024-02-02,2024-01-26,Ongoing
+PID00221,56,Male,Cannabis,Detox,Low,Strong,Depression,2024-12-19,2024-01-25,Ongoing
+PID00222,19,Male,Opioids,Detox,Medium,Weak,Depression,2024-08-18,2024-01-20,Relapsed
+PID00223,20,Female,Cocaine,Detox,Low,Weak,Depression,2024-11-12,2024-01-03,Relapsed
+PID00224,66,Male,Cannabis,Detox,High,Weak,Anxiety,2024-09-22,2024-01-05,Recovered
+PID00225,54,Female,Cannabis,Medication-Assisted Treatment (MAT),High,Moderate,Anxiety,2024-06-30,2024-01-23,Ongoing
+PID00226,66,Male,Cannabis,Detox,Medium,Weak,Anxiety,2024-12-05,2024-01-28,Ongoing
+PID00227,34,Female,Alcohol,Residential Rehab,Low,Strong,Depression,2024-03-05,2024-01-29,Relapsed
+PID00228,66,Male,Opioids,Counseling,Low,Strong,Anxiety,2024-11-28,2024-01-14,Recovered
+PID00229,19,Male,Polysubstance,Counseling,Low,Strong,PTSD,2024-01-01,2024-01-03,Ongoing
+PID00230,19,Female,Methamphetamine,Counseling,Low,Moderate,Anxiety,2024-05-12,2024-01-05,Recovered
+PID00231,45,Male,Alcohol,Counseling,Low,Strong,PTSD,2024-03-20,2024-01-05,Relapsed
+PID00232,40,Male,Alcohol,Medication-Assisted Treatment (MAT),Medium,Strong,Depression,2024-09-27,2024-01-07,Recovered
+PID00233,54,Female,Alcohol,Detox,Medium,Moderate,None,2024-08-28,2024-01-21,Recovered
+PID00234,49,Female,Cannabis,Counseling,Low,Weak,Anxiety,2024-01-28,2024-01-31,Recovered
+PID00235,50,Male,Cocaine,Medication-Assisted Treatment (MAT),Low,Strong,Depression,2024-08-10,2024-01-27,Recovered
+PID00236,18,Male,Alcohol,Residential Rehab,Low,Strong,Depression,2024-01-23,2024-01-03,Ongoing
+PID00237,36,Female,Opioids,Medication-Assisted Treatment (MAT),Low,Strong,PTSD,2024-04-18,2024-01-06,Recovered
+PID00238,19,Male,Cocaine,Counseling,High,Strong,None,2024-04-16,2024-01-31,Recovered
+PID00239,61,Male,Cannabis,Medication-Assisted Treatment (MAT),Low,Strong,Anxiety,2024-05-24,2024-01-31,Relapsed
+PID00240,43,Male,Opioids,Counseling,Low,Moderate,Depression,2024-12-19,2024-01-28,Recovered
+PID00241,49,Female,Opioids,Counseling,Low,Moderate,None,2024-05-18,2024-01-28,Ongoing
+PID00242,23,Female,Opioids,Detox,High,Moderate,PTSD,2024-10-10,2024-01-06,Recovered
+PID00243,49,Male,Alcohol,Counseling,Medium,Strong,Anxiety,2024-10-24,2024-01-19,Recovered
+PID00244,21,Male,Opioids,Detox,Low,Weak,Anxiety,2024-04-08,2024-01-16,Relapsed
+PID00245,28,Male,Cannabis,Counseling,Medium,Strong,Depression,2024-11-12,2024-01-20,Ongoing
+PID00246,34,Female,Cocaine,Medication-Assisted Treatment (MAT),Medium,Moderate,PTSD,2024-05-02,2024-01-29,Recovered
+PID00247,55,Male,Opioids,Detox,High,Weak,Anxiety,2024-11-15,2024-01-03,Relapsed
+PID00248,41,Male,Cannabis,Detox,Low,Strong,None,2024-10-13,2024-01-24,Relapsed
+PID00249,22,Female,Alcohol,Detox,High,Strong,Anxiety,2024-03-21,2024-01-18,Relapsed
+PID00250,69,Male,Opioids,Residential Rehab,High,Weak,Anxiety,2024-01-10,2024-01-05,Recovered
+PID00251,51,Female,Alcohol,Counseling,High,Strong,Anxiety,2024-01-08,2024-01-25,Recovered
+PID00252,23,Male,Alcohol,Counseling,Medium,Moderate,None,2024-07-23,2024-01-23,Ongoing
+PID00253,39,Male,Cannabis,Medication-Assisted Treatment (MAT),Medium,Strong,None,2024-11-10,2024-01-11,Ongoing
+PID00254,28,Male,Polysubstance,Medication-Assisted Treatment (MAT),Low,Moderate,Anxiety,2024-07-15,2024-01-25,Recovered
+PID00255,65,Female,Alcohol,Counseling,Medium,Strong,PTSD,2024-07-16,2024-01-06,Ongoing
+PID00256,33,Female,Opioids,Counseling,Medium,Strong,Anxiety,2024-01-30,2024-01-23,Recovered
+PID00257,50,Female,Cocaine,Medication-Assisted Treatment (MAT),Medium,Moderate,Anxiety,2024-01-20,2024-01-07,Recovered
+PID00258,26,Male,Alcohol,Counseling,Low,Strong,Depression,2024-02-17,2024-01-13,Recovered
+PID00259,23,Female,Opioids,Detox,Medium,Strong,Anxiety,2024-05-09,2024-01-23,Ongoing
+PID00260,33,Male,Cannabis,Medication-Assisted Treatment (MAT),High,Strong,Depression,2024-10-19,2024-01-28,Recovered
+PID00261,46,Male,Opioids,Counseling,Low,Strong,None,2024-05-11,2024-01-11,Relapsed
+PID00262,20,Female,Alcohol,Detox,High,Strong,Anxiety,2024-12-21,2024-01-28,Ongoing
+PID00263,37,Male,Alcohol,Counseling,Medium,Strong,None,2024-02-23,2024-01-05,Ongoing
+PID00264,53,Male,Cannabis,Detox,High,Weak,Anxiety,2024-10-07,2024-01-08,Relapsed
+PID00265,36,Male,Opioids,Detox,Low,Strong,PTSD,2024-09-21,2024-01-26,Ongoing
+PID00266,43,Male,Alcohol,Medication-Assisted Treatment (MAT),Low,Moderate,Anxiety,2024-08-02,2024-01-13,Relapsed
+PID00267,20,Male,Cannabis,Detox,High,Strong,Depression,2024-10-16,2024-01-11,Recovered
+PID00268,36,Female,Alcohol,Counseling,Low,Strong,Anxiety,2024-02-12,2024-01-31,Recovered
+PID00269,37,Male,Cannabis,Counseling,High,Weak,Depression,2024-03-14,2024-01-17,Recovered
+PID00270,49,Female,Alcohol,Detox,Low,Strong,PTSD,2024-12-15,2024-01-25,Recovered
+PID00271,24,Female,Polysubstance,Residential Rehab,Medium,Weak,Anxiety,2024-10-04,2024-01-30,Relapsed
+PID00272,69,Male,Alcohol,Detox,Low,Strong,PTSD,2024-11-21,2024-01-05,Recovered
+PID00273,58,Male,Alcohol,Counseling,Medium,Moderate,Depression,2024-08-29,2024-01-03,Ongoing
+PID00274,50,Male,Alcohol,Counseling,Low,Moderate,Depression,2024-05-09,2024-01-22,Ongoing
+PID00275,57,Female,Alcohol,Detox,Low,Weak,Anxiety,2024-12-15,2024-01-31,Ongoing
+PID00276,56,Male,Cocaine,Detox,Low,Moderate,None,2024-07-12,2024-01-24,Recovered
+PID00277,35,Female,Polysubstance,Medication-Assisted Treatment (MAT),Low,Moderate,PTSD,2024-02-01,2024-01-21,Ongoing
+PID00278,57,Male,Alcohol,Residential Rehab,High,Strong,Anxiety,2024-04-15,2024-01-16,Recovered
+PID00279,18,Female,Opioids,Detox,High,Strong,Anxiety,2024-07-22,2024-01-19,Recovered
+PID00280,28,Male,Cannabis,Counseling,Low,Weak,Depression,2024-01-01,2024-01-24,Ongoing
+PID00281,45,Male,Cocaine,Medication-Assisted Treatment (MAT),Medium,Strong,None,2024-09-01,2024-01-16,Ongoing
+PID00282,42,Female,Opioids,Medication-Assisted Treatment (MAT),Low,Strong,PTSD,2024-03-12,2024-01-19,Recovered
+PID00283,67,Female,Alcohol,Counseling,Medium,Moderate,Depression,2024-11-01,2024-01-27,Relapsed
+PID00284,40,Male,Opioids,Counseling,High,Strong,Anxiety,2024-01-15,2024-01-29,Recovered
+PID00285,48,Female,Cannabis,Counseling,High,Weak,Depression,2024-02-22,2024-01-16,Recovered
+PID00286,47,Male,Alcohol,Medication-Assisted Treatment (MAT),Low,Moderate,None,2024-01-08,2024-01-14,Recovered
+PID00287,59,Female,Opioids,Medication-Assisted Treatment (MAT),Medium,Moderate,Depression,2024-11-25,2024-01-18,Ongoing
+PID00288,52,Female,Alcohol,Detox,Low,Weak,PTSD,2024-02-15,2024-01-03,Ongoing
+PID00289,24,Male,Cannabis,Counseling,High,Strong,Depression,2024-11-20,2024-01-15,Recovered
+PID00290,33,Male,Alcohol,Residential Rehab,Low,Strong,PTSD,2024-04-23,2024-01-08,Recovered
+PID00291,43,Male,Opioids,Medication-Assisted Treatment (MAT),Medium,Moderate,PTSD,2024-05-26,2024-01-19,Ongoing
+PID00292,65,Female,Opioids,Residential Rehab,Medium,Strong,PTSD,2024-06-14,2024-01-14,Recovered
+PID00293,69,Female,Opioids,Medication-Assisted Treatment (MAT),Medium,Moderate,PTSD,2024-05-18,2024-01-25,Recovered
+PID00294,66,Male,Alcohol,Counseling,Low,Weak,None,2024-04-26,2024-01-21,Ongoing
+PID00295,19,Male,Opioids,Counseling,High,Moderate,Depression,2024-10-25,2024-01-08,Recovered
+PID00296,18,Female,Opioids,Counseling,Low,Strong,Anxiety,2024-10-02,2024-01-09,Relapsed
+PID00297,65,Non-binary,Opioids,Detox,Medium,Weak,Depression,2024-10-03,2024-01-03,Recovered
+PID00298,29,Female,Opioids,Counseling,Low,Moderate,None,2024-12-03,2024-01-03,Ongoing
+PID00299,22,Male,Cannabis,Medication-Assisted Treatment (MAT),Low,Moderate,Anxiety,2024-11-08,2024-01-31,Recovered
+PID00300,54,Male,Cocaine,Detox,Medium,Strong,PTSD,2024-06-26,2024-01-07,Relapsed
+PID00301,49,Male,Alcohol,Medication-Assisted Treatment (MAT),Low,Weak,PTSD,2024-11-25,2024-01-08,Recovered
+PID00302,26,Female,Cocaine,Counseling,Low,Moderate,Depression,2024-12-19,2024-01-18,Ongoing
+PID00303,58,Male,Opioids,Residential Rehab,Low,Moderate,Depression,2024-06-02,2024-01-27,Ongoing
+PID00304,52,Female,Alcohol,Detox,Low,Weak,Depression,2024-07-19,2024-01-18,Recovered
+PID00305,36,Male,Alcohol,Detox,Medium,Strong,Anxiety,2024-04-24,2024-01-16,Recovered
+PID00306,65,Female,Alcohol,Counseling,High,Moderate,Depression,2024-06-07,2024-01-03,Ongoing
+PID00307,33,Female,Cannabis,Detox,Low,Weak,Depression,2024-02-11,2024-01-15,Relapsed
+PID00308,20,Female,Cannabis,Medication-Assisted Treatment (MAT),Low,Strong,None,2024-09-03,2024-01-22,Recovered
+PID00309,37,Male,Cannabis,Medication-Assisted Treatment (MAT),Low,Moderate,None,2024-03-08,2024-01-12,Recovered
+PID00310,41,Male,Opioids,Detox,Low,Weak,Anxiety,2024-11-21,2024-01-26,Relapsed
+PID00311,50,Male,Opioids,Counseling,Medium,Moderate,Anxiety,2024-11-29,2024-01-12,Recovered
+PID00312,41,Female,Alcohol,Counseling,Medium,Moderate,Depression,2024-07-14,2024-01-11,Relapsed
+PID00313,69,Female,Alcohol,Counseling,Low,Weak,PTSD,2024-03-30,2024-01-15,Ongoing
+PID00314,28,Female,Opioids,Residential Rehab,Low,Weak,None,2024-04-20,2024-01-05,Ongoing
+PID00315,66,Female,Alcohol,Medication-Assisted Treatment (MAT),Low,Strong,Depression,2024-12-24,2024-01-29,Recovered
+PID00316,25,Female,Alcohol,Counseling,High,Strong,Depression,2024-05-24,2024-01-20,Recovered
+PID00317,53,Male,Opioids,Medication-Assisted Treatment (MAT),High,Moderate,PTSD,2024-10-01,2024-01-22,Ongoing
+PID00318,55,Female,Cannabis,Counseling,Low,Moderate,PTSD,2024-06-27,2024-01-04,Relapsed
+PID00319,57,Male,Polysubstance,Residential Rehab,Low,Moderate,Depression,2024-08-28,2024-01-19,Relapsed
+PID00320,37,Male,Methamphetamine,Counseling,High,Moderate,PTSD,2024-11-21,2024-01-30,Recovered
+PID00321,52,Female,Opioids,Medication-Assisted Treatment (MAT),High,Strong,Anxiety,2024-11-14,2024-01-21,Recovered
+PID00322,65,Male,Opioids,Medication-Assisted Treatment (MAT),Low,Moderate,Anxiety,2024-11-26,2024-01-25,Recovered
+PID00323,42,Male,Opioids,Detox,Low,Strong,PTSD,2024-06-01,2024-01-15,Relapsed
+PID00324,52,Female,Cannabis,Medication-Assisted Treatment (MAT),Low,Moderate,None,2024-04-13,2024-01-15,Recovered
+PID00325,42,Male,Alcohol,Detox,Medium,Moderate,Anxiety,2024-03-15,2024-01-03,Recovered
+PID00326,46,Female,Opioids,Counseling,Low,Strong,None,2024-05-07,2024-01-04,Recovered
+PID00327,35,Male,Cocaine,Counseling,Low,Strong,Anxiety,2024-07-17,2024-01-03,Recovered
+PID00328,63,Male,Alcohol,Residential Rehab,Medium,Moderate,PTSD,2024-06-02,2024-01-26,Relapsed
+PID00329,35,Male,Opioids,Medication-Assisted Treatment (MAT),Low,Moderate,Anxiety,2024-02-25,2024-01-07,Ongoing
+PID00330,19,Male,Opioids,Medication-Assisted Treatment (MAT),Medium,Strong,None,2024-10-04,2024-01-26,Recovered
+PID00331,52,Female,Alcohol,Medication-Assisted Treatment (MAT),Low,Weak,None,2024-12-10,2024-01-05,Recovered
+PID00332,33,Male,Alcohol,Counseling,Low,Moderate,Depression,2024-01-19,2024-01-31,Recovered
+PID00333,58,Female,Alcohol,Residential Rehab,Medium,Weak,None,2024-06-07,2024-01-30,Recovered
+PID00334,53,Male,Alcohol,Counseling,Low,Moderate,None,2024-01-26,2024-01-09,Recovered
+PID00335,50,Female,Alcohol,Counseling,High,Moderate,PTSD,2024-06-17,2024-01-26,Ongoing
+PID00336,21,Female,Cocaine,Detox,Medium,Weak,Depression,2024-01-23,2024-01-24,Recovered
+PID00337,50,Female,Alcohol,Medication-Assisted Treatment (MAT),Low,Moderate,None,2024-02-16,2024-01-15,Recovered
+PID00338,31,Male,Opioids,Medication-Assisted Treatment (MAT),Medium,Moderate,None,2024-01-13,2024-01-31,Recovered
+PID00339,38,Male,Alcohol,Counseling,Low,Strong,Depression,2024-08-04,2024-01-25,Ongoing
+PID00340,65,Male,Methamphetamine,Detox,High,Moderate,None,2024-11-17,2024-01-30,Ongoing
+PID00341,37,Female,Alcohol,Medication-Assisted Treatment (MAT),Low,Strong,Depression,2024-07-12,2024-01-20,Ongoing
+PID00342,25,Male,Opioids,Detox,Medium,Strong,Depression,2024-05-23,2024-01-26,Ongoing
+PID00343,24,Male,Cocaine,Medication-Assisted Treatment (MAT),Low,Strong,Anxiety,2024-03-13,2024-01-23,Ongoing
+PID00344,20,Female,Cocaine,Residential Rehab,Low,Strong,Anxiety,2024-06-04,2024-01-09,Recovered
+PID00345,34,Male,Alcohol,Counseling,High,Weak,PTSD,2024-03-17,2024-01-03,Relapsed
+PID00346,50,Female,Cocaine,Detox,High,Strong,Depression,2024-06-17,2024-01-07,Recovered
+PID00347,65,Male,Opioids,Medication-Assisted Treatment (MAT),Low,Moderate,None,2024-10-13,2024-01-19,Recovered
+PID00348,29,Male,Opioids,Medication-Assisted Treatment (MAT),Low,Weak,Depression,2024-03-25,2024-01-30,Ongoing
+PID00349,68,Female,Alcohol,Counseling,High,Moderate,Depression,2024-06-30,2024-01-31,Recovered
+PID00350,39,Male,Alcohol,Residential Rehab,High,Strong,Depression,2024-11-10,2024-01-10,Relapsed
+PID00351,39,Female,Cannabis,Detox,Low,Moderate,Anxiety,2024-10-23,2024-01-17,Recovered
+PID00352,63,Male,Opioids,Counseling,Low,Moderate,None,2024-04-21,2024-01-22,Relapsed
+PID00353,47,Male,Opioids,Medication-Assisted Treatment (MAT),Low,Moderate,PTSD,2024-08-17,2024-01-06,Relapsed
+PID00354,55,Female,Cannabis,Medication-Assisted Treatment (MAT),High,Moderate,None,2024-04-05,2024-01-04,Relapsed
+PID00355,55,Female,Cannabis,Detox,Low,Weak,Depression,2024-06-16,2024-01-07,Relapsed
+PID00356,62,Female,Alcohol,Medication-Assisted Treatment (MAT),Low,Moderate,Anxiety,2024-06-04,2024-01-03,Relapsed
+PID00357,68,Male,Opioids,Counseling,Medium,Strong,Anxiety,2024-04-14,2024-01-27,Ongoing
+PID00358,25,Female,Alcohol,Counseling,Low,Moderate,Anxiety,2024-07-11,2024-01-07,Recovered
+PID00359,44,Male,Cannabis,Detox,Low,Strong,Depression,2024-11-25,2024-01-08,Recovered
+PID00360,44,Male,Cannabis,Medication-Assisted Treatment (MAT),Low,Weak,PTSD,2024-05-11,2024-01-04,Ongoing
+PID00361,51,Female,Polysubstance,Detox,Low,Strong,Anxiety,2024-12-20,2024-01-28,Relapsed
+PID00362,38,Male,Alcohol,Counseling,Low,Strong,PTSD,2024-05-17,2024-01-28,Ongoing
+PID00363,47,Non-binary,Alcohol,Detox,Medium,Weak,Anxiety,2024-11-26,2024-01-03,Relapsed
+PID00364,50,Male,Alcohol,Medication-Assisted Treatment (MAT),Low,Moderate,Depression,2024-09-26,2024-01-06,Relapsed
+PID00365,45,Male,Alcohol,Counseling,Medium,Strong,PTSD,2024-02-07,2024-01-09,Recovered
+PID00366,64,Female,Alcohol,Medication-Assisted Treatment (MAT),High,Moderate,Depression,2024-02-14,2024-01-24,Recovered
+PID00367,50,Female,Methamphetamine,Detox,Medium,Weak,None,2024-06-11,2024-01-28,Recovered
+PID00368,22,Female,Alcohol,Counseling,Low,Strong,PTSD,2024-11-26,2024-01-03,Recovered
+PID00369,65,Female,Alcohol,Counseling,Low,Weak,Depression,2024-09-09,2024-01-03,Ongoing
+PID00370,36,Female,Cannabis,Medication-Assisted Treatment (MAT),Low,Strong,None,2024-06-17,2024-01-10,Relapsed
+PID00371,21,Female,Opioids,Residential Rehab,Low,Moderate,Anxiety,2024-10-11,2024-01-22,Ongoing
+PID00372,52,Female,Cannabis,Detox,Low,Weak,Depression,2024-09-30,2024-01-18,Recovered
+PID00373,66,Male,Alcohol,Counseling,Medium,Strong,PTSD,2024-01-20,2024-01-23,Recovered
+PID00374,34,Male,Opioids,Detox,Low,Moderate,Depression,2024-08-26,2024-01-15,Recovered
+PID00375,61,Male,Alcohol,Counseling,Low,Strong,None,2024-09-26,2024-01-25,Ongoing
+PID00376,45,Non-binary,Alcohol,Detox,Low,Moderate,None,2024-11-05,2024-01-26,Recovered
+PID00377,47,Female,Methamphetamine,Counseling,Medium,Moderate,None,2024-01-31,2024-01-28,Recovered
+PID00378,46,Male,Alcohol,Counseling,Low,Moderate,Anxiety,2024-11-09,2024-01-25,Recovered
+PID00379,63,Female,Opioids,Counseling,Medium,Strong,Anxiety,2024-04-13,2024-01-20,Recovered
+PID00380,23,Female,Opioids,Counseling,Low,Strong,PTSD,2024-06-18,2024-01-22,Relapsed
+PID00381,52,Male,Alcohol,Medication-Assisted Treatment (MAT),High,Strong,Depression,2024-07-04,2024-01-12,Recovered
+PID00382,58,Female,Cocaine,Counseling,High,Strong,Anxiety,2024-05-07,2024-01-14,Recovered
+PID00383,54,Female,Alcohol,Detox,Low,Moderate,Anxiety,2024-07-28,2024-01-03,Recovered
+PID00384,41,Male,Cannabis,Medication-Assisted Treatment (MAT),Low,Weak,Depression,2024-10-07,2024-01-12,Recovered
+PID00385,46,Female,Polysubstance,Detox,Low,Moderate,Anxiety,2024-09-09,2024-01-11,Ongoing
+PID00386,66,Male,Opioids,Counseling,Low,Moderate,None,2024-01-19,2024-01-05,Ongoing
+PID00387,63,Female,Methamphetamine,Counseling,Medium,Weak,None,2024-07-18,2024-01-30,Recovered
+PID00388,48,Non-binary,Alcohol,Counseling,High,Moderate,Depression,2024-08-07,2024-01-21,Ongoing
+PID00389,52,Female,Opioids,Detox,Medium,Weak,Depression,2024-05-15,2024-01-28,Recovered
+PID00390,50,Male,Alcohol,Counseling,High,Moderate,Depression,2024-08-10,2024-01-11,Ongoing
+PID00391,69,Female,Cannabis,Residential Rehab,Low,Strong,None,2024-01-03,2024-01-12,Recovered
+PID00392,38,Female,Polysubstance,Counseling,Low,Strong,Depression,2024-08-23,2024-01-21,Recovered
+PID00393,49,Male,Alcohol,Counseling,Medium,Moderate,PTSD,2024-12-07,2024-01-18,Ongoing
+PID00394,40,Female,Cannabis,Counseling,Low,Strong,Depression,2024-08-15,2024-01-26,Relapsed
+PID00395,50,Male,Alcohol,Detox,Medium,Strong,PTSD,2024-05-21,2024-01-20,Ongoing
+PID00396,20,Female,Opioids,Counseling,Low,Moderate,Anxiety,2024-01-09,2024-01-16,Recovered
+PID00397,35,Male,Opioids,Medication-Assisted Treatment (MAT),Low,Moderate,PTSD,2024-07-08,2024-01-31,Recovered
+PID00398,42,Male,Polysubstance,Detox,High,Moderate,Depression,2024-12-15,2024-01-05,Relapsed
+PID00399,59,Male,Opioids,Detox,Low,Strong,PTSD,2024-06-13,2024-01-04,Recovered
+PID00400,48,Female,Alcohol,Detox,High,Strong,Depression,2024-05-18,2024-01-03,Recovered
+PID00401,20,Male,Alcohol,Counseling,High,Moderate,PTSD,2024-10-02,2024-01-20,Recovered
+PID00402,57,Female,Alcohol,Residential Rehab,Medium,Weak,None,2024-10-17,2024-01-26,Recovered
+PID00403,63,Male,Alcohol,Detox,Medium,Moderate,Depression,2024-02-22,2024-01-11,Recovered
+PID00404,41,Male,Alcohol,Counseling,Medium,Weak,None,2024-06-23,2024-01-15,Recovered
+PID00405,67,Female,Cocaine,Detox,High,Moderate,Anxiety,2024-04-19,2024-01-04,Recovered
+PID00406,49,Female,Opioids,Residential Rehab,Low,Moderate,Depression,2024-07-21,2024-01-09,Relapsed
+PID00407,64,Male,Opioids,Detox,Low,Strong,Anxiety,2024-05-15,2024-01-18,Recovered
+PID00408,39,Female,Alcohol,Counseling,Medium,Moderate,Depression,2024-01-04,2024-01-23,Recovered
+PID00409,40,Female,Cocaine,Medication-Assisted Treatment (MAT),Low,Moderate,PTSD,2024-06-03,2024-01-21,Ongoing
+PID00410,19,Female,Cannabis,Medication-Assisted Treatment (MAT),Low,Moderate,PTSD,2024-06-20,2024-01-27,Ongoing
+PID00411,44,Male,Alcohol,Counseling,Low,Moderate,Depression,2024-12-23,2024-01-17,Recovered
+PID00412,59,Male,Cannabis,Counseling,Medium,Moderate,Anxiety,2024-02-16,2024-01-24,Relapsed
+PID00413,19,Female,Opioids,Counseling,High,Strong,None,2024-04-03,2024-01-13,Recovered
+PID00414,43,Male,Alcohol,Detox,Low,Moderate,None,2024-02-17,2024-01-03,Relapsed
+PID00415,34,Female,Opioids,Detox,High,Strong,Anxiety,2024-08-27,2024-01-23,Recovered
+PID00416,57,Female,Opioids,Counseling,Medium,Weak,None,2024-12-12,2024-01-09,Recovered
+PID00417,50,Female,Alcohol,Detox,High,Strong,Anxiety,2024-07-31,2024-01-22,Relapsed
+PID00418,26,Female,Methamphetamine,Detox,Medium,Strong,Anxiety,2024-12-05,2024-01-10,Ongoing
+PID00419,60,Non-binary,Cocaine,Counseling,Medium,Moderate,None,2024-11-19,2024-01-12,Recovered
+PID00420,65,Male,Cannabis,Residential Rehab,Low,Moderate,Anxiety,2024-05-18,2024-01-07,Recovered
+PID00421,56,Female,Opioids,Counseling,High,Moderate,Anxiety,2024-07-23,2024-01-11,Recovered
+PID00422,46,Male,Opioids,Detox,Low,Strong,Anxiety,2024-03-13,2024-01-27,Ongoing
+PID00423,59,Male,Cannabis,Detox,High,Moderate,None,2024-01-04,2024-01-27,Recovered
+PID00424,43,Female,Opioids,Residential Rehab,High,Strong,None,2024-03-16,2024-01-03,Recovered
+PID00425,52,Female,Alcohol,Detox,Low,Weak,Anxiety,2024-11-24,2024-01-04,Recovered
+PID00426,67,Non-binary,Opioids,Detox,Low,Weak,Anxiety,2024-03-17,2024-01-21,Ongoing
+PID00427,42,Female,Cocaine,Counseling,Medium,Moderate,Anxiety,2024-10-30,2024-01-16,Relapsed
+PID00428,41,Male,Opioids,Counseling,Low,Strong,Anxiety,2024-09-12,2024-01-22,Ongoing
+PID00429,30,Male,Alcohol,Counseling,High,Moderate,Depression,2024-04-11,2024-01-12,Recovered
+PID00430,24,Female,Cannabis,Detox,Low,Strong,PTSD,2024-04-15,2024-01-11,Relapsed
+PID00431,53,Male,Alcohol,Detox,Low,Moderate,Anxiety,2024-11-28,2024-01-12,Ongoing
+PID00432,62,Male,Alcohol,Residential Rehab,High,Strong,Anxiety,2024-02-08,2024-01-31,Relapsed
+PID00433,37,Male,Alcohol,Detox,Medium,Weak,Depression,2024-11-09,2024-01-08,Recovered
+PID00434,18,Male,Alcohol,Counseling,High,Strong,Depression,2024-10-01,2024-01-19,Recovered
+PID00435,25,Male,Cannabis,Medication-Assisted Treatment (MAT),Low,Moderate,None,2024-03-28,2024-01-30,Ongoing
+PID00436,63,Male,Opioids,Counseling,Medium,Moderate,Anxiety,2024-07-29,2024-01-27,Recovered
+PID00437,33,Male,Alcohol,Counseling,Medium,Moderate,Depression,2024-03-17,2024-01-08,Ongoing
+PID00438,31,Male,Cocaine,Detox,Medium,Strong,Anxiety,2024-03-17,2024-01-06,Relapsed
+PID00439,29,Non-binary,Cocaine,Counseling,Medium,Weak,Anxiety,2024-01-28,2024-01-22,Relapsed
+PID00440,68,Male,Cocaine,Medication-Assisted Treatment (MAT),Medium,Moderate,Depression,2024-09-01,2024-01-05,Relapsed
+PID00441,40,Male,Alcohol,Residential Rehab,Low,Moderate,Anxiety,2024-03-06,2024-01-25,Ongoing
+PID00442,32,Female,Opioids,Detox,Low,Strong,Anxiety,2024-09-22,2024-01-21,Recovered
+PID00443,45,Male,Polysubstance,Detox,Medium,Moderate,Anxiety,2024-07-23,2024-01-20,Recovered
+PID00444,51,Female,Cannabis,Residential Rehab,Low,Moderate,Anxiety,2024-02-27,2024-01-28,Recovered
+PID00445,19,Female,Alcohol,Medication-Assisted Treatment (MAT),Medium,Strong,Anxiety,2024-07-19,2024-01-26,Ongoing
+PID00446,49,Male,Alcohol,Medication-Assisted Treatment (MAT),Low,Strong,None,2024-08-12,2024-01-06,Recovered
+PID00447,40,Male,Opioids,Detox,Medium,Weak,Anxiety,2024-05-21,2024-01-10,Recovered
+PID00448,39,Female,Methamphetamine,Counseling,Medium,Strong,Depression,2024-03-24,2024-01-19,Ongoing
+PID00449,68,Female,Opioids,Medication-Assisted Treatment (MAT),Low,Strong,Depression,2024-05-22,2024-01-07,Ongoing
+PID00450,42,Male,Opioids,Counseling,Low,Moderate,Anxiety,2024-12-17,2024-01-15,Relapsed
+PID00451,39,Female,Alcohol,Counseling,Low,Moderate,PTSD,2024-02-02,2024-01-27,Ongoing
+PID00452,39,Male,Cannabis,Detox,Medium,Strong,Depression,2024-05-31,2024-01-03,Ongoing
+PID00453,66,Non-binary,Cocaine,Counseling,High,Moderate,PTSD,2024-06-06,2024-01-29,Ongoing
+PID00454,69,Male,Alcohol,Detox,Low,Strong,Depression,2024-05-20,2024-01-15,Relapsed
+PID00455,59,Female,Cannabis,Counseling,Medium,Strong,Anxiety,2024-09-07,2024-01-06,Ongoing
+PID00456,23,Female,Polysubstance,Residential Rehab,Low,Strong,PTSD,2024-10-29,2024-01-24,Relapsed
+PID00457,32,Female,Alcohol,Counseling,Low,Weak,Anxiety,2024-04-21,2024-01-28,Relapsed
+PID00458,60,Female,Opioids,Medication-Assisted Treatment (MAT),High,Strong,Anxiety,2024-05-23,2024-01-26,Relapsed
+PID00459,54,Male,Alcohol,Detox,Low,Strong,Depression,2024-07-27,2024-01-16,Recovered
+PID00460,50,Male,Cannabis,Counseling,Low,Moderate,PTSD,2024-08-11,2024-01-05,Recovered
+PID00461,25,Male,Opioids,Residential Rehab,Low,Weak,Depression,2024-02-12,2024-01-07,Recovered
+PID00462,61,Male,Opioids,Detox,Low,Strong,None,2024-09-20,2024-01-09,Recovered
+PID00463,61,Female,Cannabis,Detox,Low,Moderate,Depression,2024-08-31,2024-01-03,Recovered
+PID00464,22,Male,Alcohol,Counseling,Low,Strong,None,2024-01-03,2024-01-25,Recovered
+PID00465,56,Male,Methamphetamine,Detox,Medium,Moderate,Anxiety,2024-05-04,2024-01-31,Recovered
+PID00466,21,Non-binary,Opioids,Medication-Assisted Treatment (MAT),Low,Moderate,PTSD,2024-09-24,2024-01-14,Ongoing
+PID00467,23,Female,Alcohol,Residential Rehab,Medium,Moderate,Anxiety,2024-03-24,2024-01-13,Ongoing
+PID00468,62,Female,Cannabis,Counseling,Low,Strong,None,2024-01-16,2024-01-26,Recovered
+PID00469,49,Non-binary,Cannabis,Detox,Low,Strong,Depression,2024-11-29,2024-01-10,Ongoing
+PID00470,69,Male,Alcohol,Counseling,Medium,Strong,Depression,2024-02-28,2024-01-27,Ongoing
+PID00471,47,Male,Cocaine,Medication-Assisted Treatment (MAT),High,Strong,Anxiety,2024-06-25,2024-01-08,Ongoing
+PID00472,64,Female,Methamphetamine,Detox,Low,Strong,Depression,2024-03-03,2024-01-30,Relapsed
+PID00473,52,Female,Alcohol,Counseling,High,Moderate,Depression,2024-02-18,2024-01-24,Recovered
+PID00474,57,Male,Polysubstance,Counseling,Medium,Weak,None,2024-11-02,2024-01-04,Recovered
+PID00475,69,Female,Alcohol,Counseling,Medium,Weak,None,2024-09-02,2024-01-21,Recovered
+PID00476,33,Male,Alcohol,Detox,Medium,Weak,Anxiety,2024-10-15,2024-01-22,Recovered
+PID00477,30,Male,Alcohol,Medication-Assisted Treatment (MAT),Low,Moderate,None,2024-10-12,2024-01-22,Ongoing
+PID00478,67,Female,Cocaine,Detox,Low,Moderate,Anxiety,2024-11-27,2024-01-26,Recovered
+PID00479,59,Female,Cannabis,Detox,Medium,Strong,Depression,2024-01-15,2024-01-16,Recovered
+PID00480,47,Female,Alcohol,Medication-Assisted Treatment (MAT),Low,Moderate,PTSD,2024-12-03,2024-01-03,Recovered
+PID00481,36,Male,Opioids,Medication-Assisted Treatment (MAT),High,Moderate,PTSD,2024-09-11,2024-01-12,Recovered
+PID00482,34,Female,Opioids,Detox,Low,Moderate,None,2024-04-01,2024-01-18,Ongoing
+PID00483,36,Male,Alcohol,Detox,Low,Moderate,Depression,2024-10-05,2024-01-06,Ongoing
+PID00484,45,Male,Cocaine,Detox,Medium,Strong,PTSD,2024-07-24,2024-01-29,Recovered
+PID00485,43,Female,Cocaine,Detox,Low,Strong,Depression,2024-04-03,2024-01-30,Recovered
+PID00486,54,Non-binary,Opioids,Detox,Medium,Weak,Depression,2024-08-12,2024-01-31,Recovered
+PID00487,43,Female,Polysubstance,Detox,Medium,Strong,Depression,2024-10-27,2024-01-13,Recovered
+PID00488,40,Female,Opioids,Counseling,High,Moderate,None,2024-11-13,2024-01-18,Relapsed
+PID00489,26,Female,Polysubstance,Medication-Assisted Treatment (MAT),Medium,Weak,None,2024-07-17,2024-01-29,Recovered
+PID00490,29,Female,Cannabis,Counseling,Medium,Moderate,PTSD,2024-09-27,2024-01-22,Ongoing
+PID00491,18,Male,Opioids,Counseling,Medium,Moderate,Anxiety,2024-08-21,2024-01-03,Relapsed
+PID00492,18,Male,Alcohol,Detox,High,Strong,Anxiety,2024-02-15,2024-01-18,Recovered
+PID00493,64,Male,Cocaine,Residential Rehab,Low,Strong,Depression,2024-03-04,2024-01-21,Recovered
+PID00494,51,Male,Opioids,Medication-Assisted Treatment (MAT),Low,Weak,Depression,2024-08-17,2024-01-23,Relapsed
+PID00495,49,Female,Alcohol,Medication-Assisted Treatment (MAT),Low,Moderate,Anxiety,2024-09-05,2024-01-24,Relapsed
+PID00496,65,Male,Alcohol,Medication-Assisted Treatment (MAT),Low,Moderate,PTSD,2024-09-02,2024-01-11,Recovered
+PID00497,42,Male,Opioids,Residential Rehab,Medium,Strong,Anxiety,2024-03-15,2024-01-11,Ongoing
+PID00498,57,Male,Opioids,Counseling,Medium,Strong,Depression,2024-06-05,2024-01-11,Relapsed
+PID00499,62,Female,Cannabis,Detox,Medium,Weak,Depression,2024-08-10,2024-01-29,Recovered
+PID00500,18,Male,Cocaine,Counseling,Low,Strong,Depression,2024-07-08,2024-01-19,Relapsed
+PID00501,33,Female,Alcohol,Medication-Assisted Treatment (MAT),Medium,Moderate,Anxiety,2024-02-21,2024-01-14,Recovered
+PID00502,56,Male,Cannabis,Medication-Assisted Treatment (MAT),Low,Strong,None,2024-03-28,2024-01-27,Ongoing
+PID00503,22,Male,Alcohol,Counseling,Medium,Moderate,PTSD,2024-11-08,2024-01-15,Relapsed
+PID00504,39,Female,Cocaine,Detox,Medium,Weak,None,2024-12-04,2024-01-10,Relapsed
+PID00505,46,Female,Cocaine,Counseling,Low,Moderate,Anxiety,2024-03-06,2024-01-18,Recovered
+PID00506,20,Male,Opioids,Residential Rehab,Low,Strong,Anxiety,2024-05-29,2024-01-20,Recovered
+PID00507,29,Female,Cannabis,Counseling,Low,Moderate,Depression,2024-01-20,2024-01-31,Ongoing
+PID00508,43,Female,Alcohol,Counseling,High,Moderate,None,2024-02-02,2024-01-29,Ongoing
+PID00509,33,Male,Opioids,Detox,High,Moderate,PTSD,2024-11-23,2024-01-03,Ongoing
+PID00510,68,Female,Cocaine,Counseling,Medium,Weak,Depression,2024-10-07,2024-01-03,Relapsed
+PID00511,54,Female,Opioids,Medication-Assisted Treatment (MAT),Low,Moderate,Anxiety,2024-02-15,2024-01-14,Relapsed
+PID00512,39,Female,Alcohol,Counseling,Low,Weak,Anxiety,2024-03-13,2024-01-08,Recovered
+PID00513,46,Female,Opioids,Medication-Assisted Treatment (MAT),Medium,Moderate,PTSD,2024-12-19,2024-01-11,Recovered
+PID00514,31,Female,Cocaine,Counseling,Medium,Strong,None,2024-11-08,2024-01-25,Recovered
+PID00515,45,Female,Alcohol,Counseling,Low,Strong,Anxiety,2024-12-08,2024-01-07,Ongoing
+PID00516,22,Female,Alcohol,Detox,Low,Strong,Anxiety,2024-05-12,2024-01-29,Ongoing
+PID00517,64,Female,Cannabis,Medication-Assisted Treatment (MAT),Medium,Weak,Depression,2024-02-24,2024-01-18,Ongoing
+PID00518,66,Female,Cocaine,Counseling,Low,Moderate,Depression,2024-03-01,2024-01-20,Recovered
+PID00519,47,Female,Alcohol,Counseling,Low,Moderate,Depression,2024-12-10,2024-01-19,Recovered
+PID00520,63,Female,Alcohol,Counseling,Low,Strong,Depression,2024-01-08,2024-01-20,Recovered
+PID00521,69,Male,Alcohol,Residential Rehab,Medium,Strong,PTSD,2024-09-28,2024-01-03,Ongoing
+PID00522,22,Female,Alcohol,Detox,High,Moderate,PTSD,2024-09-02,2024-01-21,Recovered
+PID00523,29,Female,Opioids,Medication-Assisted Treatment (MAT),High,Moderate,Depression,2024-06-24,2024-01-24,Recovered
+PID00524,33,Male,Cannabis,Detox,Medium,Strong,None,2024-04-25,2024-01-31,Recovered
+PID00525,43,Female,Cannabis,Counseling,Medium,Moderate,Depression,2024-11-12,2024-01-10,Ongoing
+PID00526,43,Male,Opioids,Detox,Low,Strong,Anxiety,2024-09-27,2024-01-05,Recovered
+PID00527,65,Male,Alcohol,Counseling,Medium,Strong,Depression,2024-07-11,2024-01-28,Relapsed
+PID00528,38,Female,Cocaine,Counseling,Low,Moderate,Anxiety,2024-05-29,2024-01-27,Ongoing
+PID00529,56,Male,Opioids,Detox,Medium,Strong,Depression,2024-05-10,2024-01-28,Ongoing
+PID00530,53,Female,Polysubstance,Counseling,Low,Weak,Anxiety,2024-04-11,2024-01-07,Ongoing
+PID00531,50,Female,Opioids,Residential Rehab,Low,Strong,Anxiety,2024-11-05,2024-01-25,Recovered
+PID00532,47,Female,Alcohol,Detox,Low,Strong,None,2024-09-26,2024-01-10,Recovered
+PID00533,54,Male,Cannabis,Medication-Assisted Treatment (MAT),Low,Strong,Depression,2024-10-18,2024-01-21,Relapsed
+PID00534,40,Male,Alcohol,Counseling,Low,Moderate,Depression,2024-07-28,2024-01-20,Ongoing
+PID00535,27,Female,Cannabis,Counseling,Low,Moderate,Depression,2024-12-26,2024-01-20,Relapsed
+PID00536,22,Non-binary,Alcohol,Detox,High,Moderate,PTSD,2024-12-03,2024-01-23,Ongoing
+PID00537,53,Female,Alcohol,Detox,Low,Strong,Depression,2024-03-07,2024-01-03,Recovered
+PID00538,51,Male,Cocaine,Detox,Medium,Strong,None,2024-01-10,2024-01-17,Recovered
+PID00539,69,Female,Alcohol,Detox,High,Moderate,Anxiety,2024-02-18,2024-01-20,Ongoing
+PID00540,48,Female,Cocaine,Detox,High,Weak,Anxiety,2024-04-20,2024-01-31,Recovered
+PID00541,27,Female,Alcohol,Counseling,Medium,Weak,Anxiety,2024-11-16,2024-01-27,Recovered
+PID00542,36,Male,Opioids,Medication-Assisted Treatment (MAT),High,Strong,Depression,2024-08-06,2024-01-09,Relapsed
+PID00543,49,Female,Cannabis,Medication-Assisted Treatment (MAT),Low,Moderate,Depression,2024-02-26,2024-01-18,Recovered
+PID00544,18,Female,Opioids,Counseling,Low,Weak,Anxiety,2024-10-09,2024-01-18,Recovered
+PID00545,22,Non-binary,Alcohol,Detox,Low,Strong,Anxiety,2024-04-22,2024-01-17,Relapsed
+PID00546,62,Male,Alcohol,Detox,Medium,Weak,Depression,2024-05-12,2024-01-08,Relapsed
+PID00547,21,Female,Alcohol,Counseling,Medium,Strong,Depression,2024-03-11,2024-01-11,Recovered
+PID00548,33,Female,Alcohol,Detox,Low,Weak,None,2024-03-23,2024-01-09,Relapsed
+PID00549,41,Male,Cannabis,Counseling,Low,Moderate,Depression,2024-02-26,2024-01-16,Relapsed
+PID00550,33,Female,Methamphetamine,Counseling,Medium,Weak,None,2024-12-14,2024-01-13,Recovered
+PID00551,19,Female,Cocaine,Counseling,Low,Moderate,PTSD,2024-09-27,2024-01-23,Recovered
+PID00552,66,Male,Cannabis,Counseling,Medium,Strong,Depression,2024-04-20,2024-01-18,Recovered
+PID00553,45,Male,Cannabis,Medication-Assisted Treatment (MAT),Medium,Weak,Depression,2024-12-22,2024-01-27,Ongoing
+PID00554,49,Female,Cannabis,Medication-Assisted Treatment (MAT),Medium,Strong,Depression,2024-03-16,2024-01-08,Recovered
+PID00555,44,Male,Alcohol,Counseling,Medium,Strong,PTSD,2024-06-06,2024-01-24,Relapsed
+PID00556,37,Female,Methamphetamine,Residential Rehab,High,Moderate,PTSD,2024-01-20,2024-01-29,Ongoing
+PID00557,41,Male,Cannabis,Residential Rehab,Low,Moderate,PTSD,2024-05-10,2024-01-18,Ongoing
+PID00558,29,Female,Opioids,Counseling,Medium,Weak,None,2024-11-24,2024-01-22,Relapsed
+PID00559,67,Male,Alcohol,Counseling,Medium,Strong,PTSD,2024-05-01,2024-01-31,Relapsed
+PID00560,52,Female,Opioids,Counseling,Low,Moderate,Depression,2024-02-10,2024-01-18,Recovered
+PID00561,50,Non-binary,Opioids,Residential Rehab,Low,Moderate,Depression,2024-06-15,2024-01-14,Recovered
+PID00562,50,Non-binary,Cocaine,Medication-Assisted Treatment (MAT),Low,Strong,None,2024-05-09,2024-01-19,Ongoing
+PID00563,68,Female,Opioids,Detox,Low,Strong,Depression,2024-01-23,2024-01-07,Recovered
+PID00564,60,Male,Alcohol,Counseling,Medium,Strong,Depression,2024-10-05,2024-01-29,Recovered
+PID00565,54,Female,Polysubstance,Counseling,High,Strong,PTSD,2024-09-07,2024-01-27,Ongoing
+PID00566,29,Male,Alcohol,Counseling,Low,Weak,Anxiety,2024-01-09,2024-01-15,Relapsed
+PID00567,20,Male,Opioids,Detox,Low,Moderate,None,2024-01-13,2024-01-10,Recovered
+PID00568,18,Male,Alcohol,Medication-Assisted Treatment (MAT),High,Moderate,PTSD,2024-11-02,2024-01-26,Ongoing
+PID00569,50,Male,Cannabis,Counseling,Low,Weak,Depression,2024-11-15,2024-01-07,Recovered
+PID00570,57,Female,Methamphetamine,Medication-Assisted Treatment (MAT),Low,Strong,None,2024-02-21,2024-01-14,Ongoing
+PID00571,27,Female,Alcohol,Medication-Assisted Treatment (MAT),Medium,Weak,Depression,2024-07-27,2024-01-11,Recovered
+PID00572,60,Male,Cocaine,Medication-Assisted Treatment (MAT),Medium,Moderate,Anxiety,2024-02-07,2024-01-05,Relapsed
+PID00573,61,Male,Alcohol,Counseling,Low,Weak,Anxiety,2024-04-09,2024-01-05,Recovered
+PID00574,46,Non-binary,Methamphetamine,Counseling,Low,Strong,Depression,2024-07-11,2024-01-03,Ongoing
+PID00575,30,Male,Cannabis,Detox,Low,Weak,Anxiety,2024-07-09,2024-01-27,Recovered
+PID00576,29,Male,Cocaine,Counseling,Medium,Strong,Depression,2024-02-20,2024-01-24,Recovered
+PID00577,48,Male,Alcohol,Detox,Medium,Strong,Anxiety,2024-05-20,2024-01-20,Recovered
+PID00578,63,Female,Polysubstance,Counseling,Low,Moderate,Anxiety,2024-06-16,2024-01-26,Recovered
+PID00579,19,Female,Cannabis,Detox,Medium,Strong,PTSD,2024-11-06,2024-01-14,Recovered
+PID00580,68,Male,Alcohol,Detox,High,Moderate,None,2024-04-18,2024-01-11,Recovered
+PID00581,67,Male,Cocaine,Detox,Low,Moderate,Depression,2024-07-25,2024-01-11,Ongoing
+PID00582,52,Female,Alcohol,Detox,Low,Moderate,Anxiety,2024-10-26,2024-01-20,Ongoing
+PID00583,40,Female,Cocaine,Medication-Assisted Treatment (MAT),Medium,Strong,Anxiety,2024-04-19,2024-01-20,Recovered
+PID00584,34,Male,Alcohol,Medication-Assisted Treatment (MAT),Low,Strong,Depression,2024-07-14,2024-01-31,Ongoing
+PID00585,43,Non-binary,Cannabis,Counseling,Low,Strong,PTSD,2024-05-31,2024-01-09,Recovered
+PID00586,25,Male,Opioids,Detox,Medium,Moderate,PTSD,2024-08-30,2024-01-29,Ongoing
+PID00587,46,Male,Alcohol,Detox,High,Strong,Depression,2024-05-07,2024-01-06,Recovered
+PID00588,43,Female,Alcohol,Detox,High,Strong,Anxiety,2024-04-14,2024-01-15,Ongoing
+PID00589,27,Male,Alcohol,Detox,Medium,Strong,Depression,2024-01-10,2024-01-19,Recovered
+PID00590,43,Female,Opioids,Medication-Assisted Treatment (MAT),Medium,Strong,PTSD,2024-12-21,2024-01-26,Relapsed
+PID00591,51,Male,Alcohol,Detox,Low,Moderate,Depression,2024-05-27,2024-01-04,Recovered
+PID00592,68,Male,Opioids,Counseling,Medium,Weak,None,2024-12-30,2024-01-16,Recovered
+PID00593,58,Non-binary,Alcohol,Detox,Low,Strong,PTSD,2024-12-29,2024-01-05,Recovered
+PID00594,24,Male,Alcohol,Detox,Low,Moderate,Anxiety,2024-05-19,2024-01-07,Relapsed
+PID00595,21,Female,Cannabis,Counseling,Medium,Moderate,Anxiety,2024-07-08,2024-01-16,Ongoing
+PID00596,67,Male,Alcohol,Counseling,Medium,Moderate,None,2024-04-03,2024-01-05,Ongoing
+PID00597,62,Male,Methamphetamine,Detox,Low,Moderate,Anxiety,2024-08-16,2024-01-25,Relapsed
+PID00598,28,Male,Cocaine,Detox,High,Moderate,Depression,2024-03-03,2024-01-09,Relapsed
+PID00599,46,Female,Cannabis,Counseling,Low,Moderate,Anxiety,2024-12-05,2024-01-20,Ongoing
+PID00600,53,Male,Opioids,Detox,Low,Strong,None,2024-01-25,2024-01-15,Recovered
+PID00601,42,Female,Cocaine,Detox,Low,Moderate,PTSD,2024-09-24,2024-01-31,Relapsed
+PID00602,38,Male,Alcohol,Residential Rehab,Medium,Moderate,PTSD,2024-10-07,2024-01-25,Recovered
+PID00603,53,Non-binary,Alcohol,Counseling,Medium,Strong,None,2024-01-11,2024-01-29,Ongoing
+PID00604,27,Male,Alcohol,Counseling,Low,Strong,None,2024-11-15,2024-01-24,Ongoing
+PID00605,54,Female,Cannabis,Counseling,Medium,Weak,None,2024-07-19,2024-01-12,Ongoing
+PID00606,26,Female,Alcohol,Counseling,Low,Moderate,Depression,2024-05-05,2024-01-27,Ongoing
+PID00607,41,Female,Opioids,Counseling,Medium,Moderate,Anxiety,2024-11-01,2024-01-15,Ongoing
+PID00608,52,Female,Polysubstance,Counseling,Low,Weak,PTSD,2024-07-08,2024-01-18,Relapsed
+PID00609,66,Female,Cocaine,Medication-Assisted Treatment (MAT),Low,Moderate,PTSD,2024-03-29,2024-01-11,Recovered
+PID00610,52,Female,Opioids,Detox,High,Moderate,PTSD,2024-12-20,2024-01-04,Recovered
+PID00611,65,Male,Alcohol,Counseling,Low,Moderate,Depression,2024-04-25,2024-01-25,Ongoing
+PID00612,53,Male,Cocaine,Counseling,Low,Weak,PTSD,2024-12-17,2024-01-07,Relapsed
+PID00613,35,Female,Opioids,Medication-Assisted Treatment (MAT),Medium,Moderate,PTSD,2024-06-25,2024-01-31,Recovered
+PID00614,66,Female,Alcohol,Counseling,High,Moderate,Depression,2024-01-14,2024-01-24,Recovered
+PID00615,56,Female,Alcohol,Counseling,Low,Strong,Anxiety,2024-09-13,2024-01-19,Recovered
+PID00616,49,Male,Methamphetamine,Detox,Low,Weak,Depression,2024-07-27,2024-01-25,Recovered
+PID00617,41,Male,Cannabis,Counseling,Low,Moderate,Anxiety,2024-10-07,2024-01-24,Relapsed
+PID00618,40,Male,Cocaine,Detox,Medium,Strong,Depression,2024-11-23,2024-01-06,Ongoing
+PID00619,49,Female,Cocaine,Counseling,Low,Weak,Anxiety,2024-11-20,2024-01-19,Ongoing
+PID00620,54,Male,Opioids,Detox,Medium,Moderate,Anxiety,2024-04-14,2024-01-11,Ongoing
+PID00621,29,Male,Opioids,Counseling,High,Strong,PTSD,2024-05-26,2024-01-22,Ongoing
+PID00622,66,Male,Opioids,Detox,Low,Moderate,PTSD,2024-10-05,2024-01-04,Recovered
+PID00623,30,Male,Alcohol,Counseling,Low,Moderate,None,2024-01-09,2024-01-26,Recovered
+PID00624,40,Female,Opioids,Medication-Assisted Treatment (MAT),Low,Weak,Depression,2024-04-27,2024-01-20,Recovered
+PID00625,42,Male,Cannabis,Detox,Low,Strong,Depression,2024-04-03,2024-01-23,Recovered
+PID00626,52,Female,Opioids,Counseling,High,Weak,None,2024-05-23,2024-01-29,Recovered
+PID00627,58,Male,Cocaine,Counseling,Low,Moderate,Depression,2024-10-15,2024-01-24,Recovered
+PID00628,47,Male,Opioids,Detox,Low,Strong,None,2024-01-14,2024-01-13,Recovered
+PID00629,34,Male,Opioids,Medication-Assisted Treatment (MAT),Medium,Weak,None,2024-09-13,2024-01-15,Recovered
+PID00630,66,Male,Opioids,Detox,Low,Moderate,Anxiety,2024-12-11,2024-01-10,Ongoing
+PID00631,37,Male,Opioids,Counseling,Medium,Strong,None,2024-07-04,2024-01-29,Recovered
+PID00632,65,Male,Cannabis,Counseling,Low,Moderate,Depression,2024-12-10,2024-01-03,Relapsed
+PID00633,42,Female,Alcohol,Counseling,High,Weak,Anxiety,2024-07-25,2024-01-19,Recovered
+PID00634,39,Male,Opioids,Counseling,High,Strong,PTSD,2024-12-11,2024-01-14,Ongoing
+PID00635,30,Female,Alcohol,Detox,Medium,Strong,Anxiety,2024-06-20,2024-01-06,Relapsed
+PID00636,36,Female,Alcohol,Detox,High,Strong,None,2024-09-26,2024-01-23,Relapsed
+PID00637,66,Female,Opioids,Medication-Assisted Treatment (MAT),Low,Strong,Depression,2024-08-08,2024-01-15,Relapsed
+PID00638,53,Male,Cannabis,Counseling,Low,Moderate,Anxiety,2024-05-31,2024-01-31,Recovered
+PID00639,29,Male,Polysubstance,Medication-Assisted Treatment (MAT),Medium,Moderate,Anxiety,2024-04-20,2024-01-11,Recovered
+PID00640,58,Male,Opioids,Medication-Assisted Treatment (MAT),Medium,Strong,PTSD,2024-07-01,2024-01-29,Recovered
+PID00641,36,Male,Cannabis,Medication-Assisted Treatment (MAT),Low,Strong,Depression,2024-12-04,2024-01-09,Recovered
+PID00642,29,Non-binary,Opioids,Counseling,Low,Strong,Anxiety,2024-03-12,2024-01-25,Recovered
+PID00643,26,Male,Opioids,Counseling,Low,Weak,None,2024-10-09,2024-01-26,Relapsed
+PID00644,24,Male,Alcohol,Medication-Assisted Treatment (MAT),Low,Strong,Depression,2024-03-14,2024-01-07,Ongoing
+PID00645,45,Female,Alcohol,Counseling,Low,Weak,None,2024-12-20,2024-01-07,Ongoing
+PID00646,31,Female,Alcohol,Detox,Medium,Moderate,Anxiety,2024-08-02,2024-01-19,Relapsed
+PID00647,48,Female,Opioids,Medication-Assisted Treatment (MAT),Low,Strong,PTSD,2024-11-23,2024-01-11,Ongoing
+PID00648,69,Male,Alcohol,Medication-Assisted Treatment (MAT),Low,Weak,PTSD,2024-01-23,2024-01-08,Ongoing
+PID00649,36,Male,Alcohol,Counseling,Medium,Moderate,Depression,2024-03-08,2024-01-27,Ongoing
+PID00650,64,Female,Alcohol,Detox,Medium,Moderate,Anxiety,2024-12-27,2024-01-21,Recovered
+PID00651,33,Male,Polysubstance,Counseling,High,Weak,None,2024-04-02,2024-01-18,Recovered
+PID00652,22,Male,Alcohol,Medication-Assisted Treatment (MAT),Medium,Strong,Anxiety,2024-11-16,2024-01-23,Relapsed
+PID00653,52,Male,Opioids,Residential Rehab,Low,Strong,None,2024-11-19,2024-01-04,Relapsed
+PID00654,29,Male,Alcohol,Detox,High,Moderate,Anxiety,2024-03-03,2024-01-12,Relapsed
+PID00655,42,Male,Opioids,Detox,Medium,Strong,Depression,2024-08-11,2024-01-18,Recovered
+PID00656,69,Male,Alcohol,Medication-Assisted Treatment (MAT),Low,Strong,Anxiety,2024-08-12,2024-01-07,Relapsed
+PID00657,38,Female,Alcohol,Counseling,Medium,Strong,None,2024-12-11,2024-01-17,Recovered
+PID00658,53,Female,Opioids,Counseling,High,Strong,Anxiety,2024-12-02,2024-01-15,Recovered
+PID00659,40,Female,Alcohol,Residential Rehab,Low,Moderate,None,2024-04-12,2024-01-15,Recovered
+PID00660,33,Male,Alcohol,Detox,Low,Strong,None,2024-08-02,2024-01-15,Recovered
+PID00661,56,Male,Alcohol,Counseling,Low,Moderate,Anxiety,2024-07-10,2024-01-17,Recovered
+PID00662,62,Male,Alcohol,Detox,Low,Moderate,Depression,2024-06-08,2024-01-16,Recovered
+PID00663,59,Female,Alcohol,Counseling,Low,Moderate,PTSD,2024-07-25,2024-01-10,Recovered
+PID00664,56,Female,Alcohol,Medication-Assisted Treatment (MAT),Medium,Strong,Anxiety,2024-09-25,2024-01-13,Recovered
+PID00665,31,Male,Cocaine,Counseling,Low,Moderate,PTSD,2024-07-12,2024-01-20,Ongoing
+PID00666,48,Female,Opioids,Residential Rehab,High,Strong,Anxiety,2024-05-31,2024-01-26,Ongoing
+PID00667,22,Male,Opioids,Counseling,Medium,Moderate,Anxiety,2024-08-24,2024-01-06,Recovered
+PID00668,52,Female,Alcohol,Counseling,Medium,Weak,PTSD,2024-03-28,2024-01-28,Recovered
+PID00669,40,Female,Methamphetamine,Detox,High,Moderate,Anxiety,2024-01-11,2024-01-12,Ongoing
+PID00670,46,Female,Alcohol,Counseling,Low,Moderate,Anxiety,2024-07-05,2024-01-03,Ongoing
+PID00671,60,Female,Alcohol,Counseling,Low,Moderate,Anxiety,2024-08-01,2024-01-31,Recovered
+PID00672,28,Female,Opioids,Detox,Medium,Strong,Anxiety,2024-01-15,2024-01-07,Ongoing
+PID00673,35,Male,Alcohol,Counseling,High,Weak,Anxiety,2024-09-22,2024-01-15,Relapsed
+PID00674,64,Female,Alcohol,Counseling,Medium,Weak,None,2024-10-23,2024-01-03,Recovered
+PID00675,29,Male,Opioids,Medication-Assisted Treatment (MAT),Low,Strong,Anxiety,2024-03-13,2024-01-25,Recovered
+PID00676,26,Female,Cocaine,Counseling,High,Moderate,Anxiety,2024-02-21,2024-01-10,Recovered
+PID00677,27,Female,Opioids,Medication-Assisted Treatment (MAT),Low,Weak,PTSD,2024-05-07,2024-01-05,Ongoing
+PID00678,61,Female,Cannabis,Detox,High,Weak,Depression,2024-01-28,2024-01-05,Recovered
+PID00679,34,Male,Polysubstance,Detox,High,Moderate,Depression,2024-03-05,2024-01-09,Recovered
+PID00680,55,Female,Alcohol,Counseling,Low,Moderate,None,2024-01-17,2024-01-06,Recovered
+PID00681,24,Female,Alcohol,Counseling,Medium,Strong,PTSD,2024-12-16,2024-01-05,Relapsed
+PID00682,63,Female,Alcohol,Detox,Low,Weak,Anxiety,2024-05-17,2024-01-17,Ongoing
+PID00683,30,Male,Opioids,Medication-Assisted Treatment (MAT),Low,Strong,PTSD,2024-11-14,2024-01-10,Ongoing
+PID00684,57,Male,Opioids,Medication-Assisted Treatment (MAT),Medium,Moderate,Depression,2024-08-16,2024-01-05,Relapsed
+PID00685,59,Male,Methamphetamine,Counseling,Medium,Strong,PTSD,2024-09-10,2024-01-31,Recovered
+PID00686,26,Male,Cannabis,Detox,High,Strong,Anxiety,2024-07-28,2024-01-09,Relapsed
+PID00687,67,Female,Opioids,Medication-Assisted Treatment (MAT),Medium,Moderate,Anxiety,2024-10-20,2024-01-20,Ongoing
+PID00688,44,Male,Alcohol,Counseling,Low,Weak,Anxiety,2024-08-18,2024-01-13,Recovered
+PID00689,19,Non-binary,Cocaine,Medication-Assisted Treatment (MAT),High,Strong,Depression,2024-08-28,2024-01-13,Relapsed
+PID00690,22,Male,Polysubstance,Medication-Assisted Treatment (MAT),High,Moderate,Depression,2024-03-10,2024-01-19,Relapsed
+PID00691,46,Male,Cocaine,Medication-Assisted Treatment (MAT),Low,Strong,None,2024-04-13,2024-01-30,Relapsed
+PID00692,54,Female,Alcohol,Counseling,High,Strong,Anxiety,2024-07-22,2024-01-08,Recovered
+PID00693,55,Female,Opioids,Detox,Low,Moderate,Anxiety,2024-02-22,2024-01-10,Relapsed
+PID00694,36,Male,Alcohol,Counseling,High,Moderate,Depression,2024-11-25,2024-01-03,Relapsed
+PID00695,25,Female,Alcohol,Counseling,Low,Strong,Depression,2024-02-23,2024-01-31,Recovered
+PID00696,65,Female,Alcohol,Medication-Assisted Treatment (MAT),Low,Strong,PTSD,2024-10-02,2024-01-12,Recovered
+PID00697,62,Male,Opioids,Detox,Low,Strong,Anxiety,2024-11-30,2024-01-30,Recovered
+PID00698,18,Non-binary,Cannabis,Detox,Medium,Strong,Anxiety,2024-01-31,2024-01-27,Relapsed
+PID00699,39,Non-binary,Alcohol,Medication-Assisted Treatment (MAT),Low,Weak,Depression,2024-05-14,2024-01-21,Ongoing
+PID00700,69,Female,Alcohol,Medication-Assisted Treatment (MAT),Low,Weak,PTSD,2024-02-27,2024-01-05,Recovered
+PID00701,34,Male,Opioids,Residential Rehab,Medium,Strong,Depression,2024-04-14,2024-01-06,Recovered
+PID00702,24,Female,Alcohol,Medication-Assisted Treatment (MAT),High,Moderate,Depression,2024-09-22,2024-01-13,Recovered
+PID00703,42,Male,Alcohol,Counseling,Low,Weak,Anxiety,2024-01-10,2024-01-17,Ongoing
+PID00704,62,Male,Opioids,Counseling,Low,Strong,Depression,2024-09-09,2024-01-03,Recovered
+PID00705,21,Male,Cannabis,Medication-Assisted Treatment (MAT),Low,Weak,Depression,2024-10-21,2024-01-11,Relapsed
+PID00706,53,Male,Alcohol,Counseling,Low,Weak,PTSD,2024-06-04,2024-01-13,Ongoing
+PID00707,23,Female,Alcohol,Counseling,High,Strong,PTSD,2024-06-06,2024-01-21,Ongoing
+PID00708,48,Female,Alcohol,Detox,High,Strong,None,2024-02-06,2024-01-15,Recovered
+PID00709,36,Female,Methamphetamine,Counseling,Medium,Weak,Anxiety,2024-04-28,2024-01-28,Recovered
+PID00710,61,Male,Cannabis,Medication-Assisted Treatment (MAT),Low,Moderate,Depression,2024-03-07,2024-01-18,Recovered
+PID00711,56,Male,Cannabis,Detox,Medium,Strong,Depression,2024-08-29,2024-01-06,Recovered
+PID00712,44,Male,Alcohol,Detox,Medium,Strong,None,2024-10-25,2024-01-03,Recovered
+PID00713,27,Non-binary,Opioids,Counseling,High,Moderate,Anxiety,2024-07-31,2024-01-22,Relapsed
+PID00714,43,Male,Alcohol,Detox,Medium,Moderate,PTSD,2024-11-03,2024-01-15,Recovered
+PID00715,36,Female,Opioids,Detox,Medium,Moderate,Depression,2024-04-10,2024-01-03,Recovered
+PID00716,56,Female,Methamphetamine,Counseling,Medium,Weak,Anxiety,2024-02-25,2024-01-07,Recovered
+PID00717,20,Male,Opioids,Residential Rehab,Low,Strong,Depression,2024-11-27,2024-01-07,Recovered
+PID00718,62,Female,Cocaine,Counseling,High,Moderate,Anxiety,2024-11-19,2024-01-16,Relapsed
+PID00719,30,Male,Cannabis,Detox,Medium,Moderate,None,2024-08-26,2024-01-29,Recovered
+PID00720,67,Female,Alcohol,Detox,Medium,Moderate,None,2024-08-18,2024-01-25,Recovered
+PID00721,45,Female,Methamphetamine,Counseling,Low,Strong,Anxiety,2024-12-27,2024-01-16,Ongoing
+PID00722,37,Male,Alcohol,Counseling,Medium,Weak,Anxiety,2024-04-01,2024-01-10,Recovered
+PID00723,45,Male,Opioids,Medication-Assisted Treatment (MAT),Medium,Weak,None,2024-10-05,2024-01-06,Recovered
+PID00724,25,Female,Alcohol,Counseling,Low,Moderate,PTSD,2024-04-18,2024-01-09,Recovered
+PID00725,58,Female,Alcohol,Medication-Assisted Treatment (MAT),Low,Moderate,Depression,2024-11-12,2024-01-22,Recovered
+PID00726,56,Male,Opioids,Detox,Medium,Strong,Anxiety,2024-06-16,2024-01-21,Recovered
+PID00727,18,Female,Alcohol,Counseling,Medium,Moderate,Depression,2024-10-26,2024-01-17,Recovered
+PID00728,20,Female,Opioids,Detox,Medium,Moderate,Anxiety,2024-08-05,2024-01-24,Relapsed
+PID00729,30,Female,Opioids,Residential Rehab,Low,Moderate,Anxiety,2024-08-09,2024-01-06,Recovered
+PID00730,45,Male,Alcohol,Counseling,Medium,Weak,Anxiety,2024-06-09,2024-01-21,Ongoing
+PID00731,66,Female,Alcohol,Counseling,Low,Moderate,Anxiety,2024-01-16,2024-01-11,Ongoing
+PID00732,42,Female,Opioids,Detox,Low,Strong,Depression,2024-10-04,2024-01-23,Ongoing
+PID00733,50,Male,Alcohol,Detox,Low,Moderate,Anxiety,2024-02-26,2024-01-15,Recovered
+PID00734,55,Male,Cannabis,Counseling,Low,Strong,None,2024-03-02,2024-01-16,Recovered
+PID00735,23,Non-binary,Cannabis,Detox,Low,Strong,PTSD,2024-12-28,2024-01-25,Ongoing
+PID00736,61,Male,Cocaine,Counseling,Low,Strong,Anxiety,2024-11-22,2024-01-30,Ongoing
+PID00737,62,Female,Cannabis,Detox,Low,Moderate,None,2024-08-29,2024-01-16,Ongoing
+PID00738,49,Male,Opioids,Counseling,Low,Moderate,None,2024-03-30,2024-01-24,Recovered
+PID00739,62,Male,Cannabis,Medication-Assisted Treatment (MAT),Medium,Moderate,Depression,2024-03-12,2024-01-12,Relapsed
+PID00740,64,Female,Alcohol,Medication-Assisted Treatment (MAT),Low,Moderate,Depression,2024-11-21,2024-01-18,Recovered
+PID00741,38,Male,Alcohol,Medication-Assisted Treatment (MAT),Low,Moderate,PTSD,2024-01-30,2024-01-07,Recovered
+PID00742,33,Female,Cannabis,Detox,High,Strong,None,2024-12-24,2024-01-25,Recovered
+PID00743,38,Male,Opioids,Detox,Low,Weak,None,2024-10-14,2024-01-29,Recovered
+PID00744,28,Female,Cannabis,Counseling,Medium,Strong,None,2024-03-26,2024-01-08,Recovered
+PID00745,54,Male,Cocaine,Counseling,Low,Strong,PTSD,2024-08-21,2024-01-28,Ongoing
+PID00746,53,Male,Cocaine,Counseling,Low,Moderate,Anxiety,2024-08-22,2024-01-04,Relapsed
+PID00747,52,Non-binary,Methamphetamine,Detox,Medium,Strong,Depression,2024-11-08,2024-01-15,Relapsed
+PID00748,36,Male,Opioids,Detox,Medium,Strong,Depression,2024-12-30,2024-01-31,Recovered
+PID00749,37,Female,Alcohol,Detox,High,Moderate,Anxiety,2024-09-21,2024-01-15,Ongoing
+PID00750,35,Male,Opioids,Medication-Assisted Treatment (MAT),Medium,Moderate,PTSD,2024-10-13,2024-01-21,Recovered
+PID00751,64,Female,Alcohol,Detox,High,Moderate,Anxiety,2024-11-22,2024-01-20,Recovered
+PID00752,58,Male,Opioids,Counseling,Low,Weak,PTSD,2024-09-25,2024-01-30,Recovered
+PID00753,66,Non-binary,Cannabis,Detox,Low,Moderate,Depression,2024-07-04,2024-01-21,Recovered
+PID00754,31,Male,Cannabis,Counseling,Low,Weak,Anxiety,2024-05-10,2024-01-03,Recovered
+PID00755,32,Male,Alcohol,Counseling,Low,Strong,Depression,2024-10-17,2024-01-10,Recovered
+PID00756,48,Male,Alcohol,Medication-Assisted Treatment (MAT),Medium,Moderate,Anxiety,2024-10-03,2024-01-24,Ongoing
+PID00757,18,Male,Opioids,Medication-Assisted Treatment (MAT),Medium,Weak,PTSD,2024-11-15,2024-01-18,Relapsed
+PID00758,20,Female,Alcohol,Counseling,Low,Moderate,PTSD,2024-12-16,2024-01-31,Recovered
+PID00759,33,Male,Cocaine,Residential Rehab,High,Moderate,None,2024-06-28,2024-01-04,Relapsed
+PID00760,40,Female,Alcohol,Residential Rehab,High,Strong,Depression,2024-10-16,2024-01-10,Ongoing
+PID00761,28,Male,Alcohol,Medication-Assisted Treatment (MAT),Low,Strong,Anxiety,2024-06-11,2024-01-08,Ongoing
+PID00762,29,Male,Alcohol,Medication-Assisted Treatment (MAT),Low,Moderate,Anxiety,2024-09-27,2024-01-18,Ongoing
+PID00763,27,Female,Opioids,Detox,Low,Strong,Anxiety,2024-04-05,2024-01-25,Recovered
+PID00764,49,Female,Opioids,Counseling,Low,Weak,None,2024-09-18,2024-01-13,Relapsed
+PID00765,33,Male,Alcohol,Detox,Low,Strong,PTSD,2024-12-30,2024-01-19,Ongoing
+PID00766,25,Male,Alcohol,Detox,Medium,Weak,None,2024-12-18,2024-01-25,Relapsed
+PID00767,55,Male,Opioids,Residential Rehab,Low,Weak,Depression,2024-10-14,2024-01-21,Ongoing
+PID00768,29,Female,Alcohol,Counseling,Low,Strong,None,2024-03-23,2024-01-13,Relapsed
+PID00769,41,Female,Cannabis,Medication-Assisted Treatment (MAT),High,Strong,Depression,2024-08-12,2024-01-30,Ongoing
+PID00770,45,Male,Opioids,Medication-Assisted Treatment (MAT),Medium,Weak,None,2024-08-10,2024-01-10,Recovered
+PID00771,25,Female,Alcohol,Medication-Assisted Treatment (MAT),High,Weak,Anxiety,2024-04-27,2024-01-24,Recovered
+PID00772,45,Female,Alcohol,Residential Rehab,Low,Moderate,Anxiety,2024-07-10,2024-01-06,Recovered
+PID00773,53,Female,Polysubstance,Detox,Low,Strong,Anxiety,2024-03-19,2024-01-13,Recovered
+PID00774,43,Female,Opioids,Detox,Medium,Moderate,None,2024-03-18,2024-01-10,Recovered
+PID00775,25,Male,Cannabis,Counseling,Low,Moderate,Depression,2024-05-26,2024-01-11,Relapsed
+PID00776,67,Male,Alcohol,Detox,Low,Strong,Anxiety,2024-04-16,2024-01-28,Ongoing
+PID00777,45,Male,Opioids,Detox,Medium,Moderate,None,2024-09-27,2024-01-04,Relapsed
+PID00778,45,Male,Alcohol,Counseling,Medium,Strong,Anxiety,2024-08-31,2024-01-18,Relapsed
+PID00779,54,Female,Opioids,Medication-Assisted Treatment (MAT),Low,Strong,Depression,2024-03-13,2024-01-08,Ongoing
+PID00780,58,Female,Polysubstance,Counseling,Low,Strong,Anxiety,2024-12-22,2024-01-23,Relapsed
+PID00781,53,Male,Alcohol,Counseling,Low,Strong,Anxiety,2024-12-19,2024-01-23,Ongoing
+PID00782,44,Male,Alcohol,Counseling,Low,Strong,None,2024-01-26,2024-01-28,Relapsed
+PID00783,34,Male,Alcohol,Detox,Low,Moderate,PTSD,2024-07-28,2024-01-29,Recovered
+PID00784,26,Female,Alcohol,Detox,Low,Strong,Anxiety,2024-04-01,2024-01-21,Recovered
+PID00785,50,Male,Alcohol,Medication-Assisted Treatment (MAT),Low,Strong,None,2024-05-04,2024-01-30,Recovered
+PID00786,37,Female,Alcohol,Counseling,High,Strong,Anxiety,2024-03-13,2024-01-10,Ongoing
+PID00787,30,Male,Cannabis,Medication-Assisted Treatment (MAT),Medium,Weak,Depression,2024-05-02,2024-01-16,Ongoing
+PID00788,45,Male,Opioids,Detox,Medium,Moderate,Depression,2024-11-04,2024-01-26,Recovered
+PID00789,65,Non-binary,Alcohol,Medication-Assisted Treatment (MAT),Low,Moderate,Anxiety,2024-07-02,2024-01-18,Recovered
+PID00790,46,Non-binary,Methamphetamine,Counseling,Low,Moderate,Depression,2024-07-05,2024-01-14,Relapsed
+PID00791,30,Male,Alcohol,Counseling,Low,Weak,None,2024-07-16,2024-01-07,Ongoing
+PID00792,63,Non-binary,Polysubstance,Counseling,Low,Strong,PTSD,2024-03-18,2024-01-26,Recovered
+PID00793,52,Female,Alcohol,Medication-Assisted Treatment (MAT),Low,Moderate,Depression,2024-12-13,2024-01-28,Ongoing
+PID00794,23,Female,Cocaine,Counseling,Medium,Moderate,Anxiety,2024-07-04,2024-01-26,Ongoing
+PID00795,35,Male,Opioids,Counseling,Medium,Moderate,PTSD,2024-12-09,2024-01-21,Relapsed
+PID00796,68,Female,Cocaine,Residential Rehab,Medium,Strong,None,2024-09-09,2024-01-20,Recovered
+PID00797,22,Male,Polysubstance,Medication-Assisted Treatment (MAT),Low,Moderate,None,2024-01-13,2024-01-11,Recovered
+PID00798,64,Female,Alcohol,Counseling,High,Strong,Anxiety,2024-10-25,2024-01-04,Recovered
+PID00799,42,Male,Polysubstance,Medication-Assisted Treatment (MAT),Low,Moderate,PTSD,2024-03-16,2024-01-27,Recovered
+PID00800,19,Male,Alcohol,Counseling,Low,Moderate,Anxiety,2024-02-20,2024-01-22,Relapsed
+PID00801,27,Male,Alcohol,Detox,Low,Strong,Anxiety,2024-10-01,2024-01-14,Recovered
+PID00802,47,Female,Alcohol,Counseling,Medium,Weak,Depression,2024-05-28,2024-01-31,Relapsed
+PID00803,67,Male,Opioids,Residential Rehab,High,Strong,Depression,2024-08-06,2024-01-04,Recovered
+PID00804,62,Female,Alcohol,Residential Rehab,Low,Weak,Anxiety,2024-05-01,2024-01-12,Relapsed
+PID00805,22,Non-binary,Opioids,Counseling,High,Moderate,Depression,2024-07-29,2024-01-03,Recovered
+PID00806,50,Male,Opioids,Counseling,High,Strong,Depression,2024-10-06,2024-01-06,Relapsed
+PID00807,18,Female,Cannabis,Detox,Low,Strong,PTSD,2024-01-26,2024-01-27,Relapsed
+PID00808,35,Male,Cocaine,Residential Rehab,Low,Weak,Depression,2024-06-21,2024-01-14,Relapsed
+PID00809,49,Female,Opioids,Residential Rehab,Low,Strong,Anxiety,2024-06-04,2024-01-11,Recovered
+PID00810,64,Male,Alcohol,Counseling,High,Strong,Anxiety,2024-08-25,2024-01-06,Recovered
+PID00811,66,Female,Alcohol,Medication-Assisted Treatment (MAT),Low,Strong,None,2024-03-22,2024-01-11,Ongoing
+PID00812,28,Female,Alcohol,Medication-Assisted Treatment (MAT),Medium,Moderate,Anxiety,2024-12-21,2024-01-30,Recovered
+PID00813,38,Female,Alcohol,Counseling,Low,Moderate,Depression,2024-09-29,2024-01-08,Recovered
+PID00814,43,Female,Alcohol,Detox,Medium,Strong,Anxiety,2024-03-08,2024-01-03,Recovered
+PID00815,42,Male,Alcohol,Counseling,Low,Strong,None,2024-02-13,2024-01-12,Ongoing
+PID00816,39,Female,Polysubstance,Counseling,Medium,Strong,None,2024-03-01,2024-01-31,Ongoing
+PID00817,44,Female,Opioids,Counseling,High,Strong,Anxiety,2024-05-02,2024-01-16,Recovered
+PID00818,66,Female,Alcohol,Counseling,High,Moderate,Anxiety,2024-12-14,2024-01-24,Recovered
+PID00819,30,Male,Opioids,Residential Rehab,High,Moderate,None,2024-07-14,2024-01-27,Recovered
+PID00820,50,Female,Alcohol,Detox,Low,Strong,Depression,2024-11-25,2024-01-31,Ongoing
+PID00821,51,Female,Opioids,Counseling,Medium,Strong,PTSD,2024-11-18,2024-01-20,Recovered
+PID00822,58,Female,Opioids,Counseling,Low,Strong,Anxiety,2024-04-20,2024-01-08,Recovered
+PID00823,52,Male,Opioids,Counseling,Low,Weak,Depression,2024-09-14,2024-01-20,Relapsed
+PID00824,18,Female,Opioids,Counseling,Medium,Weak,Anxiety,2024-03-29,2024-01-22,Relapsed
+PID00825,38,Male,Polysubstance,Detox,Low,Weak,Depression,2024-07-16,2024-01-18,Relapsed
+PID00826,65,Female,Cocaine,Detox,Medium,Strong,PTSD,2024-10-08,2024-01-17,Relapsed
+PID00827,23,Male,Opioids,Counseling,High,Strong,None,2024-07-18,2024-01-18,Recovered
+PID00828,45,Female,Opioids,Counseling,Low,Strong,Depression,2024-04-08,2024-01-10,Ongoing
+PID00829,34,Non-binary,Opioids,Detox,Medium,Strong,None,2024-01-27,2024-01-15,Recovered
+PID00830,22,Male,Alcohol,Medication-Assisted Treatment (MAT),Low,Moderate,Depression,2024-03-29,2024-01-25,Ongoing
+PID00831,48,Non-binary,Alcohol,Counseling,Low,Moderate,Anxiety,2024-05-25,2024-01-13,Recovered
+PID00832,22,Male,Alcohol,Counseling,Low,Weak,Depression,2024-06-30,2024-01-30,Ongoing
+PID00833,55,Female,Opioids,Medication-Assisted Treatment (MAT),High,Weak,None,2024-09-13,2024-01-31,Ongoing
+PID00834,20,Female,Opioids,Detox,High,Strong,PTSD,2024-07-07,2024-01-27,Recovered
+PID00835,40,Female,Alcohol,Detox,High,Moderate,PTSD,2024-08-27,2024-01-09,Ongoing
+PID00836,54,Female,Polysubstance,Medication-Assisted Treatment (MAT),High,Strong,None,2024-12-24,2024-01-19,Recovered
+PID00837,54,Female,Methamphetamine,Counseling,Low,Strong,PTSD,2024-07-14,2024-01-20,Recovered
+PID00838,27,Male,Cannabis,Counseling,Low,Moderate,None,2024-10-23,2024-01-24,Recovered
+PID00839,27,Male,Opioids,Medication-Assisted Treatment (MAT),Medium,Strong,PTSD,2024-06-13,2024-01-25,Recovered
+PID00840,36,Female,Cocaine,Medication-Assisted Treatment (MAT),Low,Moderate,None,2024-11-02,2024-01-21,Recovered
+PID00841,34,Female,Alcohol,Residential Rehab,Low,Strong,Anxiety,2024-09-27,2024-01-27,Relapsed
+PID00842,38,Female,Cannabis,Counseling,Low,Moderate,Depression,2024-01-08,2024-01-15,Recovered
+PID00843,31,Female,Alcohol,Counseling,Medium,Moderate,Anxiety,2024-02-07,2024-01-17,Recovered
+PID00844,26,Male,Cannabis,Counseling,Medium,Strong,Depression,2024-04-23,2024-01-25,Recovered
+PID00845,63,Female,Alcohol,Detox,Low,Weak,Anxiety,2024-12-04,2024-01-24,Ongoing
+PID00846,18,Male,Cocaine,Counseling,Low,Strong,Anxiety,2024-02-25,2024-01-31,Ongoing
+PID00847,68,Female,Methamphetamine,Detox,Medium,Moderate,PTSD,2024-12-24,2024-01-24,Ongoing
+PID00848,62,Male,Alcohol,Residential Rehab,Medium,Moderate,Depression,2024-05-17,2024-01-03,Ongoing
+PID00849,30,Male,Opioids,Counseling,Low,Moderate,Depression,2024-04-11,2024-01-31,Relapsed
+PID00850,21,Male,Polysubstance,Counseling,Medium,Weak,Anxiety,2024-11-29,2024-01-18,Relapsed
+PID00851,18,Male,Opioids,Counseling,Low,Strong,None,2024-06-25,2024-01-07,Ongoing
+PID00852,66,Female,Cocaine,Detox,Low,Moderate,Anxiety,2024-06-17,2024-01-28,Recovered
+PID00853,57,Male,Opioids,Detox,Medium,Moderate,Anxiety,2024-12-04,2024-01-05,Ongoing
+PID00854,49,Male,Alcohol,Counseling,Medium,Weak,PTSD,2024-10-12,2024-01-25,Ongoing
+PID00855,51,Male,Alcohol,Detox,Low,Strong,PTSD,2024-09-17,2024-01-12,Ongoing
+PID00856,45,Male,Alcohol,Counseling,Medium,Moderate,Depression,2024-08-10,2024-01-21,Relapsed
+PID00857,48,Male,Cannabis,Medication-Assisted Treatment (MAT),Medium,Moderate,Anxiety,2024-07-17,2024-01-07,Ongoing
+PID00858,25,Male,Alcohol,Medication-Assisted Treatment (MAT),Medium,Strong,Depression,2024-07-29,2024-01-09,Relapsed
+PID00859,56,Female,Opioids,Counseling,Medium,Moderate,None,2024-10-13,2024-01-16,Recovered
+PID00860,43,Female,Opioids,Detox,Medium,Strong,Depression,2024-06-28,2024-01-05,Recovered
+PID00861,51,Female,Opioids,Medication-Assisted Treatment (MAT),Low,Moderate,Anxiety,2024-09-06,2024-01-15,Recovered
+PID00862,20,Male,Cocaine,Medication-Assisted Treatment (MAT),Low,Weak,Depression,2024-08-18,2024-01-15,Relapsed
+PID00863,67,Male,Polysubstance,Detox,Low,Moderate,Depression,2024-01-23,2024-01-12,Relapsed
+PID00864,29,Female,Opioids,Medication-Assisted Treatment (MAT),Low,Moderate,PTSD,2024-02-17,2024-01-04,Ongoing
+PID00865,18,Female,Cocaine,Detox,Medium,Moderate,Depression,2024-04-18,2024-01-08,Ongoing
+PID00866,61,Male,Cannabis,Medication-Assisted Treatment (MAT),Medium,Strong,Depression,2024-10-22,2024-01-10,Ongoing
+PID00867,22,Male,Opioids,Residential Rehab,Low,Strong,Anxiety,2024-01-06,2024-01-06,Relapsed
+PID00868,47,Male,Polysubstance,Detox,Low,Moderate,Depression,2024-02-07,2024-01-27,Relapsed
+PID00869,47,Male,Alcohol,Medication-Assisted Treatment (MAT),Low,Strong,Depression,2024-06-17,2024-01-14,Ongoing
+PID00870,34,Male,Alcohol,Counseling,Low,Strong,None,2024-12-21,2024-01-30,Ongoing
+PID00871,65,Female,Cocaine,Residential Rehab,Medium,Moderate,PTSD,2024-10-09,2024-01-17,Recovered
+PID00872,64,Female,Opioids,Counseling,Low,Strong,None,2024-07-21,2024-01-10,Ongoing
+PID00873,40,Female,Cocaine,Medication-Assisted Treatment (MAT),Medium,Strong,None,2024-11-20,2024-01-09,Recovered
+PID00874,32,Female,Cocaine,Detox,High,Moderate,PTSD,2024-11-08,2024-01-16,Recovered
+PID00875,54,Female,Alcohol,Counseling,Low,Strong,Depression,2024-09-29,2024-01-25,Relapsed
+PID00876,38,Female,Cocaine,Detox,Low,Weak,PTSD,2024-08-31,2024-01-21,Ongoing
+PID00877,31,Non-binary,Opioids,Residential Rehab,Low,Weak,None,2024-11-22,2024-01-16,Relapsed
+PID00878,19,Male,Opioids,Medication-Assisted Treatment (MAT),Medium,Moderate,PTSD,2024-02-16,2024-01-24,Recovered
+PID00879,28,Male,Opioids,Medication-Assisted Treatment (MAT),Medium,Strong,Anxiety,2024-09-05,2024-01-15,Recovered
+PID00880,68,Male,Methamphetamine,Residential Rehab,Low,Moderate,Depression,2024-03-19,2024-01-31,Recovered
+PID00881,56,Female,Alcohol,Detox,Medium,Weak,None,2024-04-19,2024-01-23,Recovered
+PID00882,55,Female,Opioids,Counseling,High,Moderate,PTSD,2024-01-13,2024-01-03,Recovered
+PID00883,51,Male,Cannabis,Detox,Low,Strong,None,2024-12-30,2024-01-29,Recovered
+PID00884,55,Female,Cannabis,Detox,Low,Moderate,Depression,2024-03-30,2024-01-21,Recovered
+PID00885,67,Male,Cannabis,Detox,High,Weak,Depression,2024-12-07,2024-01-31,Recovered
+PID00886,51,Female,Alcohol,Counseling,Medium,Moderate,Depression,2024-12-13,2024-01-30,Recovered
+PID00887,35,Male,Alcohol,Detox,High,Moderate,PTSD,2024-10-06,2024-01-03,Ongoing
+PID00888,47,Male,Alcohol,Detox,Medium,Moderate,Depression,2024-08-08,2024-01-06,Recovered
+PID00889,32,Male,Cocaine,Detox,High,Moderate,Depression,2024-03-13,2024-01-12,Ongoing
+PID00890,44,Male,Alcohol,Detox,Low,Strong,None,2024-08-21,2024-01-05,Ongoing
+PID00891,68,Male,Alcohol,Residential Rehab,Medium,Moderate,Depression,2024-09-16,2024-01-29,Recovered
+PID00892,51,Male,Polysubstance,Medication-Assisted Treatment (MAT),High,Strong,None,2024-04-22,2024-01-22,Relapsed
+PID00893,69,Female,Alcohol,Residential Rehab,Medium,Moderate,Anxiety,2024-02-15,2024-01-11,Ongoing
+PID00894,55,Female,Polysubstance,Counseling,Low,Strong,None,2024-09-30,2024-01-05,Ongoing
+PID00895,50,Male,Cannabis,Detox,Low,Moderate,Anxiety,2024-02-12,2024-01-30,Recovered
+PID00896,41,Female,Cocaine,Medication-Assisted Treatment (MAT),Low,Strong,None,2024-07-26,2024-01-08,Ongoing
+PID00897,32,Female,Alcohol,Counseling,Low,Moderate,None,2024-12-14,2024-01-08,Relapsed
+PID00898,47,Male,Alcohol,Detox,Low,Moderate,Depression,2024-04-12,2024-01-25,Recovered
+PID00899,59,Male,Cannabis,Detox,Medium,Strong,Depression,2024-05-03,2024-01-27,Recovered
+PID00900,68,Male,Cocaine,Detox,Medium,Strong,Depression,2024-01-10,2024-01-14,Recovered
+PID00901,34,Male,Cannabis,Detox,Low,Strong,PTSD,2024-11-24,2024-01-25,Ongoing
+PID00902,22,Female,Alcohol,Counseling,Medium,Weak,None,2024-07-05,2024-01-03,Recovered
+PID00903,46,Male,Cannabis,Counseling,Low,Moderate,Anxiety,2024-01-31,2024-01-18,Ongoing
+PID00904,21,Female,Cannabis,Detox,Low,Moderate,PTSD,2024-06-04,2024-01-26,Recovered
+PID00905,27,Female,Cannabis,Detox,Low,Strong,Depression,2024-02-29,2024-01-07,Relapsed
+PID00906,34,Male,Cannabis,Medication-Assisted Treatment (MAT),Medium,Moderate,None,2024-09-05,2024-01-11,Recovered
+PID00907,27,Female,Cocaine,Detox,Low,Weak,None,2024-09-26,2024-01-12,Recovered
+PID00908,34,Male,Opioids,Counseling,Low,Weak,Depression,2024-08-04,2024-01-15,Ongoing
+PID00909,37,Non-binary,Alcohol,Medication-Assisted Treatment (MAT),Low,Moderate,Anxiety,2024-01-02,2024-01-17,Recovered
+PID00910,41,Male,Opioids,Detox,High,Strong,Depression,2024-01-24,2024-01-14,Recovered
+PID00911,22,Female,Alcohol,Detox,Low,Strong,Anxiety,2024-07-24,2024-01-07,Recovered
+PID00912,51,Female,Opioids,Counseling,Medium,Strong,Anxiety,2024-11-15,2024-01-07,Ongoing
+PID00913,23,Male,Opioids,Counseling,Medium,Strong,Depression,2024-07-17,2024-01-30,Relapsed
+PID00914,19,Female,Alcohol,Counseling,Medium,Strong,Anxiety,2024-12-21,2024-01-30,Relapsed
+PID00915,30,Non-binary,Alcohol,Medication-Assisted Treatment (MAT),High,Strong,Anxiety,2024-04-23,2024-01-20,Recovered
+PID00916,60,Female,Alcohol,Detox,Low,Strong,Anxiety,2024-10-06,2024-01-14,Recovered
+PID00917,60,Female,Cocaine,Counseling,Low,Weak,Anxiety,2024-06-03,2024-01-29,Ongoing
+PID00918,65,Female,Methamphetamine,Counseling,High,Moderate,Depression,2024-06-13,2024-01-05,Ongoing
+PID00919,28,Male,Alcohol,Detox,Low,Weak,PTSD,2024-08-09,2024-01-28,Recovered
+PID00920,68,Male,Polysubstance,Counseling,Medium,Moderate,PTSD,2024-03-31,2024-01-27,Recovered
+PID00921,64,Female,Opioids,Detox,Medium,Strong,Anxiety,2024-06-15,2024-01-09,Recovered
+PID00922,40,Male,Alcohol,Counseling,Medium,Moderate,Depression,2024-07-25,2024-01-19,Ongoing
+PID00923,33,Female,Alcohol,Detox,High,Strong,PTSD,2024-10-08,2024-01-21,Recovered
+PID00924,48,Female,Opioids,Counseling,High,Moderate,None,2024-03-05,2024-01-30,Relapsed
+PID00925,28,Male,Cannabis,Counseling,Medium,Strong,Depression,2024-01-04,2024-01-20,Recovered
+PID00926,33,Male,Cannabis,Medication-Assisted Treatment (MAT),Low,Weak,Anxiety,2024-06-05,2024-01-03,Recovered
+PID00927,25,Female,Alcohol,Detox,High,Strong,Depression,2024-09-05,2024-01-27,Recovered
+PID00928,21,Male,Alcohol,Counseling,Low,Strong,Anxiety,2024-09-13,2024-01-26,Recovered
+PID00929,57,Female,Opioids,Counseling,Low,Weak,Depression,2024-08-22,2024-01-07,Recovered
+PID00930,21,Male,Alcohol,Medication-Assisted Treatment (MAT),High,Strong,Anxiety,2024-11-01,2024-01-29,Recovered
+PID00931,42,Female,Alcohol,Counseling,Low,Moderate,PTSD,2024-03-14,2024-01-30,Recovered
+PID00932,20,Male,Alcohol,Counseling,Low,Moderate,Anxiety,2024-07-05,2024-01-04,Recovered
+PID00933,49,Female,Cocaine,Medication-Assisted Treatment (MAT),Low,Weak,Anxiety,2024-03-02,2024-01-03,Recovered
+PID00934,20,Male,Methamphetamine,Medication-Assisted Treatment (MAT),High,Weak,Anxiety,2024-12-02,2024-01-09,Relapsed
+PID00935,44,Female,Opioids,Counseling,Medium,Weak,Anxiety,2024-06-12,2024-01-31,Ongoing
+PID00936,46,Male,Methamphetamine,Counseling,Medium,Strong,Depression,2024-02-25,2024-01-13,Ongoing
+PID00937,49,Female,Alcohol,Medication-Assisted Treatment (MAT),Low,Weak,Depression,2024-04-20,2024-01-13,Recovered
+PID00938,67,Female,Opioids,Residential Rehab,Medium,Moderate,None,2024-08-05,2024-01-20,Recovered
+PID00939,68,Male,Alcohol,Medication-Assisted Treatment (MAT),Medium,Moderate,Depression,2024-08-27,2024-01-19,Recovered
+PID00940,36,Male,Opioids,Counseling,Low,Strong,PTSD,2024-01-21,2024-01-04,Ongoing
+PID00941,38,Male,Polysubstance,Detox,Low,Moderate,None,2024-05-20,2024-01-09,Recovered
+PID00942,22,Female,Opioids,Counseling,Low,Weak,Depression,2024-09-21,2024-01-09,Recovered
+PID00943,35,Female,Alcohol,Medication-Assisted Treatment (MAT),High,Weak,Anxiety,2024-05-18,2024-01-12,Ongoing
+PID00944,45,Female,Opioids,Counseling,Medium,Moderate,Anxiety,2024-03-10,2024-01-24,Recovered
+PID00945,59,Male,Alcohol,Counseling,High,Strong,None,2024-04-27,2024-01-23,Recovered
+PID00946,39,Male,Cocaine,Medication-Assisted Treatment (MAT),Low,Strong,None,2024-07-16,2024-01-05,Recovered
+PID00947,38,Female,Opioids,Counseling,Medium,Weak,PTSD,2024-07-23,2024-01-14,Ongoing
+PID00948,23,Male,Opioids,Medication-Assisted Treatment (MAT),Medium,Moderate,Depression,2024-08-01,2024-01-05,Ongoing
+PID00949,18,Non-binary,Opioids,Counseling,Medium,Moderate,PTSD,2024-02-25,2024-01-13,Recovered
+PID00950,22,Male,Opioids,Counseling,High,Strong,Anxiety,2024-10-13,2024-01-31,Recovered
+PID00951,58,Female,Alcohol,Counseling,Low,Moderate,Anxiety,2024-10-19,2024-01-14,Ongoing
+PID00952,29,Male,Cannabis,Medication-Assisted Treatment (MAT),Low,Moderate,Depression,2024-06-23,2024-01-27,Recovered
+PID00953,43,Male,Alcohol,Detox,Medium,Weak,Depression,2024-12-12,2024-01-06,Ongoing
+PID00954,63,Female,Cannabis,Detox,Medium,Moderate,PTSD,2024-05-07,2024-01-27,Ongoing
+PID00955,51,Female,Cocaine,Residential Rehab,Medium,Strong,Anxiety,2024-11-20,2024-01-18,Recovered
+PID00956,66,Non-binary,Cocaine,Detox,Low,Moderate,Anxiety,2024-10-18,2024-01-22,Recovered
+PID00957,31,Male,Opioids,Counseling,Medium,Strong,Anxiety,2024-10-14,2024-01-20,Ongoing
+PID00958,43,Male,Opioids,Counseling,Low,Weak,None,2024-08-13,2024-01-06,Recovered
+PID00959,62,Female,Alcohol,Counseling,Low,Strong,PTSD,2024-03-04,2024-01-24,Recovered
+PID00960,44,Female,Cannabis,Counseling,Medium,Moderate,Depression,2024-02-17,2024-01-08,Ongoing
+PID00961,26,Male,Alcohol,Detox,Medium,Strong,Depression,2024-07-20,2024-01-23,Recovered
+PID00962,43,Male,Opioids,Counseling,Low,Moderate,Depression,2024-12-02,2024-01-17,Recovered
+PID00963,64,Male,Alcohol,Counseling,Low,Moderate,None,2024-02-29,2024-01-03,Recovered
+PID00964,39,Female,Alcohol,Counseling,Low,Moderate,Anxiety,2024-09-13,2024-01-05,Ongoing
+PID00965,64,Male,Opioids,Detox,Low,Strong,Anxiety,2024-03-05,2024-01-07,Recovered
+PID00966,47,Male,Alcohol,Counseling,Medium,Strong,Anxiety,2024-08-26,2024-01-24,Relapsed
+PID00967,60,Male,Cannabis,Detox,High,Strong,Anxiety,2024-10-15,2024-01-19,Ongoing
+PID00968,65,Male,Alcohol,Detox,Low,Moderate,None,2024-02-07,2024-01-16,Recovered
+PID00969,34,Male,Alcohol,Detox,Medium,Strong,Anxiety,2024-01-25,2024-01-11,Recovered
+PID00970,43,Female,Opioids,Detox,High,Moderate,Depression,2024-02-28,2024-01-05,Recovered
+PID00971,53,Male,Alcohol,Medication-Assisted Treatment (MAT),High,Weak,Depression,2024-12-22,2024-01-28,Ongoing
+PID00972,18,Female,Alcohol,Detox,Low,Weak,Anxiety,2024-10-23,2024-01-15,Relapsed
+PID00973,25,Male,Cannabis,Residential Rehab,High,Moderate,None,2024-06-06,2024-01-05,Ongoing
+PID00974,66,Female,Alcohol,Residential Rehab,Low,Moderate,Anxiety,2024-02-26,2024-01-13,Recovered
+PID00975,52,Female,Cocaine,Counseling,Low,Strong,None,2024-02-17,2024-01-04,Ongoing
+PID00976,69,Female,Alcohol,Detox,Low,Moderate,PTSD,2024-11-23,2024-01-26,Recovered
+PID00977,32,Female,Alcohol,Counseling,Low,Weak,Depression,2024-02-25,2024-01-17,Ongoing
+PID00978,64,Male,Cannabis,Medication-Assisted Treatment (MAT),Low,Strong,Depression,2024-03-05,2024-01-15,Ongoing
+PID00979,39,Male,Alcohol,Counseling,Low,Moderate,Depression,2024-09-24,2024-01-21,Recovered
+PID00980,31,Female,Alcohol,Detox,Low,Weak,PTSD,2024-03-09,2024-01-24,Recovered
+PID00981,43,Non-binary,Alcohol,Counseling,High,Weak,Depression,2024-08-03,2024-01-18,Ongoing
+PID00982,45,Female,Alcohol,Medication-Assisted Treatment (MAT),High,Strong,Anxiety,2024-03-29,2024-01-20,Ongoing
+PID00983,40,Female,Cocaine,Medication-Assisted Treatment (MAT),Low,Moderate,Anxiety,2024-10-07,2024-01-09,Recovered
+PID00984,31,Female,Alcohol,Detox,High,Strong,PTSD,2024-09-13,2024-01-15,Recovered
+PID00985,41,Male,Cannabis,Counseling,High,Strong,Depression,2024-06-08,2024-01-06,Ongoing
+PID00986,19,Male,Cocaine,Detox,Medium,Weak,Anxiety,2024-08-21,2024-01-11,Recovered
+PID00987,62,Female,Opioids,Detox,Low,Weak,Anxiety,2024-05-10,2024-01-12,Recovered
+PID00988,43,Non-binary,Methamphetamine,Medication-Assisted Treatment (MAT),Medium,Moderate,Anxiety,2024-02-18,2024-01-11,Recovered
+PID00989,31,Male,Alcohol,Detox,High,Strong,None,2024-05-26,2024-01-09,Recovered
+PID00990,68,Female,Polysubstance,Detox,Medium,Weak,Depression,2024-11-11,2024-01-17,Ongoing
+PID00991,24,Male,Alcohol,Detox,Low,Moderate,None,2024-01-02,2024-01-30,Relapsed
+PID00992,20,Female,Cannabis,Medication-Assisted Treatment (MAT),Medium,Strong,PTSD,2024-11-24,2024-01-10,Ongoing
+PID00993,64,Male,Opioids,Medication-Assisted Treatment (MAT),Medium,Moderate,Anxiety,2024-05-24,2024-01-21,Recovered
+PID00994,40,Male,Alcohol,Counseling,Medium,Strong,PTSD,2024-03-01,2024-01-13,Ongoing
+PID00995,63,Female,Opioids,Medication-Assisted Treatment (MAT),Low,Moderate,Anxiety,2024-09-29,2024-01-07,Recovered
+PID00996,60,Male,Cannabis,Detox,Low,Moderate,Depression,2024-02-18,2024-01-04,Recovered
+PID00997,64,Female,Alcohol,Counseling,High,Strong,PTSD,2024-11-27,2024-01-12,Relapsed
+PID00998,62,Female,Alcohol,Counseling,High,Strong,Anxiety,2024-05-10,2024-01-18,Recovered
+PID00999,35,Female,Cannabis,Detox,Low,Strong,PTSD,2024-02-12,2024-01-25,Relapsed
+PID01000,55,Male,Cannabis,Counseling,High,Strong,Anxiety,2024-02-26,2024-01-15,Recovered
