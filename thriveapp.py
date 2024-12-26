@@ -3,10 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn.model_selection import train_test_split
-from sklearn.impute import SimpleImputer
-from sklearn.preprocessing import StandardScaler, OneHotEncoder
-from sklearn.linear_model import LogisticRegression
+from sklearn.preprocessing import OneHotEncoder
 import pickle
 
 # Set page configuration
@@ -30,10 +27,11 @@ def load_and_preprocess_data():
 # Load the trained model and encoder
 @st.cache_resource
 def load_model_and_encoder():
-    # Load the model (replace with your Snowflake integration if needed)
-    with open("logistic_regression_model.pkl", "rb") as model_file:
+    # Load the retrained model and encoder
+    with open("logistic_regression_retrained.pkl", "rb") as model_file:
         model = pickle.load(model_file)
-    encoder = OneHotEncoder(handle_unknown='ignore')
+    with open("encoder_retrained.pkl", "rb") as encoder_file:
+        encoder = pickle.load(encoder_file)
     return model, encoder
 
 # Pages
@@ -92,6 +90,7 @@ def ml_prediction():
         substance_type = st.selectbox("Substance Type", ["Alcohol", "Cannabis", "Opioids", "Cocaine", "Methamphetamine", "Polysubstance"])
         treatment_type = st.selectbox("Treatment Type", ["Residential Rehab", "Detox", "Counseling", "Medication-Assisted Treatment (MAT)"])
         support_system = st.selectbox("Support System", ["Strong", "Moderate", "Weak"])
+        treatment_outcome = st.selectbox("Treatment Outcome", ["Ongoing", "Recovered", "Relapsed"])
         submit = st.form_submit_button("Predict Relapse Risk")
 
         if submit:
@@ -101,7 +100,8 @@ def ml_prediction():
                 "Gender": [gender],
                 "Substance_Type": [substance_type],
                 "Treatment_Type": [treatment_type],
-                "Support_System": [support_system]
+                "Support_System": [support_system],
+                "Treatment_Outcome": [treatment_outcome]
             })
 
             # Load the model and encoder
@@ -109,9 +109,8 @@ def ml_prediction():
 
             # Transform input data to match the model's feature set
             try:
-                # Ensure input data columns are consistent with encoder's fit data
                 input_data_encoded = encoder.transform(input_data).toarray()
-                
+
                 # Predict the relapse risk
                 prediction = model.predict(input_data_encoded)
                 prediction_prob = model.predict_proba(input_data_encoded)
@@ -122,7 +121,6 @@ def ml_prediction():
             except ValueError as e:
                 st.error("Error during prediction: Ensure the input matches the model's expected features.")
                 st.error(str(e))
-
 
 def case_management(data):
     st.title("Case Management")
