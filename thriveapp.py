@@ -85,6 +85,7 @@ def ml_prediction():
     st.title("ML Prediction: Relapse Risk")
     st.write("Enter patient details to predict relapse risks.")
 
+    # User input form
     with st.form("prediction_form"):
         age = st.number_input("Age", min_value=0, max_value=120, value=30)
         gender = st.selectbox("Gender", ["Male", "Female"])
@@ -94,6 +95,7 @@ def ml_prediction():
         submit = st.form_submit_button("Predict Relapse Risk")
 
         if submit:
+            # Create input data DataFrame
             input_data = pd.DataFrame({
                 "Age": [age],
                 "Gender": [gender],
@@ -101,11 +103,18 @@ def ml_prediction():
                 "Treatment_Type": [treatment_type],
                 "Support_System": [support_system]
             })
+
             # Load the model and encoder
             model, encoder = load_model_and_encoder()
-            encoded_input = encoder.fit_transform(input_data).toarray()
-            prediction = model.predict(encoded_input)
-            st.write(f"Predicted Relapse Risk: **{prediction[0]}**")
+
+            # Transform input data to match the model's feature set
+            try:
+                encoded_input = encoder.transform(input_data).toarray()
+                prediction = model.predict(encoded_input)
+                st.write(f"Predicted Relapse Risk: **{prediction[0]}**")
+            except ValueError as e:
+                st.error("Error during prediction: Ensure the input matches the model's expected features.")
+                st.error(str(e))
 
 def case_management(data):
     st.title("Case Management")
