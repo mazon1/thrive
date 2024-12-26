@@ -109,12 +109,20 @@ def ml_prediction():
 
             # Transform input data to match the model's feature set
             try:
-                encoded_input = encoder.transform(input_data).toarray()
-                prediction = model.predict(encoded_input)
+                # Ensure input data columns are consistent with encoder's fit data
+                input_data_encoded = encoder.transform(input_data).toarray()
+                
+                # Predict the relapse risk
+                prediction = model.predict(input_data_encoded)
+                prediction_prob = model.predict_proba(input_data_encoded)
+
+                # Display the prediction
                 st.write(f"Predicted Relapse Risk: **{prediction[0]}**")
+                st.write(f"Confidence: **{round(max(prediction_prob[0]) * 100, 2)}%**")
             except ValueError as e:
                 st.error("Error during prediction: Ensure the input matches the model's expected features.")
                 st.error(str(e))
+
 
 def case_management(data):
     st.title("Case Management")
