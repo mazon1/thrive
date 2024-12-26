@@ -20,7 +20,7 @@ def load_and_preprocess_data():
     har_df = pd.read_csv("Synthetic_HAR_Data_for_SUD_Patients2.csv")
 
     # Merge datasets
-    combined_df = pd.merge(sud_df, har_df, on="PATIENT_ID", how="inner")
+    combined_df = pd.merge(sud_df, har_df, on="Patient_ID", how="inner")
 
     # Ensure there are no missing values
     combined_df.fillna(value="Unknown", inplace=True)
