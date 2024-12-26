@@ -42,12 +42,12 @@ def dashboard(data):
 
     # Relapse Risk Distribution
     st.subheader("Relapse Risk Distribution")
-    relapse_counts = data['RELAPSE_RISK'].value_counts()
+    relapse_counts = data['Relapse_Risk'].value_counts()
     st.bar_chart(relapse_counts)
 
     # High-Risk Patients
     st.subheader("High-Risk Patients (Relapse Risk: High)")
-    high_risk = data[data['RELAPSE_RISK'] == 'High']
+    high_risk = data[data['Relapse_Risk'] == 'High']
     st.write(high_risk[['PATIENT_ID', 'SUBSTANCE_TYPE', 'TREATMENT_TYPE']])
 
     # Key Statistics
@@ -60,24 +60,24 @@ def data_visualization(data):
 
     # Average Heart Rate by Relapse Risk
     st.subheader("Average Heart Rate by Relapse Risk")
-    avg_heart_rate = data.groupby('RELAPSE_RISK')['AVG_HEART_RATE'].mean().reset_index()
+    avg_heart_rate = data.groupby('Relapse_Risk')['AVG_HEART_RATE'].mean().reset_index()
     fig, ax = plt.subplots()
-    sns.barplot(data=avg_heart_rate, x='RELAPSE_RISK', y='AVG_HEART_RATE', ax=ax)
+    sns.barplot(data=avg_heart_rate, x='Relapse_Risk', y='AVG_HEART_RATE', ax=ax)
     ax.set_title("Average Heart Rate by Relapse Risk")
     st.pyplot(fig)
 
     # Activity Level Visualization
     st.subheader("Average Activity Levels by Relapse Risk")
-    avg_activity = data.groupby('RELAPSE_RISK')[['AVG_X_ACCEL', 'AVG_Y_ACCEL', 'AVG_Z_ACCEL']].mean().reset_index()
+    avg_activity = data.groupby('Relapse_Risk')[['AVG_X_ACCEL', 'AVG_Y_ACCEL', 'AVG_Z_ACCEL']].mean().reset_index()
     fig, ax = plt.subplots()
-    avg_activity.set_index('RELAPSE_RISK').plot(kind='bar', stacked=True, ax=ax)
+    avg_activity.set_index('Relapse_Risk').plot(kind='bar', stacked=True, ax=ax)
     ax.set_title("Average Activity Levels by Relapse Risk")
     st.pyplot(fig)
 
     # Filter and display data
     st.subheader("Filter Data")
-    relapse_risk_filter = st.selectbox("Select Relapse Risk Level", options=data['RELAPSE_RISK'].unique())
-    filtered_data = data[data['RELAPSE_RISK'] == relapse_risk_filter]
+    relapse_risk_filter = st.selectbox("Select Relapse Risk Level", options=data['Relapse_Risk'].unique())
+    filtered_data = data[data['Relapse_Risk'] == relapse_risk_filter]
     st.write(filtered_data)
 
 def ml_prediction():
