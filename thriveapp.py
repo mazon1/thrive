@@ -7,6 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.linear_model import LogisticRegression
+import pickle
 
 # Set page configuration
 st.set_page_config(page_title="SUD Patient Analysis", page_icon="📊", layout="wide")
@@ -14,15 +15,25 @@ st.set_page_config(page_title="SUD Patient Analysis", page_icon="📊", layout="
 # Data Loading and Preprocessing
 @st.cache_data
 def load_and_preprocess_data():
-  
-    # Read the data
+    # Simulate reading from Snowflake or replace with your Snowflake data query
     sud_df = pd.read_csv("Synthetic_SUD_Patient_Data.csv")
     har_df = pd.read_csv("Synthetic_HAR_Data_for_SUD_Patients2.csv")
-    
-    # Merge datasets if necessary
+
+    # Merge datasets
     combined_df = pd.merge(sud_df, har_df, on="PATIENT_ID", how="inner")
 
+    # Ensure there are no missing values
+    combined_df.fillna(value="Unknown", inplace=True)
     return combined_df
+
+# Load the trained model and encoder
+@st.cache_resource
+def load_model_and_encoder():
+    # Replace with the actual file path or load from Snowflake stage
+    with open("logistic_regression_model.pkl", "rb") as model_file:
+        model = pickle.load(model_file)
+    encoder = OneHotEncoder(handle_unknown='ignore')
+    return model, encoder
 
 # Pages
 def dashboard(data):
@@ -69,7 +80,7 @@ def data_visualization(data):
     filtered_data = data[data['RELAPSE_RISK'] == relapse_risk_filter]
     st.write(filtered_data)
 
-def ml_prediction(model, encoder):
+def ml_prediction():
     st.title("ML Prediction: Relapse Risk")
     st.write("Enter patient details to predict relapse risks.")
 
@@ -89,7 +100,9 @@ def ml_prediction(model, encoder):
                 "Treatment_Type": [treatment_type],
                 "Support_System": [support_system]
             })
-            encoded_input = encoder.transform(input_data)
+            # Load the model and encoder
+            model, encoder = load_model_and_encoder()
+            encoded_input = encoder.fit_transform(input_data).toarray()
             prediction = model.predict(encoded_input)
             st.write(f"Predicted Relapse Risk: **{prediction[0]}**")
 
@@ -113,9 +126,6 @@ if page == "Dashboard":
 elif page == "Data Visualization":
     data_visualization(data)
 elif page == "ML Prediction":
-    # Load a dummy encoder and model for demo
-    encoder = OneHotEncoder(handle_unknown='ignore')
-    model = LogisticRegression()
-    ml_prediction(model, encoder)
+    ml_prediction()
 elif page == "Case Management":
     case_management(data)
