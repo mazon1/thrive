@@ -14,14 +14,10 @@ st.set_page_config(page_title="SUD Patient Analysis", page_icon="📊", layout="
 # Data Loading and Preprocessing
 @st.cache_data
 def load_and_preprocess_data():
-    # Load data from GitHub
-    github_base_url = "https://raw.githubusercontent.com/your-github-username/your-repo-name/main/"
-    sud_patient_data_url = github_base_url + "Synthetic_SUD_Patient_Data.csv"
-    har_data_url = github_base_url + "Synthetic_HAR_Data_for_SUD_Patients2.csv"
-    
+  
     # Read the data
-    sud_df = pd.read_csv(sud_patient_data_url)
-    har_df = pd.read_csv(har_data_url)
+    sud_df = pd.read_csv("Synthetic_SUD_Patient_Data.csv")
+    har_df = pd.read_csv("Synthetic_HAR_Data_for_SUD_Patients2.csv")
     
     # Merge datasets if necessary
     combined_df = pd.merge(sud_df, har_df, on="PATIENT_ID", how="inner")
