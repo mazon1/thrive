@@ -109,11 +109,20 @@ def ml_prediction():
 
             # Transform input data to match the model's feature set
             try:
-                input_data_encoded = encoder.transform(input_data).toarray()
+                # Use the encoder to transform input data
+                categorical_cols = ["Gender", "Substance_Type", "Treatment_Type", "Support_System", "Treatment_Outcome"]
+                numerical_cols = ["Age"]
+
+                # Encode categorical features
+                encoded_categorical = encoder.transform(input_data[categorical_cols]).toarray()
+
+                # Combine with numerical features
+                numerical_features = input_data[numerical_cols].values
+                final_input = np.hstack([numerical_features, encoded_categorical])
 
                 # Predict the relapse risk
-                prediction = model.predict(input_data_encoded)
-                prediction_prob = model.predict_proba(input_data_encoded)
+                prediction = model.predict(final_input)
+                prediction_prob = model.predict_proba(final_input)
 
                 # Display the prediction
                 st.write(f"Predicted Relapse Risk: **{prediction[0]}**")
@@ -121,6 +130,7 @@ def ml_prediction():
             except ValueError as e:
                 st.error("Error during prediction: Ensure the input matches the model's expected features.")
                 st.error(str(e))
+
 
 def case_management(data):
     st.title("Case Management")
