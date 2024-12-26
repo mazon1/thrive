@@ -15,21 +15,22 @@ st.set_page_config(page_title="SUD Patient Analysis", page_icon="📊", layout="
 # Data Loading and Preprocessing
 @st.cache_data
 def load_and_preprocess_data():
-    # Simulate reading from Snowflake or replace with your Snowflake data query
+    # Load data from CSV files
     sud_df = pd.read_csv("Synthetic_SUD_Patient_Data.csv")
     har_df = pd.read_csv("Synthetic_HAR_Data_for_SUD_Patients2.csv")
 
-    # Merge datasets
+    # Merge datasets on Patient_ID
     combined_df = pd.merge(sud_df, har_df, on="Patient_ID", how="inner")
 
-    # Ensure there are no missing values
+    # Fill missing values with a placeholder
     combined_df.fillna(value="Unknown", inplace=True)
+
     return combined_df
 
 # Load the trained model and encoder
 @st.cache_resource
 def load_model_and_encoder():
-    # Replace with the actual file path or load from Snowflake stage
+    # Load the model (replace with your Snowflake integration if needed)
     with open("logistic_regression_model.pkl", "rb") as model_file:
         model = pickle.load(model_file)
     encoder = OneHotEncoder(handle_unknown='ignore')
@@ -48,7 +49,7 @@ def dashboard(data):
     # High-Risk Patients
     st.subheader("High-Risk Patients (Relapse Risk: High)")
     high_risk = data[data['Relapse_Risk'] == 'High']
-    st.write(high_risk[['PATIENT_ID', 'SUBSTANCE_TYPE', 'TREATMENT_TYPE']])
+    st.write(high_risk[['Patient_ID', 'Substance_Type', 'Treatment_Type']])
 
     # Key Statistics
     st.subheader("Key Statistics")
@@ -60,15 +61,15 @@ def data_visualization(data):
 
     # Average Heart Rate by Relapse Risk
     st.subheader("Average Heart Rate by Relapse Risk")
-    avg_heart_rate = data.groupby('Relapse_Risk')['AVG_HEART_RATE'].mean().reset_index()
+    avg_heart_rate = data.groupby('Relapse_Risk')['Heart_Rate'].mean().reset_index()
     fig, ax = plt.subplots()
-    sns.barplot(data=avg_heart_rate, x='Relapse_Risk', y='AVG_HEART_RATE', ax=ax)
+    sns.barplot(data=avg_heart_rate, x='Relapse_Risk', y='Heart_Rate', ax=ax)
     ax.set_title("Average Heart Rate by Relapse Risk")
     st.pyplot(fig)
 
     # Activity Level Visualization
     st.subheader("Average Activity Levels by Relapse Risk")
-    avg_activity = data.groupby('Relapse_Risk')[['AVG_X_ACCEL', 'AVG_Y_ACCEL', 'AVG_Z_ACCEL']].mean().reset_index()
+    avg_activity = data.groupby('Relapse_Risk')[['X_accel', 'Y_accel', 'Z_accel']].mean().reset_index()
     fig, ax = plt.subplots()
     avg_activity.set_index('Relapse_Risk').plot(kind='bar', stacked=True, ax=ax)
     ax.set_title("Average Activity Levels by Relapse Risk")
