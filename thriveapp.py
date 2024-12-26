@@ -104,40 +104,39 @@ def ml_prediction():
                 "Treatment_Outcome": [treatment_outcome]
             })
 
-            # Load the model, encoder, and feature order
+            # Load the model and encoder
             model, encoder = load_model_and_encoder()
-            with open("feature_order.pkl", "rb") as f:
-                feature_order = pickle.load(f)
 
-            # Transform input data
+            # Transform input data to match the model's feature set
             try:
-                # Define categorical and numerical columns
                 categorical_cols = ["Gender", "Substance_Type", "Treatment_Type", "Support_System", "Treatment_Outcome"]
                 numerical_cols = ["Age"]
 
                 # Encode categorical features
                 encoded_categorical = encoder.transform(input_data[categorical_cols]).toarray()
 
-                # Extract numerical features
+                # Combine with numerical features
                 numerical_features = input_data[numerical_cols].values
+                final_input = np.hstack([numerical_features, encoded_categorical])
 
-                # Combine encoded categorical and numerical features
-                combined_features = np.hstack([numerical_features, encoded_categorical])
-
-                # Convert to DataFrame and align with saved feature order
-                combined_features_df = pd.DataFrame(combined_features, columns=list(numerical_cols) + list(encoder.get_feature_names_out(categorical_cols)))
-                final_features = combined_features_df[feature_order]
+                # Create a DataFrame with column names for the model
+                feature_names = numerical_cols + list(encoder.get_feature_names_out(categorical_cols))
+                final_input_df = pd.DataFrame(final_input, columns=feature_names)
 
                 # Make prediction
-                prediction = model.predict(final_features)[0]
-                prediction_proba = model.predict_proba(final_features)[0]
+                prediction = model.predict(final_input_df)[0]
+                prediction_proba = model.predict_proba(final_input_df)[0]
 
                 # Display prediction
                 st.write(f"Predicted Relapse Risk: **{prediction}**")
-                st.write(f"Confidence: **{prediction_proba[1] * 100:.2f}%**")  # Assuming class 1 is Relapse
+                st.write(f"Probability: **{prediction_proba[1]:.2f}**")  # Assuming probability of class 1 (Relapse)
 
+            except ValueError as ve:
+                st.error("Error during prediction: Ensure input features match the training data.")
+                st.error(str(ve))
             except Exception as e:
-                st.error(f"Error during prediction: {e}")
+                st.error(f"Unexpected error during prediction: {e}")
+
 
 
 
