@@ -94,61 +94,56 @@ def ml_prediction():
         submit = st.form_submit_button("Predict Relapse Risk")
 
         if submit:
-            # Create input data DataFrame
-            input_data = pd.DataFrame({
-                "Age": [age],
-                "Gender": [gender],
-                "Substance_Type": [substance_type],
-                "Treatment_Type": [treatment_type],
-                "Support_System": [support_system],
-                "Treatment_Outcome": [treatment_outcome]
-            })
-
-            # Load the model, encoder, and feature order
             try:
+                # Create input data DataFrame
+                input_data = pd.DataFrame({
+                    "Age": [age],
+                    "Gender": [gender],
+                    "Substance_Type": [substance_type],
+                    "Treatment_Type": [treatment_type],
+                    "Support_System": [support_system],
+                    "Treatment_Outcome": [treatment_outcome]
+                })
+
+                # Load the model, encoder, and feature order
                 with open("logistic_regression_retrained.pkl", "rb") as model_file:
                     model = pickle.load(model_file)
                 with open("encoder_retrained.pkl", "rb") as encoder_file:
                     encoder = pickle.load(encoder_file)
                 with open("feature_order.pkl", "rb") as f:
                     feature_order = pickle.load(f)
-            except Exception as e:
-                st.error("Error loading the model or encoder.")
-                st.error(str(e))
-                return
 
-            # Preprocess the input data
-            try:
+                # Preprocess input data
                 categorical_cols = ["Gender", "Substance_Type", "Treatment_Type", "Support_System", "Treatment_Outcome"]
                 numerical_cols = ["Age"]
 
                 # Encode categorical features
                 encoded_categorical = encoder.transform(input_data[categorical_cols]).toarray()
+                numerical_features = input_data[numerical_cols].values
 
                 # Combine numerical and encoded categorical features
-                numerical_features = input_data[numerical_cols].values
-                combined_features = pd.concat(
+                final_input = pd.concat(
                     [
-                        pd.DataFrame(numerical_features, columns=numerical_cols, index=input_data.index),
-                        pd.DataFrame(encoded_categorical, columns=encoder.get_feature_names_out(categorical_cols), index=input_data.index)
+                        pd.DataFrame(numerical_features, columns=numerical_cols),
+                        pd.DataFrame(encoded_categorical, columns=encoder.get_feature_names_out(categorical_cols))
                     ],
                     axis=1
                 )
 
-                # Align features to match training feature order
-                aligned_features = combined_features.reindex(columns=feature_order, fill_value=0)
+                # Ensure feature order matches the training data
+                final_input = final_input.reindex(columns=feature_order, fill_value=0)
 
-                # Make predictions
-                prediction = model.predict(aligned_features)[0]
-                prediction_proba = model.predict_proba(aligned_features)[0]
+                # Make prediction
+                prediction = model.predict(final_input)[0]
+                prediction_proba = model.predict_proba(final_input)[0]
 
-                # Display predictions
-                st.success(f"Predicted Relapse Risk: **{prediction}**")
-                st.info(f"Probability of Relapse: **{prediction_proba[1] * 100:.2f}%**")
+                # Display results
+                st.write(f"Predicted Relapse Risk: **{prediction}**")
+                st.write(f"Confidence: **{prediction_proba[1] * 100:.2f}%**")  # Assuming class 1 is "Relapse"
 
             except Exception as e:
-                st.error("Error during prediction.")
-                st.error(str(e))
+                st.error(f"Error during prediction: {e}")
+
 
 def case_management(data):
     st.title("Case Management")
