@@ -10,8 +10,9 @@ import google.generativeai as genai
 # Set page configuration
 st.set_page_config(page_title="SUD Patient Analysis", page_icon="📊", layout="wide")
 
-# Initialize Google Generative AI API (Replace 'your_api_key_here' with an actual API key)
-genai.configure(api_key="your_api_key_here")
+# Set up the API key
+GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY', st.secrets.get("GOOGLE_API_KEY"))
+genai.configure(api_key=GOOGLE_API_KEY)
 
 # Data Loading and Preprocessing
 @st.cache_data
@@ -98,33 +99,10 @@ def ml_prediction_prototype():
         st.write(f"**Predicted Relapse Risk:** {predicted_risk}")
         st.write(f"**Confidence:** {confidence}%")
 
-# Case Management with AI Report Generation
-def case_management(data):
-    st.title("Case Management")
-    st.write("Manage and monitor patient cases with AI-generated reports.")
-
-    # User input for Patient ID and Case Notes
-    patient_id = st.text_input("Enter Patient ID", placeholder="E.g., PID12345")
-    notes = st.text_area("Enter Case Notes", placeholder="E.g., Patient has shown improvement...")
-
-    # Button to generate the case report
-    if st.button("Generate Case Report"):
-        if not patient_id:
-            st.error("Patient ID is required to generate a report.")
-        else:
-            # Generate the case report using Google Generative AI
-            report = generate_case_report(patient_id, notes)
-
-            # Display the generated report
-            st.subheader("Generated Case Report")
-            st.write(report)
-
-
-# Generate Case Report Function
 # Function to generate a case report using Google Generative AI
 def generate_case_report(patient_id, notes):
     try:
-        # Create the prompt
+        # Refined prompt for case report generation
         prompt = f"""
         Generate a detailed case report for a Substance Use Disorder (SUD) patient.
         Patient ID: {patient_id}.
@@ -139,20 +117,48 @@ def generate_case_report(patient_id, notes):
         Format the report for professional documentation.
         """
 
-        # Use the chat model to generate a response
-        response = genai.chat(
-            messages=[
-                {"role": "system", "content": "You are a professional case report generator for SUD patients."},
-                {"role": "user", "content": prompt}
-            ]
-        )
+        # Use Google Generative AI's GenerativeModel
+        model = genai.GenerativeModel('gemini-pro')  # Ensure the correct model is specified
+        response = model.generate_content(prompt)
 
-        # Extract the generated content
-        report = response['content']
+        # Extract the response text
+        report = response.text
+
+        # Post-process to ensure structure
+        if "Patient Overview:" not in report:
+            report = "Patient Overview: Not specified.\n" + report
+        if "Diagnosis:" not in report:
+            report += "\nDiagnosis: Not specified."
+        if "Treatment Plan:" not in report:
+            report += "\nTreatment Plan: Not specified."
+        if "Follow-Up Recommendations:" not in report:
+            report += "\nFollow-Up Recommendations: Not specified."
+
         return report
-
     except Exception as e:
-        return f"An error occurred while generating the report: {e}"
+        st.error(f"Error generating report: {e}")
+        return "Sorry, I couldn't process your request."
+
+# Case Management page updated with Google Generative AI integration
+def case_management(data):
+    st.title("Case Management")
+    st.write("Manage and monitor patient cases with AI-generated reports.")
+
+    # User input for Patient ID and Case Notes
+    patient_id = st.text_input("Enter Patient ID", placeholder="E.g., PID12345")
+    notes = st.text_area("Enter Case Notes", placeholder="E.g., Patient has shown improvement...")
+
+    # Button to generate the report
+    if st.button("Generate AI Report"):
+        if not patient_id:
+            st.error("Patient ID is required to generate a report.")
+        else:
+            # Generate the case report
+            report = generate_case_report(patient_id, notes)
+
+            # Display the generated report
+            st.subheader("Generated Case Report")
+            st.write(report)
 
 # Navigation
 page = st.sidebar.selectbox("Select a Page", ["Dashboard", "Data Visualization", "ML Prediction", "Case Management"])
