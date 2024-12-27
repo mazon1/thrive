@@ -121,26 +121,38 @@ def case_management(data):
 
 
 # Generate Case Report Function
+# Function to generate a case report using Google Generative AI
 def generate_case_report(patient_id, notes):
     try:
-        # Create the prompt for Google Generative AI
+        # Create the prompt
         prompt = f"""
-        Generate a case report for a Substance Use Disorder (SUD) patient in the USA.
+        Generate a detailed case report for a Substance Use Disorder (SUD) patient.
         Patient ID: {patient_id}.
-        Include the following notes: {notes}.
-        Provide a comprehensive case report in plain English, summarizing patient status, treatment progress, and recommendations.
+        Case notes:
+        {notes}
+        Include the following sections:
+        1. Patient Overview
+        2. Diagnosis
+        3. Treatment Plan
+        4. Medication Dosage and Instructions (if applicable)
+        5. Follow-Up Recommendations
+        Format the report for professional documentation.
         """
 
-        # Call Google Generative AI to generate the report
-        response = genai.generate_text(
-            prompt=prompt,
-            temperature=0.7,  # Adjust creativity level (optional)
-            max_output_tokens=500  # Limit the response length
+        # Use the chat model to generate a response
+        response = genai.chat(
+            messages=[
+                {"role": "system", "content": "You are a professional case report generator for SUD patients."},
+                {"role": "user", "content": prompt}
+            ]
         )
-        return response.text  # Extract the generated report content
-    except Exception as e:
-        return f"Error generating report: {e}"
 
+        # Extract the generated content
+        report = response['content']
+        return report
+
+    except Exception as e:
+        return f"An error occurred while generating the report: {e}"
 
 # Navigation
 page = st.sidebar.selectbox("Select a Page", ["Dashboard", "Data Visualization", "ML Prediction", "Case Management"])
