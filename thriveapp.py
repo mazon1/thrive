@@ -111,12 +111,6 @@ def ml_prediction():
                 with open("encoder_retrained.pkl", "rb") as encoder_file:
                     encoder = pickle.load(encoder_file)
 
-                # Define the expected feature order (numerical first, then categorical)
-                expected_order = (
-                    ["Age"] +
-                    list(encoder.get_feature_names_out(["Gender", "Substance_Type", "Treatment_Type", "Support_System", "Treatment_Outcome"]))
-                )
-
                 # Preprocess input data
                 categorical_cols = ["Gender", "Substance_Type", "Treatment_Type", "Support_System", "Treatment_Outcome"]
                 numerical_cols = ["Age"]
@@ -134,8 +128,8 @@ def ml_prediction():
                     axis=1
                 )
 
-                # Reorder columns to match the expected order
-                final_input = final_input[expected_order]
+                # Dynamically align columns with model's expected feature names
+                final_input = final_input.reindex(columns=model.feature_names_in_, fill_value=0)
 
                 # Make prediction
                 prediction = model.predict(final_input)[0]
@@ -147,7 +141,6 @@ def ml_prediction():
 
             except Exception as e:
                 st.error(f"Error during prediction: {e}")
-
 
 def case_management(data):
     st.title("Case Management")
