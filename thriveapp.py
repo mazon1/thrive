@@ -196,7 +196,9 @@ if page == "Dashboard":
     dashboard(data)
 elif page == "Data Visualization":
     data_visualization(data)
+# elif page == "ML Prediction":
+#     ml_prediction()
 elif page == "ML Prediction":
-    ml_prediction()
+    ml_prediction_prototype()
 elif page == "Case Management":
     case_management(data)
