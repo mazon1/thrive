@@ -3,11 +3,15 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn.preprocessing import OneHotEncoder
 import pickle
 
 # Set page configuration
 st.set_page_config(page_title="SUD Patient Analysis", page_icon="📊", layout="wide")
+
+# Constants
+MODEL_FILE = "logistic_regression_retrained.pkl"
+ENCODER_FILE = "encoder_retrained.pkl"
+FEATURE_ORDER_FILE = "feature_order.pkl"
 
 # Data Loading and Preprocessing
 @st.cache_data
@@ -24,17 +28,18 @@ def load_and_preprocess_data():
 
     return combined_df
 
-# Load the trained model and encoder
+# Load the trained model, encoder, and feature order
 @st.cache_resource
 def load_model_and_encoder():
-    # Load the retrained model and encoder
-    with open("logistic_regression_retrained.pkl", "rb") as model_file:
+    with open(MODEL_FILE, "rb") as model_file:
         model = pickle.load(model_file)
-    with open("encoder_retrained.pkl", "rb") as encoder_file:
+    with open(ENCODER_FILE, "rb") as encoder_file:
         encoder = pickle.load(encoder_file)
-    return model, encoder
+    with open(FEATURE_ORDER_FILE, "rb") as f:
+        feature_order = pickle.load(f)
+    return model, encoder, feature_order
 
-# Pages
+# Dashboard Page
 def dashboard(data):
     st.title("Dashboard: SUD Patient Insights")
     st.write("Overview of relapse risks and patient statistics.")
@@ -53,6 +58,7 @@ def dashboard(data):
     st.subheader("Key Statistics")
     st.write(data.describe())
 
+# Data Visualization Page
 def data_visualization(data):
     st.title("Data Visualization")
     st.write("Explore visual trends in patient data.")
@@ -79,50 +85,57 @@ def data_visualization(data):
     filtered_data = data[data['Relapse_Risk'] == relapse_risk_filter]
     st.write(filtered_data)
 
-def load_model_and_encoder():
-    with open("logistic_regression_retrained.pkl", "rb") as model_file:
-        model = pickle.load(model_file)
-    with open("encoder_retrained.pkl", "rb") as encoder_file:
-        encoder = pickle.load(encoder_file)
-    with open("feature_order.pkl", "rb") as f:
-        feature_order = pickle.load(f)
-    return model, encoder, feature_order
-
+# ML Prediction Page
 def ml_prediction():
-    # ... (Input collection as before)
+    st.title("ML Prediction: Relapse Risk")
+    st.write("Enter patient details to predict relapse risks.")
 
-    if submit:
-        # Prepare input data
-        input_data = pd.DataFrame({
-            "Age": [age],
-            "Gender": [gender],
-            "Substance_Type": [substance_type],
-            "Treatment_Type": [treatment_type],
-            "Support_System": [support_system],
-            "Treatment_Outcome": [treatment_outcome]
-        })
+    # User input form
+    with st.form("prediction_form"):
+        age = st.number_input("Age", min_value=0, max_value=120, value=30)
+        gender = st.selectbox("Gender", ["Male", "Female"])
+        substance_type = st.selectbox("Substance Type", ["Alcohol", "Cannabis", "Opioids", "Cocaine", "Methamphetamine", "Polysubstance"])
+        treatment_type = st.selectbox("Treatment Type", ["Residential Rehab", "Detox", "Counseling", "Medication-Assisted Treatment (MAT)"])
+        support_system = st.selectbox("Support System", ["Strong", "Moderate", "Weak"])
+        treatment_outcome = st.selectbox("Treatment Outcome", ["Ongoing", "Recovered", "Relapsed"])
+        submit = st.form_submit_button("Predict Relapse Risk")
 
-        model, encoder, feature_order = load_model_and_encoder()
+        if submit:
+            input_data = pd.DataFrame({
+                "Age": [age],
+                "Gender": [gender],
+                "Substance_Type": [substance_type],
+                "Treatment_Type": [treatment_type],
+                "Support_System": [support_system],
+                "Treatment_Outcome": [treatment_outcome]
+            })
 
-        # Encode categorical features
-        encoded_categorical = encoder.transform(input_data[categorical_cols]).toarray()
-        numerical_features = input_data[numerical_cols].values
-        final_input = pd.concat(
-            [pd.DataFrame(numerical_features, columns=numerical_cols),
-             pd.DataFrame(encoded_categorical, columns=encoder.get_feature_names_out(categorical_cols))],
-            axis=1
-        )
+            try:
+                model, encoder, feature_order = load_model_and_encoder()
 
-        # Reorder features to match the training order
-        final_input = final_input[feature_order]
+                # Encode categorical features
+                categorical_cols = ["Gender", "Substance_Type", "Treatment_Type", "Support_System", "Treatment_Outcome"]
+                encoded_categorical = encoder.transform(input_data[categorical_cols]).toarray()
 
-        # Make predictions
-        prediction = model.predict(final_input)[0]
-        prediction_proba = model.predict_proba(final_input)[0]
-        st.write(f"Predicted Relapse Risk: **{prediction}**")
-        st.write(f"Probability: **{prediction_proba[1] * 100:.2f}%**")
+                # Combine numerical and encoded features
+                numerical_features = input_data[["Age"]].values
+                final_input = np.hstack([numerical_features, encoded_categorical])
 
+                # Create DataFrame with feature order
+                final_input_df = pd.DataFrame(final_input, columns=feature_order)
 
+                # Make predictions
+                prediction = model.predict(final_input_df)[0]
+                prediction_proba = model.predict_proba(final_input_df)[0]
+
+                # Display predictions
+                st.success(f"Predicted Relapse Risk: **{prediction}**")
+                st.info(f"Probability of Relapse: **{prediction_proba[1] * 100:.2f}%**")
+
+            except Exception as e:
+                st.error(f"Error during prediction: {e}")
+
+# Case Management Page
 def case_management(data):
     st.title("Case Management")
     st.write("Manage and monitor patient cases.")
@@ -131,13 +144,13 @@ def case_management(data):
     if st.button("Save Notes"):
         st.success(f"Notes saved for patient {patient_id}!")
 
-# Navigation
+# Page Navigation
 page = st.sidebar.selectbox("Select a Page", ["Dashboard", "Data Visualization", "ML Prediction", "Case Management"])
 
 # Load data
 data = load_and_preprocess_data()
 
-# Display the selected page
+# Display selected page
 if page == "Dashboard":
     dashboard(data)
 elif page == "Data Visualization":
