@@ -127,7 +127,7 @@ def ml_prediction():
 
                 # Combine numerical and encoded categorical features
                 numerical_features = input_data[numerical_cols].values
-                final_input = pd.concat(
+                combined_features = pd.concat(
                     [
                         pd.DataFrame(numerical_features, columns=numerical_cols, index=input_data.index),
                         pd.DataFrame(encoded_categorical, columns=encoder.get_feature_names_out(categorical_cols), index=input_data.index)
@@ -135,12 +135,12 @@ def ml_prediction():
                     axis=1
                 )
 
-                # Align input features with model's training feature order
-                final_input = final_input.reindex(columns=feature_order, fill_value=0)
+                # Align features to match training feature order
+                aligned_features = combined_features.reindex(columns=feature_order, fill_value=0)
 
                 # Make predictions
-                prediction = model.predict(final_input)[0]
-                prediction_proba = model.predict_proba(final_input)[0]
+                prediction = model.predict(aligned_features)[0]
+                prediction_proba = model.predict_proba(aligned_features)[0]
 
                 # Display predictions
                 st.success(f"Predicted Relapse Risk: **{prediction}**")
@@ -149,7 +149,6 @@ def ml_prediction():
             except Exception as e:
                 st.error("Error during prediction.")
                 st.error(str(e))
-
 
 def case_management(data):
     st.title("Case Management")
