@@ -79,65 +79,48 @@ def data_visualization(data):
     filtered_data = data[data['Relapse_Risk'] == relapse_risk_filter]
     st.write(filtered_data)
 
+def load_model_and_encoder():
+    with open("logistic_regression_retrained.pkl", "rb") as model_file:
+        model = pickle.load(model_file)
+    with open("encoder_retrained.pkl", "rb") as encoder_file:
+        encoder = pickle.load(encoder_file)
+    with open("feature_order.pkl", "rb") as f:
+        feature_order = pickle.load(f)
+    return model, encoder, feature_order
+
 def ml_prediction():
-    st.title("ML Prediction: Relapse Risk")
-    st.write("Enter patient details to predict relapse risks.")
+    # ... (Input collection as before)
 
-    # User input form
-    with st.form("prediction_form"):
-        age = st.number_input("Age", min_value=0, max_value=120, value=30)
-        gender = st.selectbox("Gender", ["Male", "Female"])
-        substance_type = st.selectbox("Substance Type", ["Alcohol", "Cannabis", "Opioids", "Cocaine", "Methamphetamine", "Polysubstance"])
-        treatment_type = st.selectbox("Treatment Type", ["Residential Rehab", "Detox", "Counseling", "Medication-Assisted Treatment (MAT)"])
-        support_system = st.selectbox("Support System", ["Strong", "Moderate", "Weak"])
-        treatment_outcome = st.selectbox("Treatment Outcome", ["Ongoing", "Recovered", "Relapsed"])
-        submit = st.form_submit_button("Predict Relapse Risk")
+    if submit:
+        # Prepare input data
+        input_data = pd.DataFrame({
+            "Age": [age],
+            "Gender": [gender],
+            "Substance_Type": [substance_type],
+            "Treatment_Type": [treatment_type],
+            "Support_System": [support_system],
+            "Treatment_Outcome": [treatment_outcome]
+        })
 
-        if submit:
-            # Create input data DataFrame
-            input_data = pd.DataFrame({
-                "Age": [age],
-                "Gender": [gender],
-                "Substance_Type": [substance_type],
-                "Treatment_Type": [treatment_type],
-                "Support_System": [support_system],
-                "Treatment_Outcome": [treatment_outcome]
-            })
+        model, encoder, feature_order = load_model_and_encoder()
 
-            # Load the model and encoder
-            model, encoder = load_model_and_encoder()
+        # Encode categorical features
+        encoded_categorical = encoder.transform(input_data[categorical_cols]).toarray()
+        numerical_features = input_data[numerical_cols].values
+        final_input = pd.concat(
+            [pd.DataFrame(numerical_features, columns=numerical_cols),
+             pd.DataFrame(encoded_categorical, columns=encoder.get_feature_names_out(categorical_cols))],
+            axis=1
+        )
 
-            # Transform input data to match the model's feature set
-            try:
-                categorical_cols = ["Gender", "Substance_Type", "Treatment_Type", "Support_System", "Treatment_Outcome"]
-                numerical_cols = ["Age"]
+        # Reorder features to match the training order
+        final_input = final_input[feature_order]
 
-                # Encode categorical features
-                encoded_categorical = encoder.transform(input_data[categorical_cols]).toarray()
-
-                # Combine with numerical features
-                numerical_features = input_data[numerical_cols].values
-                final_input = np.hstack([numerical_features, encoded_categorical])
-
-                # Create a DataFrame with column names for the model
-                feature_names = numerical_cols + list(encoder.get_feature_names_out(categorical_cols))
-                final_input_df = pd.DataFrame(final_input, columns=feature_names)
-
-                # Make prediction
-                prediction = model.predict(final_input_df)[0]
-                prediction_proba = model.predict_proba(final_input_df)[0]
-
-                # Display prediction
-                st.write(f"Predicted Relapse Risk: **{prediction}**")
-                st.write(f"Probability: **{prediction_proba[1]:.2f}**")  # Assuming probability of class 1 (Relapse)
-
-            except ValueError as ve:
-                st.error("Error during prediction: Ensure input features match the training data.")
-                st.error(str(ve))
-            except Exception as e:
-                st.error(f"Unexpected error during prediction: {e}")
-
-
+        # Make predictions
+        prediction = model.predict(final_input)[0]
+        prediction_proba = model.predict_proba(final_input)[0]
+        st.write(f"Predicted Relapse Risk: **{prediction}**")
+        st.write(f"Probability: **{prediction_proba[1] * 100:.2f}%**")
 
 
 def case_management(data):
