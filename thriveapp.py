@@ -6,6 +6,7 @@ import seaborn as sns
 from sklearn.preprocessing import OneHotEncoder
 import pickle
 import google.generativeai as genai
+import os
 
 # Set page configuration
 st.set_page_config(page_title="SUD Patient Analysis", page_icon="📊", layout="wide")
