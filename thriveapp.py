@@ -3,10 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn.model_selection import train_test_split
-from sklearn.impute import SimpleImputer
-from sklearn.preprocessing import StandardScaler, OneHotEncoder
-from sklearn.linear_model import LogisticRegression
+from sklearn.preprocessing import OneHotEncoder
 import pickle
 
 # Set page configuration
@@ -30,10 +27,11 @@ def load_and_preprocess_data():
 # Load the trained model and encoder
 @st.cache_resource
 def load_model_and_encoder():
-    # Load the model (replace with your Snowflake integration if needed)
-    with open("logistic_regression_model.pkl", "rb") as model_file:
+    # Load the retrained model and encoder
+    with open("logistic_regression_retrained.pkl", "rb") as model_file:
         model = pickle.load(model_file)
-    encoder = OneHotEncoder(handle_unknown='ignore')
+    with open("encoder_retrained.pkl", "rb") as encoder_file:
+        encoder = pickle.load(encoder_file)
     return model, encoder
 
 # Pages
@@ -85,27 +83,69 @@ def ml_prediction():
     st.title("ML Prediction: Relapse Risk")
     st.write("Enter patient details to predict relapse risks.")
 
+    # User input form
     with st.form("prediction_form"):
         age = st.number_input("Age", min_value=0, max_value=120, value=30)
         gender = st.selectbox("Gender", ["Male", "Female"])
         substance_type = st.selectbox("Substance Type", ["Alcohol", "Cannabis", "Opioids", "Cocaine", "Methamphetamine", "Polysubstance"])
         treatment_type = st.selectbox("Treatment Type", ["Residential Rehab", "Detox", "Counseling", "Medication-Assisted Treatment (MAT)"])
         support_system = st.selectbox("Support System", ["Strong", "Moderate", "Weak"])
+        treatment_outcome = st.selectbox("Treatment Outcome", ["Ongoing", "Recovered", "Relapsed"])
         submit = st.form_submit_button("Predict Relapse Risk")
 
         if submit:
-            input_data = pd.DataFrame({
-                "Age": [age],
-                "Gender": [gender],
-                "Substance_Type": [substance_type],
-                "Treatment_Type": [treatment_type],
-                "Support_System": [support_system]
-            })
-            # Load the model and encoder
-            model, encoder = load_model_and_encoder()
-            encoded_input = encoder.fit_transform(input_data).toarray()
-            prediction = model.predict(encoded_input)
-            st.write(f"Predicted Relapse Risk: **{prediction[0]}**")
+            try:
+                # Create input data DataFrame
+                input_data = pd.DataFrame({
+                    "Age": [age],
+                    "Gender": [gender],
+                    "Substance_Type": [substance_type],
+                    "Treatment_Type": [treatment_type],
+                    "Support_System": [support_system],
+                    "Treatment_Outcome": [treatment_outcome]
+                })
+
+                # Load the model, encoder, and feature order
+                with open("logistic_regression_retrained.pkl", "rb") as model_file:
+                    model = pickle.load(model_file)
+                with open("encoder_retrained.pkl", "rb") as encoder_file:
+                    encoder = pickle.load(encoder_file)
+                with open("feature_order.pkl", "rb") as feature_file:
+                    feature_order = pickle.load(feature_file)
+
+                # Identify categorical and numerical columns
+                categorical_cols = ["Gender", "Substance_Type", "Treatment_Type", "Support_System", "Treatment_Outcome"]
+                numerical_cols = ["Age"]
+
+                # Encode categorical features
+                encoded_categorical = encoder.transform(input_data[categorical_cols]).toarray()
+                numerical_features = input_data[numerical_cols].values
+
+                # Combine numerical and encoded categorical features
+                final_input = pd.concat(
+                    [
+                        pd.DataFrame(numerical_features, columns=numerical_cols),
+                        pd.DataFrame(encoded_categorical, columns=encoder.get_feature_names_out(categorical_cols))
+                    ],
+                    axis=1
+                )
+
+                # Align columns with the feature order from training
+                final_input = final_input.reindex(columns=feature_order, fill_value=0)
+
+                # Make prediction
+                prediction = model.predict(final_input)[0]
+                prediction_proba = model.predict_proba(final_input)[0]
+
+                # Display results
+                st.subheader("Prediction Result")
+                st.write(f"**Predicted Relapse Risk:** {prediction}")
+                st.write(f"**Confidence:** {prediction_proba.max() * 100:.2f}%")  # Assuming class 1 is "Relapse"
+
+            except Exception as e:
+                st.error("An error occurred during prediction. Please check your inputs or contact support.")
+                st.error(f"Details: {e}")
+
 
 def case_management(data):
     st.title("Case Management")
