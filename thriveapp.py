@@ -103,17 +103,22 @@ def case_management(data):
     st.title("Case Management")
     st.write("Manage and monitor patient cases with AI-generated reports.")
 
-    patient_id = st.text_input("Enter Patient ID")
-    notes = st.text_area("Enter Case Notes")
+    # User input for Patient ID and Case Notes
+    patient_id = st.text_input("Enter Patient ID", placeholder="E.g., PID12345")
+    notes = st.text_area("Enter Case Notes", placeholder="E.g., Patient has shown improvement...")
 
-    if st.button("Generate AI Report"):
+    # Button to generate the case report
+    if st.button("Generate Case Report"):
         if not patient_id:
             st.error("Patient ID is required to generate a report.")
         else:
-            with st.spinner("Generating report..."):
-                report = generate_case_report(patient_id, notes)
+            # Generate the case report using Google Generative AI
+            report = generate_case_report(patient_id, notes)
+
+            # Display the generated report
             st.subheader("Generated Case Report")
             st.write(report)
+
 
 # Generate Case Report Function
 def generate_case_report(patient_id, notes):
