@@ -105,13 +105,15 @@ def ml_prediction():
                     "Treatment_Outcome": [treatment_outcome]
                 })
 
-                # Load the model and encoder
+                # Load the model, encoder, and feature order
                 with open("logistic_regression_retrained.pkl", "rb") as model_file:
                     model = pickle.load(model_file)
                 with open("encoder_retrained.pkl", "rb") as encoder_file:
                     encoder = pickle.load(encoder_file)
+                with open("feature_order.pkl", "rb") as feature_file:
+                    feature_order = pickle.load(feature_file)
 
-                # Preprocess input data
+                # Identify categorical and numerical columns
                 categorical_cols = ["Gender", "Substance_Type", "Treatment_Type", "Support_System", "Treatment_Outcome"]
                 numerical_cols = ["Age"]
 
@@ -128,19 +130,22 @@ def ml_prediction():
                     axis=1
                 )
 
-                # Dynamically align columns with model's expected feature names
-                final_input = final_input.reindex(columns=model.feature_names_in_, fill_value=0)
+                # Align columns with the feature order from training
+                final_input = final_input.reindex(columns=feature_order, fill_value=0)
 
                 # Make prediction
                 prediction = model.predict(final_input)[0]
                 prediction_proba = model.predict_proba(final_input)[0]
 
                 # Display results
-                st.write(f"Predicted Relapse Risk: **{prediction}**")
-                st.write(f"Confidence: **{prediction_proba[1] * 100:.2f}%**")  # Assuming class 1 is "Relapse"
+                st.subheader("Prediction Result")
+                st.write(f"**Predicted Relapse Risk:** {prediction}")
+                st.write(f"**Confidence:** {prediction_proba.max() * 100:.2f}%")  # Assuming class 1 is "Relapse"
 
             except Exception as e:
-                st.error(f"Error during prediction: {e}")
+                st.error("An error occurred during prediction. Please check your inputs or contact support.")
+                st.error(f"Details: {e}")
+
 
 def case_management(data):
     st.title("Case Management")
