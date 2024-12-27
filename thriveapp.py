@@ -105,13 +105,17 @@ def ml_prediction():
                     "Treatment_Outcome": [treatment_outcome]
                 })
 
-                # Load the model, encoder, and feature order
+                # Load the model and encoder
                 with open("logistic_regression_retrained.pkl", "rb") as model_file:
                     model = pickle.load(model_file)
                 with open("encoder_retrained.pkl", "rb") as encoder_file:
                     encoder = pickle.load(encoder_file)
-                with open("feature_order.pkl", "rb") as f:
-                    feature_order = pickle.load(f)
+
+                # Define the expected feature order (numerical first, then categorical)
+                expected_order = (
+                    ["Age"] +
+                    list(encoder.get_feature_names_out(["Gender", "Substance_Type", "Treatment_Type", "Support_System", "Treatment_Outcome"]))
+                )
 
                 # Preprocess input data
                 categorical_cols = ["Gender", "Substance_Type", "Treatment_Type", "Support_System", "Treatment_Outcome"]
@@ -130,8 +134,8 @@ def ml_prediction():
                     axis=1
                 )
 
-                # Ensure feature order matches the training data
-                final_input = final_input.reindex(columns=feature_order, fill_value=0)
+                # Reorder columns to match the expected order
+                final_input = final_input[expected_order]
 
                 # Make prediction
                 prediction = model.predict(final_input)[0]
