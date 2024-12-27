@@ -3,15 +3,11 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+from sklearn.preprocessing import OneHotEncoder
 import pickle
 
 # Set page configuration
 st.set_page_config(page_title="SUD Patient Analysis", page_icon="📊", layout="wide")
-
-# Constants
-MODEL_FILE = "logistic_regression_retrained.pkl"
-ENCODER_FILE = "encoder_retrained.pkl"
-FEATURE_ORDER_FILE = "feature_order.pkl"
 
 # Data Loading and Preprocessing
 @st.cache_data
@@ -28,18 +24,17 @@ def load_and_preprocess_data():
 
     return combined_df
 
-# Load the trained model, encoder, and feature order
+# Load the trained model and encoder
 @st.cache_resource
 def load_model_and_encoder():
-    with open(MODEL_FILE, "rb") as model_file:
+    # Load the retrained model and encoder
+    with open("logistic_regression_retrained.pkl", "rb") as model_file:
         model = pickle.load(model_file)
-    with open(ENCODER_FILE, "rb") as encoder_file:
+    with open("encoder_retrained.pkl", "rb") as encoder_file:
         encoder = pickle.load(encoder_file)
-    with open(FEATURE_ORDER_FILE, "rb") as f:
-        feature_order = pickle.load(f)
-    return model, encoder, feature_order
+    return model, encoder
 
-# Dashboard Page
+# Pages
 def dashboard(data):
     st.title("Dashboard: SUD Patient Insights")
     st.write("Overview of relapse risks and patient statistics.")
@@ -58,7 +53,6 @@ def dashboard(data):
     st.subheader("Key Statistics")
     st.write(data.describe())
 
-# Data Visualization Page
 def data_visualization(data):
     st.title("Data Visualization")
     st.write("Explore visual trends in patient data.")
@@ -85,7 +79,6 @@ def data_visualization(data):
     filtered_data = data[data['Relapse_Risk'] == relapse_risk_filter]
     st.write(filtered_data)
 
-# ML Prediction Page
 def ml_prediction():
     st.title("ML Prediction: Relapse Risk")
     st.write("Enter patient details to predict relapse risks.")
@@ -101,6 +94,7 @@ def ml_prediction():
         submit = st.form_submit_button("Predict Relapse Risk")
 
         if submit:
+            # Create input data DataFrame
             input_data = pd.DataFrame({
                 "Age": [age],
                 "Gender": [gender],
@@ -110,32 +104,24 @@ def ml_prediction():
                 "Treatment_Outcome": [treatment_outcome]
             })
 
+            # Load the model and encoder
+            model, encoder = load_model_and_encoder()
+
+            # Transform input data to match the model's feature set
             try:
-                model, encoder, feature_order = load_model_and_encoder()
+                input_data_encoded = encoder.transform(input_data).toarray()
 
-                # Encode categorical features
-                categorical_cols = ["Gender", "Substance_Type", "Treatment_Type", "Support_System", "Treatment_Outcome"]
-                encoded_categorical = encoder.transform(input_data[categorical_cols]).toarray()
+                # Predict the relapse risk
+                prediction = model.predict(input_data_encoded)
+                prediction_prob = model.predict_proba(input_data_encoded)
 
-                # Combine numerical and encoded features
-                numerical_features = input_data[["Age"]].values
-                final_input = np.hstack([numerical_features, encoded_categorical])
+                # Display the prediction
+                st.write(f"Predicted Relapse Risk: **{prediction[0]}**")
+                st.write(f"Confidence: **{round(max(prediction_prob[0]) * 100, 2)}%**")
+            except ValueError as e:
+                st.error("Error during prediction: Ensure the input matches the model's expected features.")
+                st.error(str(e))
 
-                # Create DataFrame with feature order
-                final_input_df = pd.DataFrame(final_input, columns=feature_order)
-
-                # Make predictions
-                prediction = model.predict(final_input_df)[0]
-                prediction_proba = model.predict_proba(final_input_df)[0]
-
-                # Display predictions
-                st.success(f"Predicted Relapse Risk: **{prediction}**")
-                st.info(f"Probability of Relapse: **{prediction_proba[1] * 100:.2f}%**")
-
-            except Exception as e:
-                st.error(f"Error during prediction: {e}")
-
-# Case Management Page
 def case_management(data):
     st.title("Case Management")
     st.write("Manage and monitor patient cases.")
@@ -144,13 +130,13 @@ def case_management(data):
     if st.button("Save Notes"):
         st.success(f"Notes saved for patient {patient_id}!")
 
-# Page Navigation
+# Navigation
 page = st.sidebar.selectbox("Select a Page", ["Dashboard", "Data Visualization", "ML Prediction", "Case Management"])
 
 # Load data
 data = load_and_preprocess_data()
 
-# Display selected page
+# Display the selected page
 if page == "Dashboard":
     dashboard(data)
 elif page == "Data Visualization":
