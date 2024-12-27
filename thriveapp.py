@@ -118,21 +118,24 @@ def case_management(data):
 # Generate Case Report Function
 def generate_case_report(patient_id, notes):
     try:
+        # Create the prompt for Google Generative AI
         prompt = f"""
         Generate a case report for a Substance Use Disorder (SUD) patient in the USA.
         Patient ID: {patient_id}.
         Include the following notes: {notes}.
         Provide a comprehensive case report in plain English, summarizing patient status, treatment progress, and recommendations.
         """
-        response = genai.chat(
-            messages=[
-                {"role": "system", "content": "You are a medical case report generator for SUD patients."},
-                {"role": "user", "content": prompt}
-            ]
+
+        # Call Google Generative AI to generate the report
+        response = genai.generate_text(
+            prompt=prompt,
+            temperature=0.7,  # Adjust creativity level (optional)
+            max_output_tokens=500  # Limit the response length
         )
-        return response.get('content', 'No report generated.')
+        return response.text  # Extract the generated report content
     except Exception as e:
         return f"Error generating report: {e}"
+
 
 # Navigation
 page = st.sidebar.selectbox("Select a Page", ["Dashboard", "Data Visualization", "ML Prediction", "Case Management"])
