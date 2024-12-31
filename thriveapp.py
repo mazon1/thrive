@@ -7,9 +7,10 @@ from sklearn.preprocessing import OneHotEncoder
 import pickle
 import google.generativeai as genai
 import os
+import speech_recognition as sr
 
 # Set page configuration
-st.set_page_config(page_title="SUD Patient Analysis", page_icon="📊", layout="wide")
+st.set_page_config(page_title="SUD Patient Analysis", page_icon="\ud83d\udd70", layout="wide")
 
 # Set up the API key
 GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY', st.secrets.get("GOOGLE_API_KEY"))
@@ -114,7 +115,8 @@ def generate_case_report(patient_id, notes):
         2. Diagnosis
         3. Treatment Plan
         4. Medication Dosage and Instructions (if applicable)
-        5. Follow-Up Recommendations
+        5. Recommendations and Referrals
+        6. Follow-Up Plan
         Format the report for professional documentation.
         """
 
@@ -124,40 +126,46 @@ def generate_case_report(patient_id, notes):
 
         # Extract the response text
         report = response.text
-
-        # Post-process to ensure structure
-        if "Patient Overview:" not in report:
-            report = "Patient Overview: Not specified.\n" + report
-        if "Diagnosis:" not in report:
-            report += "\nDiagnosis: Not specified."
-        if "Treatment Plan:" not in report:
-            report += "\nTreatment Plan: Not specified."
-        if "Follow-Up Recommendations:" not in report:
-            report += "\nFollow-Up Recommendations: Not specified."
-
         return report
     except Exception as e:
         st.error(f"Error generating report: {e}")
         return "Sorry, I couldn't process your request."
 
-# Case Management page updated with Google Generative AI integration
+# Case Management page updated with Google Generative AI integration and transcription
 def case_management(data):
     st.title("Case Management")
-    st.write("Manage and monitor patient cases with AI-generated reports.")
+    st.write("Manage and monitor patient cases with AI-generated reports and multilingual transcription.")
 
-    # User input for Patient ID and Case Notes
+    # Upload audio file
+    st.subheader("Upload Audio File")
+    audio_file = st.file_uploader("Upload a patient conversation (audio file)", type=["wav", "mp3"])
+
+    transcription = ""
+    if audio_file:
+        recognizer = sr.Recognizer()
+        with sr.AudioFile(audio_file) as source:
+            audio_data = recognizer.record(source)
+            try:
+                transcription = recognizer.recognize_google(audio_data, language="en-US")  # Change language as needed
+                st.success("Transcription completed successfully.")
+                st.text_area("Transcription", transcription, height=200)
+            except Exception as e:
+                st.error(f"Error in transcription: {e}")
+
+    # Patient ID and additional notes
+    st.subheader("Patient Details")
     patient_id = st.text_input("Enter Patient ID", placeholder="E.g., PID12345")
-    notes = st.text_area("Enter Case Notes", placeholder="E.g., Patient has shown improvement...")
+    notes = st.text_area("Enter Additional Notes", placeholder="E.g., Patient has shown improvement...")
 
-    # Button to generate the report
+    # Generate the report
     if st.button("Generate AI Report"):
         if not patient_id:
             st.error("Patient ID is required to generate a report.")
         else:
-            # Generate the case report
-            report = generate_case_report(patient_id, notes)
+            combined_notes = f"{notes}\n\nTranscription:\n{transcription}" if transcription else notes
 
-            # Display the generated report
+            # Generate the case report
+            report = generate_case_report(patient_id, combined_notes)
             st.subheader("Generated Case Report")
             st.write(report)
 
