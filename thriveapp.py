@@ -7,7 +7,8 @@ from sklearn.preprocessing import OneHotEncoder
 import pickle
 import google.generativeai as genai
 import os
-import speech_recognition as sr
+import sounddevice as sd
+import queue
 
 # Set page configuration
 st.set_page_config(page_title="SUD Patient Analysis", page_icon="📊", layout="wide")
@@ -15,6 +16,15 @@ st.set_page_config(page_title="SUD Patient Analysis", page_icon="📊", layout="
 # Set up the API key
 GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY', st.secrets.get("GOOGLE_API_KEY"))
 genai.configure(api_key=GOOGLE_API_KEY)
+
+# Queue to store audio data
+audio_queue = queue.Queue()
+
+# Callback function to store audio chunks
+def audio_callback(indata, frames, time, status):
+    if status:
+        st.error(f"Error: {status}")
+    audio_queue.put(indata.copy())
 
 # Data Loading and Preprocessing
 @st.cache_data
@@ -136,21 +146,44 @@ def case_management(data):
     st.title("Case Management")
     st.write("Manage and monitor patient cases with AI-generated reports and multilingual transcription.")
 
-    # Upload audio file
-    st.subheader("Upload Audio File")
-    audio_file = st.file_uploader("Upload a patient conversation (audio file)", type=["wav", "mp3"])
+    # Live Audio Recording
+    st.subheader("Live Audio Recording")
+    if st.button("Start Recording"):
+        st.info("Recording... Press 'Stop Recording' to process.")
+        stream = sd.InputStream(callback=audio_callback)
+        stream.start()
 
-    transcription = ""
-    if audio_file:
-        recognizer = sr.Recognizer()
-        with sr.AudioFile(audio_file) as source:
-            audio_data = recognizer.record(source)
+        if st.button("Stop Recording"):
+            stream.stop()
+            stream.close()
+
+            # Collect audio data from the queue
+            audio_data = []
+            while not audio_queue.empty():
+                audio_data.append(audio_queue.get())
+
+            # Convert audio data to NumPy array
+            audio_array = np.concatenate(audio_data, axis=0)
+
+            # Process audio data (Placeholder for transcription integration)
+            st.info("Processing audio...")
             try:
-                transcription = recognizer.recognize_google(audio_data, language="en-US")  # Change language as needed
-                st.success("Transcription completed successfully.")
-                st.text_area("Transcription", transcription, height=200)
+                transcription = "Transcribed text goes here..."  # Placeholder for transcription
+
+                st.success("Transcription Completed!")
+                st.text_area("Live Transcription", transcription, height=200)
+
+                # Use transcription to generate a case report
+                if st.button("Generate Report"):
+                    patient_id = "LIVE_RECORDING"  # Placeholder ID for live recordings
+                    prompt = f"Generate a detailed case report from the following conversation:\n{transcription}"
+                    model = genai.GenerativeModel('gemini-pro')
+                    response = model.generate_content(prompt)
+                    st.subheader("Generated Case Report")
+                    st.write(response.text)
+
             except Exception as e:
-                st.error(f"Error in transcription: {e}")
+                st.error(f"Error processing audio: {e}")
 
     # Patient ID and additional notes
     st.subheader("Patient Details")
@@ -162,7 +195,7 @@ def case_management(data):
         if not patient_id:
             st.error("Patient ID is required to generate a report.")
         else:
-            combined_notes = f"{notes}\n\nTranscription:\n{transcription}" if transcription else notes
+            combined_notes = notes
 
             # Generate the case report
             report = generate_case_report(patient_id, combined_notes)
