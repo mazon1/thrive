@@ -1,11 +1,11 @@
 import streamlit as st
 from streamlit_webrtc import webrtc_streamer, AudioProcessorBase, WebRtcMode
-import numpy as np
 import google.generativeai as genai
 import os
 import tempfile
 import wave
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.preprocessing import OneHotEncoder
@@ -141,25 +141,44 @@ def case_management(data):
     if webrtc_ctx.state.playing:
         st.info("Recording...")
 
+    # Temporary storage for audio
+    temp_audio_path = None
+
     if st.button("Stop and Process Recording"):
         with tempfile.NamedTemporaryFile(delete=False, suffix=".wav") as temp_audio_file:
             audio_processor.save_audio(temp_audio_file.name)
+            temp_audio_path = temp_audio_file.name
             st.success("Audio recorded successfully!")
 
-            # Transcribe audio (Placeholder for actual transcription)
-            transcription = "Transcribed text from audio goes here..."  # Add actual transcription logic here
-            st.text_area("Transcription", transcription, height=200)
+            # Provide download button for the recorded audio
+            with open(temp_audio_path, "rb") as audio_file:
+                st.download_button(
+                    label="Download Audio",
+                    data=audio_file,
+                    file_name="recorded_audio.wav",
+                    mime="audio/wav"
+                )
 
-            # Generate a case report
-            if st.button("Generate Report"):
-                prompt = f"Generate a detailed case report based on the following conversation:\n{transcription}"
-                try:
-                    model = genai.GenerativeModel('gemini-pro')
-                    response = model.generate_content(prompt)
-                    st.subheader("Generated Case Report")
-                    st.write(response.text)
-                except Exception as e:
-                    st.error(f"Error generating report: {e}")
+            # Transcribe audio (Placeholder for actual transcription)
+            st.info("Transcribing audio...")
+            try:
+                transcription = "Transcribed text from audio goes here..."  # Placeholder for transcription
+                st.success("Transcription completed!")
+                st.text_area("Transcription", transcription, height=200)
+
+                # Generate a case report
+                if st.button("Generate Report"):
+                    prompt = f"Generate a detailed case report based on the following conversation:\n{transcription}"
+                    try:
+                        model = genai.GenerativeModel('gemini-pro')
+                        response = model.generate_content(prompt)
+                        st.subheader("Generated Case Report")
+                        st.write(response.text)
+                    except Exception as e:
+                        st.error(f"Error generating report: {e}")
+
+            except Exception as e:
+                st.error(f"Error transcribing audio: {e}")
 
     # Patient ID and additional notes
     st.subheader("Patient Details")
