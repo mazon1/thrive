@@ -10,7 +10,7 @@ import os
 import speech_recognition as sr
 
 # Set page configuration
-st.set_page_config(page_title="SUD Patient Analysis", page_icon="\ud83d\udd70", layout="wide")
+st.set_page_config(page_title="SUD Patient Analysis", page_icon="📊", layout="wide")
 
 # Set up the API key
 GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY', st.secrets.get("GOOGLE_API_KEY"))
