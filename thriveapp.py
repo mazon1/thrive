@@ -1,30 +1,39 @@
 import streamlit as st
-import pandas as pd
+from streamlit_webrtc import webrtc_streamer, AudioProcessorBase, WebRtcMode
 import numpy as np
+import google.generativeai as genai
+import os
+import tempfile
+import wave
+import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.preprocessing import OneHotEncoder
 import pickle
-import google.generativeai as genai
-import os
-import sounddevice as sd
-import queue
 
 # Set page configuration
 st.set_page_config(page_title="SUD Patient Analysis", page_icon="📊", layout="wide")
 
-# Set up the API key
+# Configure Google Generative AI
 GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY', st.secrets.get("GOOGLE_API_KEY"))
 genai.configure(api_key=GOOGLE_API_KEY)
 
-# Queue to store audio data
-audio_queue = queue.Queue()
+# Audio Processor for Streamlit WebRTC
+class AudioProcessor(AudioProcessorBase):
+    def __init__(self):
+        self.audio_frames = []
 
-# Callback function to store audio chunks
-def audio_callback(indata, frames, time, status):
-    if status:
-        st.error(f"Error: {status}")
-    audio_queue.put(indata.copy())
+    def recv_audio(self, frame):
+        self.audio_frames.append(frame)
+        return frame
+
+    def save_audio(self, filename):
+        audio_data = b"".join([frame.to_ndarray().tobytes() for frame in self.audio_frames])
+        with wave.open(filename, 'wb') as wf:
+            wf.setnchannels(1)
+            wf.setsampwidth(2)  # 16-bit audio
+            wf.setframerate(16000)
+            wf.writeframes(audio_data)
 
 # Data Loading and Preprocessing
 @st.cache_data
@@ -111,79 +120,46 @@ def ml_prediction_prototype():
         st.write(f"**Predicted Relapse Risk:** {predicted_risk}")
         st.write(f"**Confidence:** {confidence}%")
 
-# Function to generate a case report using Google Generative AI
-def generate_case_report(patient_id, notes):
-    try:
-        # Refined prompt for case report generation
-        prompt = f"""
-        Generate a detailed case report for a Substance Use Disorder (SUD) patient.
-        Patient ID: {patient_id}.
-        Case notes:
-        {notes}
-        Include the following sections:
-        1. Patient Overview
-        2. Diagnosis
-        3. Treatment Plan
-        4. Medication Dosage and Instructions (if applicable)
-        5. Recommendations and Referrals
-        6. Follow-Up Plan
-        Format the report for professional documentation.
-        """
-
-        # Use Google Generative AI's GenerativeModel
-        model = genai.GenerativeModel('gemini-pro')  # Ensure the correct model is specified
-        response = model.generate_content(prompt)
-
-        # Extract the response text
-        report = response.text
-        return report
-    except Exception as e:
-        st.error(f"Error generating report: {e}")
-        return "Sorry, I couldn't process your request."
-
-# Case Management page updated with Google Generative AI integration and transcription
+# Case Management page updated with live audio recording and report generation
 def case_management(data):
     st.title("Case Management")
-    st.write("Manage and monitor patient cases with AI-generated reports and multilingual transcription.")
+    st.write("Manage and monitor patient cases with live audio recording and AI-generated reports.")
 
     # Live Audio Recording
     st.subheader("Live Audio Recording")
-    if st.button("Start Recording"):
-        st.info("Recording... Press 'Stop Recording' to process.")
-        stream = sd.InputStream(callback=audio_callback)
-        stream.start()
+    audio_processor = AudioProcessor()
 
-        if st.button("Stop Recording"):
-            stream.stop()
-            stream.close()
+    webrtc_ctx = webrtc_streamer(
+        key="audio-recording",
+        mode=WebRtcMode.SENDRECV,
+        audio_receiver_size=256,
+        media_stream_constraints={"audio": True, "video": False},
+        audio_processor_factory=lambda: audio_processor,
+        async_processing=True,
+    )
 
-            # Collect audio data from the queue
-            audio_data = []
-            while not audio_queue.empty():
-                audio_data.append(audio_queue.get())
+    if webrtc_ctx.state.playing:
+        st.info("Recording...")
 
-            # Convert audio data to NumPy array
-            audio_array = np.concatenate(audio_data, axis=0)
+    if st.button("Stop and Process Recording"):
+        with tempfile.NamedTemporaryFile(delete=False, suffix=".wav") as temp_audio_file:
+            audio_processor.save_audio(temp_audio_file.name)
+            st.success("Audio recorded successfully!")
 
-            # Process audio data (Placeholder for transcription integration)
-            st.info("Processing audio...")
-            try:
-                transcription = "Transcribed text goes here..."  # Placeholder for transcription
+            # Transcribe audio (Placeholder for actual transcription)
+            transcription = "Transcribed text from audio goes here..."  # Add actual transcription logic here
+            st.text_area("Transcription", transcription, height=200)
 
-                st.success("Transcription Completed!")
-                st.text_area("Live Transcription", transcription, height=200)
-
-                # Use transcription to generate a case report
-                if st.button("Generate Report"):
-                    patient_id = "LIVE_RECORDING"  # Placeholder ID for live recordings
-                    prompt = f"Generate a detailed case report from the following conversation:\n{transcription}"
+            # Generate a case report
+            if st.button("Generate Report"):
+                prompt = f"Generate a detailed case report based on the following conversation:\n{transcription}"
+                try:
                     model = genai.GenerativeModel('gemini-pro')
                     response = model.generate_content(prompt)
                     st.subheader("Generated Case Report")
                     st.write(response.text)
-
-            except Exception as e:
-                st.error(f"Error processing audio: {e}")
+                except Exception as e:
+                    st.error(f"Error generating report: {e}")
 
     # Patient ID and additional notes
     st.subheader("Patient Details")
@@ -201,6 +177,31 @@ def case_management(data):
             report = generate_case_report(patient_id, combined_notes)
             st.subheader("Generated Case Report")
             st.write(report)
+
+# Function to generate a case report using Google Generative AI
+def generate_case_report(patient_id, notes):
+    try:
+        prompt = f"""
+        Generate a detailed case report for a Substance Use Disorder (SUD) patient.
+        Patient ID: {patient_id}.
+        Case notes:
+        {notes}
+        Include the following sections:
+        1. Patient Overview
+        2. Diagnosis
+        3. Treatment Plan
+        4. Medication Dosage and Instructions (if applicable)
+        5. Recommendations and Referrals
+        6. Follow-Up Plan
+        Format the report for professional documentation.
+        """
+
+        model = genai.GenerativeModel('gemini-pro')
+        response = model.generate_content(prompt)
+        return response.text
+    except Exception as e:
+        st.error(f"Error generating report: {e}")
+        return "Sorry, I couldn't process your request."
 
 # Navigation
 page = st.sidebar.selectbox("Select a Page", ["Dashboard", "Data Visualization", "ML Prediction", "Case Management"])
