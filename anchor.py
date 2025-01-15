@@ -1,5 +1,5 @@
 import streamlit as st
-from google.cloud import generativeai
+import google.generativeai as genai
 import os
 import re
 
