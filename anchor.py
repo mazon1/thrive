@@ -22,7 +22,7 @@ menu = st.sidebar.radio("Navigation", ["Home", "Enrollment", "Document Upload", 
 if menu == "Home":
     st.header("Welcome to the Medicaid Enrollment Assistant")
     st.write("Use the sidebar to navigate through the enrollment process.")
-    st.image("anchorlogo.png", width=300)
+    st.image("anchorlogo.PNG", width=300)
 
 # Enrollment page
 elif menu == "Enrollment":
