@@ -10,11 +10,11 @@ genai.configure(api_key=GOOGLE_API_KEY)
 st.title("Anchor: Your Medicaid Enrollment Assistant")
 st.write("""
 This application simplifies the Medicaid enrollment process for high-needs individuals, 
-providing guided steps for provisional Medicaid, document preparation, and full enrollment.
+providing guided steps for , document preparation, and Medicaid enrollment.
 """)
 
 # Navigation menu
-menu = st.sidebar.radio("Navigation", ["Home", "Provisional Medicaid", "Document Hub", "Full Enrollment", "Progress Tracker", "Help"])
+menu = st.sidebar.radio("Navigation", ["Home", "Document Hub", "Medicaid Enrollment", "Progress Tracker", "Help"])
 
 # Home page
 if menu == "Home":
@@ -35,7 +35,7 @@ elif menu == "Provisional Medicaid":
 
     if st.button("Submit Provisional Application"):
         st.success("Your provisional Medicaid application has been submitted. Coverage will be available shortly.")
-        st.info("Next Steps: Gather the required documents for full enrollment.")
+        st.info("Next Steps: Gather the required documents for enrollment.")
 
 # Document Hub page
 elif menu == "Document Hub":
@@ -58,10 +58,10 @@ elif menu == "Document Hub":
         st.success(f"{len(uploaded_files)} document(s) uploaded successfully.")
         st.info("Our team will verify your documents shortly.")
 
-# Full Enrollment page
-elif menu == "Full Enrollment":
-    st.header("Full Medicaid Enrollment")
-    st.write("Complete the full application to finalize your Medicaid eligibility.")
+# Medicaid Enrollment page
+elif menu == "Medicaid Enrollment":
+    st.header("Medicaid Enrollment")
+    st.write("Complete the application to finalize your Medicaid eligibility.")
 
     # Step-by-step form
     st.write("### Step 1: Personal Information")
@@ -76,8 +76,8 @@ elif menu == "Full Enrollment":
     st.write("### Step 3: Additional Information")
     medical_conditions = st.text_area("Describe any medical conditions (if applicable)", key="conditions")
 
-    if st.button("Submit Full Application"):
-        st.success("Your full Medicaid application has been submitted.")
+    if st.button("Submit Application"):
+        st.success("Your Medicaid application has been submitted.")
         st.info("Track your application status in the Progress Tracker.")
 
 # Progress Tracker page
@@ -87,7 +87,7 @@ elif menu == "Progress Tracker":
 
     # Simulated progress tracker
     progress = st.progress(70)
-    st.write("Current Status: Full Application Submitted. Awaiting Review.")
+    st.write("Current Status: Application Submitted. Awaiting Review.")
 
 # Help Section
 elif menu == "Help":
